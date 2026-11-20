@@ -1,0 +1,29 @@
+# Simulation executables
+sim_majority
+*.out
+
+# Waveforms
+*.vcd
+*.fst
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Generated FPGA files
+*.bit
+*.bin
+
+# Generated ASIC files
+*.gds
+*.lef
+*.def
+
+# Tool temporary files
+*.tmp
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
