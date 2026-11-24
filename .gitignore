@@ -27,3 +27,14 @@ __pycache__/
 # OS files
 .DS_Store
 Thumbs.db
+
+# Generated simulation executables
+sim_tmr
+sim_fault_campaign
+sim_secded
+
+# Generated waveforms
+*.vcd
+
+# Generated simulation logs
+sim/logs/*.log
