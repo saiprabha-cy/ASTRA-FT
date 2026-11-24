@@ -38,3 +38,16 @@ sim_secded
 
 # Generated simulation logs
 sim/logs/*.log
+
+# Simulation executables
+sim_tmr
+sim_fault_campaign
+sim_secded
+sim_ecc_memory
+sim_ecc_scrubber
+
+# Waveforms
+*.vcd
+
+# Logs
+sim/logs/*.log

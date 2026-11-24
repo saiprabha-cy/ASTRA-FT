@@ -1,0 +1,17 @@
+VCD info: dumpfile sim/waveforms/ecc_memory_32.vcd opened for output.
+PASS | rmal protected memory write/read
+PASS | econd memory address independent
+PASS | bit corruption corrected on read
+PASS | error detected and data rejected
+PASS | write restores clean memory data
+FAIL | or at another position corrected
+
+===============================================
+ ASTRA-FT DAY 5 MEMORY SUMMARY
+===============================================
+Tests : 6
+Passed: 5
+Failed: 1
+MEMORY STATUS: FAIL
+===============================================
+tb/integration/tb_ecc_memory_32.sv:245: $finish called at 146000 (1ps)
