@@ -51,3 +51,19 @@ sim_ecc_scrubber
 
 # Logs
 sim/logs/*.log
+
+# ASTRA-FT simulation binaries
+sim_tmr
+sim_fault_campaign
+sim_secded
+sim_ecc_memory
+sim_ecc_scrubber
+sim_watchdog
+sim_astra_integration
+
+# Waveforms
+*.vcd
+
+# Generic synthesis generated netlists
+reports/synthesis/*_synth.json
+reports/synthesis/*_synth.v
