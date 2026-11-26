@@ -1,0 +1,883 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.33 (git sha1 2584903a060)
+
+
+-- Running command `
+        read_verilog -sv rtl/tmr/replica_core.sv rtl/tmr/majority_voter.sv rtl/tmr/astra_tmr_subsystem.sv
+        hierarchy -check -top astra_tmr_subsystem
+        synth -top astra_tmr_subsystem
+        check
+        stat
+        write_json reports/synthesis/astra_tmr_subsystem_synth.json
+        write_verilog reports/synthesis/astra_tmr_subsystem_synth.v
+    ' --
+
+1. Executing Verilog-2005 frontend: rtl/tmr/replica_core.sv
+Parsing SystemVerilog input from `rtl/tmr/replica_core.sv' to AST representation.
+Generating RTLIL representation for module `\replica_core'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: rtl/tmr/majority_voter.sv
+Parsing SystemVerilog input from `rtl/tmr/majority_voter.sv' to AST representation.
+Generating RTLIL representation for module `\majority_voter'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: rtl/tmr/astra_tmr_subsystem.sv
+Parsing SystemVerilog input from `rtl/tmr/astra_tmr_subsystem.sv' to AST representation.
+Generating RTLIL representation for module `\astra_tmr_subsystem'.
+Successfully finished Verilog frontend.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1. Analyzing design hierarchy..
+Top module:  \astra_tmr_subsystem
+Used module:     \majority_voter
+Used module:     \replica_core
+Parameter \WIDTH = 32
+
+4.2. Executing AST frontend in derive mode using pre-parsed AST for module `\majority_voter'.
+Parameter \WIDTH = 32
+Generating RTLIL representation for module `$paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000'.
+Parameter \WIDTH = 32
+
+4.3. Executing AST frontend in derive mode using pre-parsed AST for module `\replica_core'.
+Parameter \WIDTH = 32
+Generating RTLIL representation for module `$paramod\replica_core\WIDTH=s32'00000000000000000000000000100000'.
+Parameter \WIDTH = 32
+Found cached RTLIL representation for module `$paramod\replica_core\WIDTH=s32'00000000000000000000000000100000'.
+Parameter \WIDTH = 32
+Found cached RTLIL representation for module `$paramod\replica_core\WIDTH=s32'00000000000000000000000000100000'.
+
+4.4. Analyzing design hierarchy..
+Top module:  \astra_tmr_subsystem
+Used module:     $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000
+Used module:     $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000
+
+4.5. Analyzing design hierarchy..
+Top module:  \astra_tmr_subsystem
+Used module:     $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000
+Used module:     $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000
+Removing unused module `\majority_voter'.
+Removing unused module `\replica_core'.
+Removed 2 unused modules.
+
+5. Executing SYNTH pass.
+
+5.1. Executing HIERARCHY pass (managing design hierarchy).
+
+5.1.1. Analyzing design hierarchy..
+Top module:  \astra_tmr_subsystem
+Used module:     $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000
+Used module:     $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000
+
+5.1.2. Analyzing design hierarchy..
+Top module:  \astra_tmr_subsystem
+Used module:     $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000
+Used module:     $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000
+Removed 0 unused modules.
+
+5.2. Executing PROC pass (convert processes to netlists).
+
+5.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+5.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed 1 dead cases from process $proc$rtl/tmr/replica_core.sv:0$42 in module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.
+Marked 1 switch rules as full_case in process $proc$rtl/tmr/replica_core.sv:0$42 in module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.
+Removed a total of 1 dead cases.
+
+5.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 3 assignments to connections.
+
+5.2.4. Executing PROC_INIT pass (extract init attributes).
+
+5.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+5.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~1 debug messages>
+
+5.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `$paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.$proc$rtl/tmr/replica_core.sv:0$42'.
+     1/1: $1\result[31:0]
+Creating decoders for process `$paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.$proc$rtl/tmr/majority_voter.sv:0$36'.
+Creating decoders for process `$paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.$proc$rtl/tmr/majority_voter.sv:0$30'.
+
+5.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `$paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.\result' from process `$paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.$proc$rtl/tmr/replica_core.sv:0$42'.
+No latch inferred for signal `$paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.\mismatch_detected' from process `$paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.$proc$rtl/tmr/majority_voter.sv:0$36'.
+No latch inferred for signal `$paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.\voted_output' from process `$paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.$proc$rtl/tmr/majority_voter.sv:0$30'.
+
+5.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+5.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+5.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 1 empty switch in `$paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.$proc$rtl/tmr/replica_core.sv:0$42'.
+Removing empty process `$paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.$proc$rtl/tmr/replica_core.sv:0$42'.
+Removing empty process `$paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.$proc$rtl/tmr/majority_voter.sv:0$36'.
+Removing empty process `$paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.$proc$rtl/tmr/majority_voter.sv:0$30'.
+Cleaned up 1 empty switch.
+
+5.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module astra_tmr_subsystem.
+Optimizing module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.
+<suppressed ~1 debug messages>
+Optimizing module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.
+
+5.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module astra_tmr_subsystem.
+Optimizing module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.
+
+5.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \astra_tmr_subsystem..
+Finding unused cells or wires in module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000..
+Removed 0 unused cells and 13 unused wires.
+<suppressed ~3 debug messages>
+
+5.5. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000...
+Checking module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000...
+Checking module astra_tmr_subsystem...
+Found and reported 0 problems.
+
+5.6. Executing OPT pass (performing simple optimizations).
+
+5.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module astra_tmr_subsystem.
+
+5.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000'.
+Finding identical cells in module `$paramod\replica_core\WIDTH=s32'00000000000000000000000000100000'.
+Finding identical cells in module `\astra_tmr_subsystem'.
+Removed a total of 0 cells.
+
+5.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \astra_tmr_subsystem..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~1 debug messages>
+
+5.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.
+  Optimizing cells in module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.
+  Optimizing cells in module \astra_tmr_subsystem.
+Performed a total of 0 changes.
+
+5.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000'.
+Finding identical cells in module `$paramod\replica_core\WIDTH=s32'00000000000000000000000000100000'.
+Finding identical cells in module `\astra_tmr_subsystem'.
+Removed a total of 0 cells.
+
+5.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module \astra_tmr_subsystem..
+
+5.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module astra_tmr_subsystem.
+
+5.6.9. Finished OPT passes. (There is nothing left to do.)
+
+5.7. Executing FSM pass (extract and optimize FSM).
+
+5.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+5.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+5.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+5.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module \astra_tmr_subsystem..
+
+5.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+5.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+5.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+5.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+5.8. Executing OPT pass (performing simple optimizations).
+
+5.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module astra_tmr_subsystem.
+
+5.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000'.
+Finding identical cells in module `$paramod\replica_core\WIDTH=s32'00000000000000000000000000100000'.
+Finding identical cells in module `\astra_tmr_subsystem'.
+Removed a total of 0 cells.
+
+5.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \astra_tmr_subsystem..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~1 debug messages>
+
+5.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.
+  Optimizing cells in module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.
+  Optimizing cells in module \astra_tmr_subsystem.
+Performed a total of 0 changes.
+
+5.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000'.
+Finding identical cells in module `$paramod\replica_core\WIDTH=s32'00000000000000000000000000100000'.
+Finding identical cells in module `\astra_tmr_subsystem'.
+Removed a total of 0 cells.
+
+5.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module \astra_tmr_subsystem..
+
+5.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module astra_tmr_subsystem.
+
+5.8.9. Finished OPT passes. (There is nothing left to do.)
+
+5.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 2 bits (of 3) from port B of cell $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.$procmux$60_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.$procmux$59_CMP0 ($eq).
+Removed top 1 bits (of 3) from port B of cell $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.$procmux$58_CMP0 ($eq).
+Removed top 26 bits (of 32) from port A of cell $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.$sub$rtl/tmr/replica_core.sv:37$48 ($sub).
+Removed top 25 bits (of 32) from port Y of cell $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.$sub$rtl/tmr/replica_core.sv:37$48 ($sub).
+Removed top 31 bits (of 32) from mux cell $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.$ternary$rtl/tmr/replica_core.sv:41$52 ($mux).
+Removed top 31 bits (of 32) from wire $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.$ternary$rtl/tmr/replica_core.sv:41$52_Y.
+
+5.10. Executing PEEPOPT pass (run peephole optimizers).
+
+5.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module \astra_tmr_subsystem..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+5.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000:
+  creating $macc model for $add$rtl/tmr/replica_core.sv:19$43 ($add).
+  creating $macc model for $sub$rtl/tmr/replica_core.sv:37$48 ($sub).
+  creating $alu model for $macc $sub$rtl/tmr/replica_core.sv:37$48.
+  creating $alu model for $macc $add$rtl/tmr/replica_core.sv:19$43.
+  creating $alu cell for $add$rtl/tmr/replica_core.sv:19$43: $auto$alumacc.cc:485:replace_alu$63
+  creating $alu cell for $sub$rtl/tmr/replica_core.sv:37$48: $auto$alumacc.cc:485:replace_alu$66
+  created 2 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module astra_tmr_subsystem:
+  created 0 $alu and 0 $macc cells.
+
+5.13. Executing SHARE pass (SAT-based resource sharing).
+Found 2 cells in module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000 that may be considered for resource sharing.
+  Analyzing resource sharing options for $shr$rtl/tmr/replica_core.sv:37$49 ($shr):
+    Found 1 activation_patterns using ctrl signal $procmux$57_CMP.
+    No candidates found.
+  Analyzing resource sharing options for $shl$rtl/tmr/replica_core.sv:36$47 ($shl):
+    Found 1 activation_patterns using ctrl signal $procmux$57_CMP.
+    No candidates found.
+
+5.14. Executing OPT pass (performing simple optimizations).
+
+5.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module astra_tmr_subsystem.
+
+5.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000'.
+Finding identical cells in module `$paramod\replica_core\WIDTH=s32'00000000000000000000000000100000'.
+Finding identical cells in module `\astra_tmr_subsystem'.
+Removed a total of 0 cells.
+
+5.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \astra_tmr_subsystem..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~1 debug messages>
+
+5.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.
+  Optimizing cells in module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.
+  Optimizing cells in module \astra_tmr_subsystem.
+Performed a total of 0 changes.
+
+5.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000'.
+Finding identical cells in module `$paramod\replica_core\WIDTH=s32'00000000000000000000000000100000'.
+Finding identical cells in module `\astra_tmr_subsystem'.
+Removed a total of 0 cells.
+
+5.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module \astra_tmr_subsystem..
+
+5.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module astra_tmr_subsystem.
+
+5.14.9. Finished OPT passes. (There is nothing left to do.)
+
+5.15. Executing MEMORY pass.
+
+5.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+5.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+5.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+5.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+5.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+5.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module \astra_tmr_subsystem..
+
+5.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+5.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+5.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module \astra_tmr_subsystem..
+
+5.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+5.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module \astra_tmr_subsystem..
+
+5.17. Executing OPT pass (performing simple optimizations).
+
+5.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.
+<suppressed ~8 debug messages>
+Optimizing module astra_tmr_subsystem.
+
+5.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000'.
+Finding identical cells in module `$paramod\replica_core\WIDTH=s32'00000000000000000000000000100000'.
+Finding identical cells in module `\astra_tmr_subsystem'.
+Removed a total of 0 cells.
+
+5.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module \astra_tmr_subsystem..
+Removed 1 unused cells and 4 unused wires.
+<suppressed ~2 debug messages>
+
+5.17.5. Finished fast OPT passes.
+
+5.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+5.19. Executing OPT pass (performing simple optimizations).
+
+5.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module astra_tmr_subsystem.
+
+5.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000'.
+Finding identical cells in module `$paramod\replica_core\WIDTH=s32'00000000000000000000000000100000'.
+Finding identical cells in module `\astra_tmr_subsystem'.
+Removed a total of 0 cells.
+
+5.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \astra_tmr_subsystem..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~1 debug messages>
+
+5.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.
+  Optimizing cells in module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.
+  Optimizing cells in module \astra_tmr_subsystem.
+Performed a total of 0 changes.
+
+5.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000'.
+Finding identical cells in module `$paramod\replica_core\WIDTH=s32'00000000000000000000000000100000'.
+Finding identical cells in module `\astra_tmr_subsystem'.
+Removed a total of 0 cells.
+
+5.19.6. Executing OPT_SHARE pass.
+
+5.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module \astra_tmr_subsystem..
+
+5.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module astra_tmr_subsystem.
+
+5.19.10. Finished OPT passes. (There is nothing left to do.)
+
+5.20. Executing TECHMAP pass (map to technology primitives).
+
+5.20.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+5.20.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $ne.
+Using extmapper simplemap for cells of type $eq.
+Using template $paramod$fbc7873bff55778c0b3173955b7e4bce1d9d6834\_90_alu for cells of type $alu.
+Using template $paramod$49f1dc3dcd6d2c748486fe94c6744a34a19bbafe\_90_pmux for cells of type $pmux.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $or.
+Using template $paramod$constmap:4621fcf06a436d1e2a4080e2ed9866a7d07a6e07$paramod$335cfd09f1afa8139c4aafcbbe5f361887b79c5e\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shl.
+Using template $paramod$00298f3f8094950cb9a5ff2fda48d0d8bde8806c\_90_alu for cells of type $alu.
+Using template $paramod$constmap:f99bc636dfa98fa6983e40552c5a4e65ec62ea50$paramod$56955d0f36f77738c952d3505dc563df3ee11b94\_90_shift_ops_shr_shl_sshl_sshr for cells of type $shr.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000100000 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using extmapper simplemap for cells of type $not.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000110 for cells of type $lcu.
+Using extmapper simplemap for cells of type $logic_or.
+No more expansions possible.
+<suppressed ~1530 debug messages>
+
+5.21. Executing OPT pass (performing simple optimizations).
+
+5.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.
+<suppressed ~155 debug messages>
+Optimizing module astra_tmr_subsystem.
+
+5.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000'.
+Finding identical cells in module `$paramod\replica_core\WIDTH=s32'00000000000000000000000000100000'.
+<suppressed ~324 debug messages>
+Finding identical cells in module `\astra_tmr_subsystem'.
+Removed a total of 108 cells.
+
+5.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module \astra_tmr_subsystem..
+Removed 46 unused cells and 239 unused wires.
+<suppressed ~49 debug messages>
+
+5.21.5. Finished fast OPT passes.
+
+5.22. Executing ABC pass (technology mapping using ABC).
+
+5.22.1. Extracting gate netlist of module `$paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000' to `<abc-temp-dir>/input.blif'..
+Extracted 351 gates and 447 wires to a netlist network with 96 inputs and 33 outputs.
+
+5.22.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+5.22.1.2. Re-integrating ABC results.
+ABC RESULTS:               XOR cells:       96
+ABC RESULTS:               AND cells:       96
+ABC RESULTS:                OR cells:      159
+ABC RESULTS:        internal signals:      318
+ABC RESULTS:           input signals:       96
+ABC RESULTS:          output signals:       33
+Removing temp directory.
+
+5.22.2. Extracting gate netlist of module `$paramod\replica_core\WIDTH=s32'00000000000000000000000000100000' to `<abc-temp-dir>/input.blif'..
+Extracted 1096 gates and 1164 wires to a netlist network with 67 inputs and 32 outputs.
+
+5.22.2.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+5.22.2.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       17
+ABC RESULTS:             ORNOT cells:       21
+ABC RESULTS:              XNOR cells:       35
+ABC RESULTS:               XOR cells:       32
+ABC RESULTS:               NOT cells:       45
+ABC RESULTS:               NOR cells:       59
+ABC RESULTS:              NAND cells:       78
+ABC RESULTS:            ANDNOT cells:      324
+ABC RESULTS:                OR cells:      224
+ABC RESULTS:               MUX cells:      290
+ABC RESULTS:        internal signals:     1065
+ABC RESULTS:           input signals:       67
+ABC RESULTS:          output signals:       32
+Removing temp directory.
+
+5.22.3. Extracting gate netlist of module `\astra_tmr_subsystem' to `<abc-temp-dir>/input.blif'..
+Extracted 285 gates and 509 wires to a netlist network with 224 inputs and 99 outputs.
+
+5.22.3.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+5.22.3.2. Re-integrating ABC results.
+ABC RESULTS:              XNOR cells:       96
+ABC RESULTS:               XOR cells:       96
+ABC RESULTS:                OR cells:       93
+ABC RESULTS:               NOT cells:      128
+ABC RESULTS:        internal signals:      186
+ABC RESULTS:           input signals:      224
+ABC RESULTS:          output signals:       99
+Removing temp directory.
+
+5.23. Executing OPT pass (performing simple optimizations).
+
+5.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000.
+Optimizing module astra_tmr_subsystem.
+
+5.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `$paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000'.
+Finding identical cells in module `$paramod\replica_core\WIDTH=s32'00000000000000000000000000100000'.
+Finding identical cells in module `\astra_tmr_subsystem'.
+Removed a total of 0 cells.
+
+5.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000..
+Finding unused cells or wires in module \astra_tmr_subsystem..
+Removed 0 unused cells and 796 unused wires.
+<suppressed ~3 debug messages>
+
+5.23.5. Finished fast OPT passes.
+
+5.24. Executing HIERARCHY pass (managing design hierarchy).
+
+5.24.1. Analyzing design hierarchy..
+Top module:  \astra_tmr_subsystem
+Used module:     $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000
+Used module:     $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000
+
+5.24.2. Analyzing design hierarchy..
+Top module:  \astra_tmr_subsystem
+Used module:     $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000
+Used module:     $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000
+Removed 0 unused modules.
+
+5.25. Printing statistics.
+
+=== $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000 ===
+
+   Number of wires:                323
+   Number of wire bits:            447
+   Number of public wires:           5
+   Number of public wire bits:     129
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                351
+     $_AND_                         96
+     $_OR_                         159
+     $_XOR_                         96
+
+=== $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000 ===
+
+   Number of wires:               1097
+   Number of wire bits:           1192
+   Number of public wires:           4
+   Number of public wire bits:      99
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1125
+     $_ANDNOT_                     324
+     $_AND_                         17
+     $_MUX_                        290
+     $_NAND_                        78
+     $_NOR_                         59
+     $_NOT_                         45
+     $_ORNOT_                       21
+     $_OR_                         224
+     $_XNOR_                        35
+     $_XOR_                         32
+
+=== astra_tmr_subsystem ===
+
+   Number of wires:                331
+   Number of wire bits:            705
+   Number of public wires:          17
+   Number of public wire bits:     391
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                417
+     $_NOT_                        128
+     $_OR_                          93
+     $_XNOR_                        96
+     $_XOR_                         96
+     $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000      1
+     $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000      3
+
+=== design hierarchy ===
+
+   astra_tmr_subsystem               1
+     $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000      1
+     $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000      3
+
+   Number of wires:               3945
+   Number of wire bits:           4728
+   Number of public wires:          34
+   Number of public wire bits:     817
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               4139
+     $_ANDNOT_                     972
+     $_AND_                        147
+     $_MUX_                        870
+     $_NAND_                       234
+     $_NOR_                        177
+     $_NOT_                        263
+     $_ORNOT_                       63
+     $_OR_                         924
+     $_XNOR_                       201
+     $_XOR_                        288
+
+5.26. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000...
+Checking module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000...
+Checking module astra_tmr_subsystem...
+Found and reported 0 problems.
+
+6. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000...
+Checking module $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000...
+Checking module astra_tmr_subsystem...
+Found and reported 0 problems.
+
+7. Printing statistics.
+
+=== $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000 ===
+
+   Number of wires:                323
+   Number of wire bits:            447
+   Number of public wires:           5
+   Number of public wire bits:     129
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                351
+     $_AND_                         96
+     $_OR_                         159
+     $_XOR_                         96
+
+=== $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000 ===
+
+   Number of wires:               1097
+   Number of wire bits:           1192
+   Number of public wires:           4
+   Number of public wire bits:      99
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               1125
+     $_ANDNOT_                     324
+     $_AND_                         17
+     $_MUX_                        290
+     $_NAND_                        78
+     $_NOR_                         59
+     $_NOT_                         45
+     $_ORNOT_                       21
+     $_OR_                         224
+     $_XNOR_                        35
+     $_XOR_                         32
+
+=== astra_tmr_subsystem ===
+
+   Number of wires:                331
+   Number of wire bits:            705
+   Number of public wires:          17
+   Number of public wire bits:     391
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                417
+     $_NOT_                        128
+     $_OR_                          93
+     $_XNOR_                        96
+     $_XOR_                         96
+     $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000      1
+     $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000      3
+
+=== design hierarchy ===
+
+   astra_tmr_subsystem               1
+     $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000      1
+     $paramod\replica_core\WIDTH=s32'00000000000000000000000000100000      3
+
+   Number of wires:               3945
+   Number of wire bits:           4728
+   Number of public wires:          34
+   Number of public wire bits:     817
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               4139
+     $_ANDNOT_                     972
+     $_AND_                        147
+     $_MUX_                        870
+     $_NAND_                       234
+     $_NOR_                        177
+     $_NOT_                        263
+     $_ORNOT_                       63
+     $_OR_                         924
+     $_XNOR_                       201
+     $_XOR_                        288
+
+8. Executing JSON backend.
+
+9. Executing Verilog backend.
+
+9.1. Executing BMUXMAP pass.
+
+9.2. Executing DEMUXMAP pass.
+Dumping module `$paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000'.
+Dumping module `$paramod\replica_core\WIDTH=s32'00000000000000000000000000100000'.
+Dumping module `\astra_tmr_subsystem'.
+
+End of script. Logfile hash: 5198d3ae2b, CPU: user 0.67s system 0.03s, MEM: 22.09 MB peak
+Yosys 0.33 (git sha1 2584903a060)
+Time spent: 23% 1x abc (0 sec), 19% 21x opt_expr (0 sec), ...

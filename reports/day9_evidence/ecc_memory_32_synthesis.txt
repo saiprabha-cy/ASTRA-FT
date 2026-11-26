@@ -1,0 +1,1755 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.33 (git sha1 2584903a060)
+
+
+-- Running command `
+        read_verilog -sv rtl/ecc/secded_encoder_32.sv rtl/ecc/secded_decoder_32.sv rtl/memory/ecc_memory_32.sv
+        hierarchy -check -top ecc_memory_32
+        synth -top ecc_memory_32
+        check
+        stat
+        write_json reports/synthesis/ecc_memory_32_synth.json
+        write_verilog reports/synthesis/ecc_memory_32_synth.v
+    ' --
+
+1. Executing Verilog-2005 frontend: rtl/ecc/secded_encoder_32.sv
+Parsing SystemVerilog input from `rtl/ecc/secded_encoder_32.sv' to AST representation.
+Generating RTLIL representation for module `\secded_encoder_32'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: rtl/ecc/secded_decoder_32.sv
+Parsing SystemVerilog input from `rtl/ecc/secded_decoder_32.sv' to AST representation.
+Generating RTLIL representation for module `\secded_decoder_32'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: rtl/memory/ecc_memory_32.sv
+Parsing SystemVerilog input from `rtl/memory/ecc_memory_32.sv' to AST representation.
+Generating RTLIL representation for module `\ecc_memory_32'.
+Successfully finished Verilog frontend.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1. Analyzing design hierarchy..
+Top module:  \ecc_memory_32
+Used module:     \secded_decoder_32
+Used module:     \secded_encoder_32
+
+4.2. Analyzing design hierarchy..
+Top module:  \ecc_memory_32
+Used module:     \secded_decoder_32
+Used module:     \secded_encoder_32
+Removed 0 unused modules.
+
+5. Executing SYNTH pass.
+
+5.1. Executing HIERARCHY pass (managing design hierarchy).
+
+5.1.1. Analyzing design hierarchy..
+Top module:  \ecc_memory_32
+Used module:     \secded_decoder_32
+Used module:     \secded_encoder_32
+
+5.1.2. Analyzing design hierarchy..
+Top module:  \ecc_memory_32
+Used module:     \secded_decoder_32
+Used module:     \secded_encoder_32
+Removed 0 unused modules.
+
+5.2. Executing PROC pass (convert processes to netlists).
+
+5.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 240 empty switches in `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+Found and cleaned up 266 empty switches in `\secded_encoder_32.$proc$rtl/ecc/secded_encoder_32.sv:0$6'.
+Cleaned up 506 empty switches.
+
+5.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 4 switch rules as full_case in process $proc$rtl/memory/ecc_memory_32.sv:109$1034 in module ecc_memory_32.
+Marked 1 switch rules as full_case in process $proc$rtl/memory/ecc_memory_32.sv:81$1032 in module ecc_memory_32.
+Marked 36 switch rules as full_case in process $proc$rtl/ecc/secded_decoder_32.sv:0$309 in module secded_decoder_32.
+Removed a total of 0 dead cases.
+
+5.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 507 assignments to connections.
+
+5.2.4. Executing PROC_INIT pass (extract init attributes).
+
+5.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+5.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~42 debug messages>
+
+5.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ecc_memory_32.$proc$rtl/memory/ecc_memory_32.sv:109$1034'.
+     1/27: $4$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1071
+     2/27: $4$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_DATA[38:0]$1070
+     3/27: $4$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_ADDR[3:0]$1069
+     4/27: $3$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1065
+     5/27: $3$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_DATA[38:0]$1064
+     6/27: $3$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_ADDR[3:0]$1063
+     7/27: $3$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1068
+     8/27: $3$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_DATA[38:0]$1067
+     9/27: $3$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_ADDR[3:0]$1066
+    10/27: $2$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1056
+    11/27: $2$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_DATA[38:0]$1055
+    12/27: $2$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_ADDR[3:0]$1054
+    13/27: $2$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1062
+    14/27: $2$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_DATA[38:0]$1061
+    15/27: $2$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_ADDR[3:0]$1060
+    16/27: $2$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1059
+    17/27: $2$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_DATA[38:0]$1058
+    18/27: $2$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_ADDR[3:0]$1057
+    19/27: $1$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1053
+    20/27: $1$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_DATA[38:0]$1052
+    21/27: $1$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_ADDR[3:0]$1051
+    22/27: $1$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1050
+    23/27: $1$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_DATA[38:0]$1049
+    24/27: $1$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_ADDR[3:0]$1048
+    25/27: $1$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1047
+    26/27: $1$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_DATA[38:0]$1046
+    27/27: $1$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_ADDR[3:0]$1045
+Creating decoders for process `\ecc_memory_32.$proc$rtl/memory/ecc_memory_32.sv:81$1032'.
+     1/5: $0\read_uncorrectable_error[0:0]
+     2/5: $0\read_error_corrected[0:0]
+     3/5: $0\read_error_detected[0:0]
+     4/5: $0\read_data_valid[0:0]
+     5/5: $0\read_data[31:0]
+Creating decoders for process `\ecc_memory_32.$proc$rtl/memory/ecc_memory_32.sv:0$1030'.
+Creating decoders for process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+     1/183: $32\data_index[31:0]
+     2/183: $32\corrected_data[31:0]
+     3/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$307[31:0]$1012
+     4/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$306[31:0]$1011
+     5/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$308[31:0]$1013
+     6/183: $31\data_index[31:0]
+     7/183: $31\corrected_data[31:0]
+     8/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$304[31:0]$998
+     9/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$303[31:0]$997
+    10/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$305[31:0]$999
+    11/183: $30\data_index[31:0]
+    12/183: $30\corrected_data[31:0]
+    13/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$301[31:0]$984
+    14/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$300[31:0]$983
+    15/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$302[31:0]$985
+    16/183: $29\data_index[31:0]
+    17/183: $29\corrected_data[31:0]
+    18/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$298[31:0]$970
+    19/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$297[31:0]$969
+    20/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$299[31:0]$971
+    21/183: $28\data_index[31:0]
+    22/183: $28\corrected_data[31:0]
+    23/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$295[31:0]$956
+    24/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$294[31:0]$955
+    25/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$296[31:0]$957
+    26/183: $27\data_index[31:0]
+    27/183: $27\corrected_data[31:0]
+    28/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$292[31:0]$942
+    29/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$291[31:0]$941
+    30/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$293[31:0]$943
+    31/183: $26\data_index[31:0]
+    32/183: $26\corrected_data[31:0]
+    33/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$289[31:0]$928
+    34/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$288[31:0]$927
+    35/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$290[31:0]$929
+    36/183: $25\data_index[31:0]
+    37/183: $25\corrected_data[31:0]
+    38/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$286[31:0]$914
+    39/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$285[31:0]$913
+    40/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$287[31:0]$915
+    41/183: $24\data_index[31:0]
+    42/183: $24\corrected_data[31:0]
+    43/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$283[31:0]$900
+    44/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$282[31:0]$899
+    45/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$284[31:0]$901
+    46/183: $23\data_index[31:0]
+    47/183: $23\corrected_data[31:0]
+    48/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$280[31:0]$886
+    49/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$279[31:0]$885
+    50/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$281[31:0]$887
+    51/183: $22\data_index[31:0]
+    52/183: $22\corrected_data[31:0]
+    53/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$277[31:0]$872
+    54/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$276[31:0]$871
+    55/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$278[31:0]$873
+    56/183: $21\data_index[31:0]
+    57/183: $21\corrected_data[31:0]
+    58/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$274[31:0]$858
+    59/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$273[31:0]$857
+    60/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$275[31:0]$859
+    61/183: $20\data_index[31:0]
+    62/183: $20\corrected_data[31:0]
+    63/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$271[31:0]$844
+    64/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$270[31:0]$843
+    65/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$272[31:0]$845
+    66/183: $19\data_index[31:0]
+    67/183: $19\corrected_data[31:0]
+    68/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$268[31:0]$830
+    69/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$267[31:0]$829
+    70/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$269[31:0]$831
+    71/183: $18\data_index[31:0]
+    72/183: $18\corrected_data[31:0]
+    73/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$265[31:0]$816
+    74/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$264[31:0]$815
+    75/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$266[31:0]$817
+    76/183: $17\data_index[31:0]
+    77/183: $17\corrected_data[31:0]
+    78/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$262[31:0]$802
+    79/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$261[31:0]$801
+    80/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$263[31:0]$803
+    81/183: $16\data_index[31:0]
+    82/183: $16\corrected_data[31:0]
+    83/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$259[31:0]$788
+    84/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$258[31:0]$787
+    85/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$260[31:0]$789
+    86/183: $15\data_index[31:0]
+    87/183: $15\corrected_data[31:0]
+    88/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$256[31:0]$774
+    89/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$255[31:0]$773
+    90/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$257[31:0]$775
+    91/183: $14\data_index[31:0]
+    92/183: $14\corrected_data[31:0]
+    93/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$253[31:0]$760
+    94/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$252[31:0]$759
+    95/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$254[31:0]$761
+    96/183: $13\data_index[31:0]
+    97/183: $13\corrected_data[31:0]
+    98/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$250[31:0]$746
+    99/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$249[31:0]$745
+   100/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$251[31:0]$747
+   101/183: $12\data_index[31:0]
+   102/183: $12\corrected_data[31:0]
+   103/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$247[31:0]$732
+   104/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$246[31:0]$731
+   105/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$248[31:0]$733
+   106/183: $11\data_index[31:0]
+   107/183: $11\corrected_data[31:0]
+   108/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$244[31:0]$718
+   109/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$243[31:0]$717
+   110/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$245[31:0]$719
+   111/183: $10\data_index[31:0]
+   112/183: $10\corrected_data[31:0]
+   113/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$241[31:0]$704
+   114/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$240[31:0]$703
+   115/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$242[31:0]$705
+   116/183: $9\data_index[31:0]
+   117/183: $9\corrected_data[31:0]
+   118/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$238[31:0]$690
+   119/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$237[31:0]$689
+   120/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$239[31:0]$691
+   121/183: $8\data_index[31:0]
+   122/183: $8\corrected_data[31:0]
+   123/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$235[31:0]$676
+   124/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$234[31:0]$675
+   125/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$236[31:0]$677
+   126/183: $7\data_index[31:0]
+   127/183: $7\corrected_data[31:0]
+   128/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$232[31:0]$662
+   129/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$231[31:0]$661
+   130/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$233[31:0]$663
+   131/183: $6\data_index[31:0]
+   132/183: $6\corrected_data[31:0]
+   133/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$229[31:0]$648
+   134/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$228[31:0]$647
+   135/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$230[31:0]$649
+   136/183: $5\data_index[31:0]
+   137/183: $5\corrected_data[31:0]
+   138/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$226[31:0]$634
+   139/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$225[31:0]$633
+   140/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$227[31:0]$635
+   141/183: $4\data_index[31:0]
+   142/183: $4\corrected_data[31:0]
+   143/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$223[31:0]$620
+   144/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$222[31:0]$619
+   145/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$224[31:0]$621
+   146/183: $3\data_index[31:0]
+   147/183: $3\corrected_data[31:0]
+   148/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$220[31:0]$606
+   149/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$219[31:0]$605
+   150/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$221[31:0]$607
+   151/183: $2\data_index[31:0]
+   152/183: $2\corrected_data[31:0]
+   153/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$217[31:0]$592
+   154/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$216[31:0]$591
+   155/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$218[31:0]$593
+   156/183: $1\data_index[31:0]
+   157/183: $1\corrected_data[31:0]
+   158/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$214[31:0]$578
+   159/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$213[31:0]$577
+   160/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$215[31:0]$579
+   161/183: $4\uncorrectable_error[0:0]
+   162/183: $4\error_corrected[0:0]
+   163/183: $3\error_detected[0:0]
+   164/183: $3\uncorrectable_error[0:0]
+   165/183: $3\error_corrected[0:0]
+   166/183: $3\corrected_codeword[37:0]
+   167/183: $3$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:145$211[37:0]$557
+   168/183: $3$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:145$210[37:0]$556
+   169/183: $3$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:145$212[5:0]$558
+   170/183: $2$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:145$212[5:0]$554
+   171/183: $2$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:145$211[37:0]$553
+   172/183: $2$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:145$210[37:0]$552
+   173/183: $2\corrected_codeword[37:0]
+   174/183: $2\uncorrectable_error[0:0]
+   175/183: $2\error_corrected[0:0]
+   176/183: $2\error_detected[0:0]
+   177/183: $1\uncorrectable_error[0:0]
+   178/183: $1\error_corrected[0:0]
+   179/183: $1\error_detected[0:0]
+   180/183: $1$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:145$212[5:0]$548
+   181/183: $1$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:145$211[37:0]$547
+   182/183: $1$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:145$210[37:0]$546
+   183/183: $1\corrected_codeword[37:0]
+Creating decoders for process `\secded_encoder_32.$proc$rtl/ecc/secded_encoder_32.sv:0$6'.
+
+5.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\ecc_memory_32.\scrub_codeword' from process `\ecc_memory_32.$proc$rtl/memory/ecc_memory_32.sv:0$1030'.
+No latch inferred for signal `\secded_decoder_32.\hamming_codeword' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.\data_index' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.\code_position' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.\parity_position' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.\overall_parity' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.\corrected_data' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.\syndrome' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.\error_detected' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.\error_corrected' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.\uncorrectable_error' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.\corrected_codeword' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.\syndrome_value' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.\parity_check' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:145$210' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:145$211' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:145$212' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$213' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$214' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$215' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$216' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$217' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$218' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$219' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$220' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$221' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$222' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$223' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$224' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$225' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$226' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$227' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$228' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$229' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$230' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$231' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$232' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$233' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$234' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$235' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$236' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$237' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$238' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$239' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$240' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$241' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$242' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$243' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$244' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$245' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$246' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$247' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$248' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$249' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$250' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$251' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$252' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$253' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$254' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$255' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$256' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$257' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$258' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$259' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$260' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$261' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$262' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$263' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$264' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$265' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$266' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$267' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$268' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$269' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$270' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$271' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$272' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$273' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$274' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$275' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$276' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$277' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$278' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$279' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$280' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$281' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$282' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$283' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$284' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$285' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$286' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$287' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$288' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$289' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$290' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$291' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$292' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$293' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$294' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$295' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$296' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$297' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$298' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$299' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$300' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$301' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$302' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$303' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$304' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$305' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$mask$rtl/ecc/secded_decoder_32.sv:204$306' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$data$rtl/ecc/secded_decoder_32.sv:204$307' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_decoder_32.$bitselwrite$sel$rtl/ecc/secded_decoder_32.sv:204$308' from process `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+No latch inferred for signal `\secded_encoder_32.\encoded_data' from process `\secded_encoder_32.$proc$rtl/ecc/secded_encoder_32.sv:0$6'.
+No latch inferred for signal `\secded_encoder_32.\hamming_codeword' from process `\secded_encoder_32.$proc$rtl/ecc/secded_encoder_32.sv:0$6'.
+No latch inferred for signal `\secded_encoder_32.\data_index' from process `\secded_encoder_32.$proc$rtl/ecc/secded_encoder_32.sv:0$6'.
+No latch inferred for signal `\secded_encoder_32.\code_position' from process `\secded_encoder_32.$proc$rtl/ecc/secded_encoder_32.sv:0$6'.
+No latch inferred for signal `\secded_encoder_32.\parity_position' from process `\secded_encoder_32.$proc$rtl/ecc/secded_encoder_32.sv:0$6'.
+No latch inferred for signal `\secded_encoder_32.\overall_parity' from process `\secded_encoder_32.$proc$rtl/ecc/secded_encoder_32.sv:0$6'.
+
+5.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\ecc_memory_32.$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_ADDR' using process `\ecc_memory_32.$proc$rtl/memory/ecc_memory_32.sv:109$1034'.
+  created $dff cell `$procdff$1573' with positive edge clock.
+Creating register for signal `\ecc_memory_32.$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_DATA' using process `\ecc_memory_32.$proc$rtl/memory/ecc_memory_32.sv:109$1034'.
+  created $dff cell `$procdff$1574' with positive edge clock.
+Creating register for signal `\ecc_memory_32.$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN' using process `\ecc_memory_32.$proc$rtl/memory/ecc_memory_32.sv:109$1034'.
+  created $dff cell `$procdff$1575' with positive edge clock.
+Creating register for signal `\ecc_memory_32.$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_ADDR' using process `\ecc_memory_32.$proc$rtl/memory/ecc_memory_32.sv:109$1034'.
+  created $dff cell `$procdff$1576' with positive edge clock.
+Creating register for signal `\ecc_memory_32.$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_DATA' using process `\ecc_memory_32.$proc$rtl/memory/ecc_memory_32.sv:109$1034'.
+  created $dff cell `$procdff$1577' with positive edge clock.
+Creating register for signal `\ecc_memory_32.$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN' using process `\ecc_memory_32.$proc$rtl/memory/ecc_memory_32.sv:109$1034'.
+  created $dff cell `$procdff$1578' with positive edge clock.
+Creating register for signal `\ecc_memory_32.$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_ADDR' using process `\ecc_memory_32.$proc$rtl/memory/ecc_memory_32.sv:109$1034'.
+  created $dff cell `$procdff$1579' with positive edge clock.
+Creating register for signal `\ecc_memory_32.$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_DATA' using process `\ecc_memory_32.$proc$rtl/memory/ecc_memory_32.sv:109$1034'.
+  created $dff cell `$procdff$1580' with positive edge clock.
+Creating register for signal `\ecc_memory_32.$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN' using process `\ecc_memory_32.$proc$rtl/memory/ecc_memory_32.sv:109$1034'.
+  created $dff cell `$procdff$1581' with positive edge clock.
+Creating register for signal `\ecc_memory_32.\read_data' using process `\ecc_memory_32.$proc$rtl/memory/ecc_memory_32.sv:81$1032'.
+  created $dff cell `$procdff$1582' with positive edge clock.
+Creating register for signal `\ecc_memory_32.\read_data_valid' using process `\ecc_memory_32.$proc$rtl/memory/ecc_memory_32.sv:81$1032'.
+  created $dff cell `$procdff$1583' with positive edge clock.
+Creating register for signal `\ecc_memory_32.\read_error_detected' using process `\ecc_memory_32.$proc$rtl/memory/ecc_memory_32.sv:81$1032'.
+  created $dff cell `$procdff$1584' with positive edge clock.
+Creating register for signal `\ecc_memory_32.\read_error_corrected' using process `\ecc_memory_32.$proc$rtl/memory/ecc_memory_32.sv:81$1032'.
+  created $dff cell `$procdff$1585' with positive edge clock.
+Creating register for signal `\ecc_memory_32.\read_uncorrectable_error' using process `\ecc_memory_32.$proc$rtl/memory/ecc_memory_32.sv:81$1032'.
+  created $dff cell `$procdff$1586' with positive edge clock.
+
+5.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+5.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 4 empty switches in `\ecc_memory_32.$proc$rtl/memory/ecc_memory_32.sv:109$1034'.
+Removing empty process `ecc_memory_32.$proc$rtl/memory/ecc_memory_32.sv:109$1034'.
+Found and cleaned up 2 empty switches in `\ecc_memory_32.$proc$rtl/memory/ecc_memory_32.sv:81$1032'.
+Removing empty process `ecc_memory_32.$proc$rtl/memory/ecc_memory_32.sv:81$1032'.
+Removing empty process `ecc_memory_32.$proc$rtl/memory/ecc_memory_32.sv:0$1030'.
+Found and cleaned up 36 empty switches in `\secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+Removing empty process `secded_decoder_32.$proc$rtl/ecc/secded_decoder_32.sv:0$309'.
+Removing empty process `secded_encoder_32.$proc$rtl/ecc/secded_encoder_32.sv:0$6'.
+Cleaned up 42 empty switches.
+
+5.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ecc_memory_32.
+<suppressed ~28 debug messages>
+Optimizing module secded_decoder_32.
+<suppressed ~334 debug messages>
+Optimizing module secded_encoder_32.
+<suppressed ~77 debug messages>
+
+5.3. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ecc_memory_32.
+Optimizing module secded_decoder_32.
+Optimizing module secded_encoder_32.
+
+5.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ecc_memory_32..
+Finding unused cells or wires in module \secded_decoder_32..
+Finding unused cells or wires in module \secded_encoder_32..
+Removed 28 unused cells and 1275 unused wires.
+<suppressed ~32 debug messages>
+
+5.5. Executing CHECK pass (checking for obvious problems).
+Checking module ecc_memory_32...
+Checking module secded_decoder_32...
+Checking module secded_encoder_32...
+Found and reported 0 problems.
+
+5.6. Executing OPT pass (performing simple optimizations).
+
+5.6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ecc_memory_32.
+Optimizing module secded_decoder_32.
+Optimizing module secded_encoder_32.
+
+5.6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ecc_memory_32'.
+Finding identical cells in module `\secded_decoder_32'.
+<suppressed ~9 debug messages>
+Finding identical cells in module `\secded_encoder_32'.
+Removed a total of 3 cells.
+
+5.6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ecc_memory_32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$1079.
+    dead port 1/2 on $mux $procmux$1082.
+    dead port 1/2 on $mux $procmux$1084.
+    dead port 1/2 on $mux $procmux$1091.
+    dead port 1/2 on $mux $procmux$1094.
+    dead port 1/2 on $mux $procmux$1096.
+    dead port 1/2 on $mux $procmux$1103.
+    dead port 1/2 on $mux $procmux$1106.
+    dead port 1/2 on $mux $procmux$1108.
+    dead port 1/2 on $mux $procmux$1115.
+    dead port 1/2 on $mux $procmux$1117.
+    dead port 1/2 on $mux $procmux$1124.
+    dead port 1/2 on $mux $procmux$1126.
+    dead port 1/2 on $mux $procmux$1133.
+    dead port 1/2 on $mux $procmux$1135.
+    dead port 1/2 on $mux $procmux$1142.
+    dead port 1/2 on $mux $procmux$1144.
+    dead port 1/2 on $mux $procmux$1151.
+    dead port 1/2 on $mux $procmux$1153.
+    dead port 1/2 on $mux $procmux$1160.
+    dead port 1/2 on $mux $procmux$1162.
+    dead port 1/2 on $mux $procmux$1168.
+    dead port 1/2 on $mux $procmux$1174.
+    dead port 1/2 on $mux $procmux$1180.
+    dead port 1/2 on $mux $procmux$1186.
+    dead port 1/2 on $mux $procmux$1192.
+    dead port 1/2 on $mux $procmux$1198.
+    dead port 1/2 on $mux $procmux$1204.
+    dead port 1/2 on $mux $procmux$1210.
+    dead port 1/2 on $mux $procmux$1216.
+Running muxtree optimizer on module \secded_decoder_32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $procmux$1434.
+    dead port 1/2 on $mux $procmux$1437.
+    dead port 1/2 on $mux $procmux$1443.
+    dead port 1/2 on $mux $procmux$1446.
+    dead port 1/2 on $mux $procmux$1451.
+    dead port 1/2 on $mux $procmux$1454.
+    dead port 2/2 on $mux $procmux$1460.
+    dead port 1/2 on $mux $procmux$1463.
+    dead port 2/2 on $mux $procmux$1469.
+    dead port 1/2 on $mux $procmux$1472.
+    dead port 2/2 on $mux $procmux$1478.
+    dead port 1/2 on $mux $procmux$1481.
+    dead port 1/2 on $mux $procmux$1532.
+    dead port 1/2 on $mux $procmux$1538.
+    dead port 1/2 on $mux $procmux$1544.
+    dead port 1/2 on $mux $procmux$1550.
+Running muxtree optimizer on module \secded_encoder_32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 46 multiplexer ports.
+<suppressed ~18 debug messages>
+
+5.6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ecc_memory_32.
+    Consolidated identical input bits for $mux cell $procmux$1166:
+      Old ports: A=39'000000000000000000000000000000000000000, B=39'111111111111111111111111111111111111111, Y=$procmux$1166_Y
+      New ports: A=1'0, B=1'1, Y=$procmux$1166_Y [0]
+      New connections: $procmux$1166_Y [38:1] = { $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] $procmux$1166_Y [0] }
+    Consolidated identical input bits for $mux cell $procmux$1112:
+      Old ports: A=39'000000000000000000000000000000000000000, B=39'111111111111111111111111111111111111111, Y=$procmux$1112_Y
+      New ports: A=1'0, B=1'1, Y=$procmux$1112_Y [0]
+      New connections: $procmux$1112_Y [38:1] = { $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] $procmux$1112_Y [0] }
+    Consolidated identical input bits for $mux cell $procmux$1076:
+      Old ports: A=39'000000000000000000000000000000000000000, B=39'111111111111111111111111111111111111111, Y=$procmux$1076_Y
+      New ports: A=1'0, B=1'1, Y=$procmux$1076_Y [0]
+      New connections: $procmux$1076_Y [38:1] = { $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] $procmux$1076_Y [0] }
+  Optimizing cells in module \ecc_memory_32.
+    Consolidated identical input bits for $mux cell $procmux$1139:
+      Old ports: A=$4$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1071, B=39'000000000000000000000000000000000000000, Y=$procmux$1139_Y
+      New ports: A=$procmux$1076_Y [0], B=1'0, Y=$procmux$1139_Y [0]
+      New connections: $procmux$1139_Y [38:1] = { $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] $procmux$1139_Y [0] }
+    Consolidated identical input bits for $mux cell $procmux$1202:
+      Old ports: A=$3$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1065, B=39'000000000000000000000000000000000000000, Y=$procmux$1202_Y
+      New ports: A=$procmux$1112_Y [0], B=1'0, Y=$procmux$1202_Y [0]
+      New connections: $procmux$1202_Y [38:1] = { $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] $procmux$1202_Y [0] }
+    Consolidated identical input bits for $mux cell $procmux$1237:
+      Old ports: A=$2$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1056, B=39'000000000000000000000000000000000000000, Y=$0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037
+      New ports: A=$procmux$1166_Y [0], B=1'0, Y=$0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0]
+      New connections: $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [38:1] = { $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:115$1025_EN[38:0]$1037 [0] }
+  Optimizing cells in module \ecc_memory_32.
+    Consolidated identical input bits for $mux cell $procmux$1184:
+      Old ports: A=$3$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1068, B=39'000000000000000000000000000000000000000, Y=$procmux$1184_Y
+      New ports: A=$procmux$1139_Y [0], B=1'0, Y=$procmux$1184_Y [0]
+      New connections: $procmux$1184_Y [38:1] = { $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] $procmux$1184_Y [0] }
+    Consolidated identical input bits for $mux cell $procmux$1228:
+      Old ports: A=$2$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1059, B=39'000000000000000000000000000000000000000, Y=$0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040
+      New ports: A=$procmux$1202_Y [0], B=1'0, Y=$0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0]
+      New connections: $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [38:1] = { $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [0] }
+  Optimizing cells in module \ecc_memory_32.
+    Consolidated identical input bits for $mux cell $procmux$1219:
+      Old ports: A=$2$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1062, B=39'000000000000000000000000000000000000000, Y=$0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043
+      New ports: A=$procmux$1184_Y [0], B=1'0, Y=$0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0]
+      New connections: $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [38:1] = { $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [0] }
+  Optimizing cells in module \ecc_memory_32.
+  Optimizing cells in module \secded_decoder_32.
+  Optimizing cells in module \secded_decoder_32.
+  Optimizing cells in module \secded_encoder_32.
+Performed a total of 10 changes.
+
+5.6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ecc_memory_32'.
+Finding identical cells in module `\secded_decoder_32'.
+Finding identical cells in module `\secded_encoder_32'.
+Removed a total of 0 cells.
+
+5.6.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.6.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ecc_memory_32..
+Finding unused cells or wires in module \secded_decoder_32..
+Finding unused cells or wires in module \secded_encoder_32..
+Removed 0 unused cells and 50 unused wires.
+<suppressed ~2 debug messages>
+
+5.6.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ecc_memory_32.
+Optimizing module secded_decoder_32.
+Optimizing module secded_encoder_32.
+
+5.6.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.6.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ecc_memory_32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \secded_decoder_32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \secded_encoder_32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~18 debug messages>
+
+5.6.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ecc_memory_32.
+  Optimizing cells in module \secded_decoder_32.
+  Optimizing cells in module \secded_encoder_32.
+Performed a total of 0 changes.
+
+5.6.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ecc_memory_32'.
+Finding identical cells in module `\secded_decoder_32'.
+Finding identical cells in module `\secded_encoder_32'.
+Removed a total of 0 cells.
+
+5.6.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.6.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ecc_memory_32..
+Finding unused cells or wires in module \secded_decoder_32..
+Finding unused cells or wires in module \secded_encoder_32..
+
+5.6.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ecc_memory_32.
+Optimizing module secded_decoder_32.
+Optimizing module secded_encoder_32.
+
+5.6.16. Finished OPT passes. (There is nothing left to do.)
+
+5.7. Executing FSM pass (extract and optimize FSM).
+
+5.7.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+5.7.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+5.7.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+5.7.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ecc_memory_32..
+Finding unused cells or wires in module \secded_decoder_32..
+Finding unused cells or wires in module \secded_encoder_32..
+
+5.7.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+5.7.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+5.7.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+5.7.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+5.8. Executing OPT pass (performing simple optimizations).
+
+5.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ecc_memory_32.
+Optimizing module secded_decoder_32.
+Optimizing module secded_encoder_32.
+
+5.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ecc_memory_32'.
+Finding identical cells in module `\secded_decoder_32'.
+Finding identical cells in module `\secded_encoder_32'.
+Removed a total of 0 cells.
+
+5.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ecc_memory_32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \secded_decoder_32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \secded_encoder_32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~18 debug messages>
+
+5.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ecc_memory_32.
+  Optimizing cells in module \secded_decoder_32.
+  Optimizing cells in module \secded_encoder_32.
+Performed a total of 0 changes.
+
+5.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ecc_memory_32'.
+Finding identical cells in module `\secded_decoder_32'.
+Finding identical cells in module `\secded_encoder_32'.
+Removed a total of 0 cells.
+
+5.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$1586 ($dff) from module ecc_memory_32 (D = $procmux$1245_Y, Q = \read_uncorrectable_error, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$1590 ($sdff) from module ecc_memory_32 (D = \user_uncorrectable_error, Q = \read_uncorrectable_error).
+Adding SRST signal on $procdff$1585 ($dff) from module ecc_memory_32 (D = $procmux$1250_Y, Q = \read_error_corrected, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$1592 ($sdff) from module ecc_memory_32 (D = \user_error_corrected, Q = \read_error_corrected).
+Adding SRST signal on $procdff$1584 ($dff) from module ecc_memory_32 (D = $procmux$1255_Y, Q = \read_error_detected, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$1594 ($sdff) from module ecc_memory_32 (D = \user_error_detected, Q = \read_error_detected).
+Adding SRST signal on $procdff$1583 ($dff) from module ecc_memory_32 (D = $procmux$1260_Y, Q = \read_data_valid, rval = 1'0).
+Adding EN signal on $auto$ff.cc:266:slice$1596 ($sdff) from module ecc_memory_32 (D = $logic_not$rtl/memory/ecc_memory_32.sv:102$1033_Y, Q = \read_data_valid).
+Adding SRST signal on $procdff$1582 ($dff) from module ecc_memory_32 (D = $procmux$1265_Y, Q = \read_data, rval = 0).
+Adding EN signal on $auto$ff.cc:266:slice$1598 ($sdff) from module ecc_memory_32 (D = \user_corrected_data, Q = \read_data).
+
+5.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ecc_memory_32..
+Finding unused cells or wires in module \secded_decoder_32..
+Finding unused cells or wires in module \secded_encoder_32..
+Removed 10 unused cells and 10 unused wires.
+<suppressed ~11 debug messages>
+
+5.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ecc_memory_32.
+Optimizing module secded_decoder_32.
+Optimizing module secded_encoder_32.
+
+5.8.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.8.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ecc_memory_32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \secded_decoder_32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \secded_encoder_32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~13 debug messages>
+
+5.8.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ecc_memory_32.
+  Optimizing cells in module \secded_decoder_32.
+  Optimizing cells in module \secded_encoder_32.
+Performed a total of 0 changes.
+
+5.8.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ecc_memory_32'.
+Finding identical cells in module `\secded_decoder_32'.
+Finding identical cells in module `\secded_encoder_32'.
+Removed a total of 0 cells.
+
+5.8.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.8.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ecc_memory_32..
+Finding unused cells or wires in module \secded_decoder_32..
+Finding unused cells or wires in module \secded_encoder_32..
+
+5.8.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ecc_memory_32.
+Optimizing module secded_decoder_32.
+Optimizing module secded_encoder_32.
+
+5.8.16. Finished OPT passes. (There is nothing left to do.)
+
+5.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 26 bits (of 32) from port B of cell secded_decoder_32.$le$rtl/ecc/secded_decoder_32.sv:143$555 ($le).
+Removed top 25 bits (of 32) from port A of cell secded_decoder_32.$sub$rtl/ecc/secded_decoder_32.sv:0$559 ($sub).
+Removed top 30 bits (of 32) from port B of cell secded_decoder_32.$sub$rtl/ecc/secded_decoder_32.sv:0$559 ($sub).
+Converting cell secded_decoder_32.$sub$rtl/ecc/secded_decoder_32.sv:0$559 ($sub) from signed to unsigned.
+Removed top 24 bits (of 32) from port Y of cell secded_decoder_32.$sub$rtl/ecc/secded_decoder_32.sv:0$559 ($sub).
+Removed top 1 bits (of 7) from port A of cell secded_decoder_32.$sub$rtl/ecc/secded_decoder_32.sv:0$559 ($sub).
+Removed top 1 bits (of 2) from port B of cell secded_decoder_32.$sub$rtl/ecc/secded_decoder_32.sv:0$559 ($sub).
+Removed top 1 bits (of 8) from port Y of cell secded_decoder_32.$sub$rtl/ecc/secded_decoder_32.sv:0$559 ($sub).
+Removed top 25 bits (of 32) from port A of cell secded_decoder_32.$neg$rtl/ecc/secded_decoder_32.sv:0$560 ($neg).
+Removed top 31 bits (of 32) from port B of cell secded_decoder_32.$auto$genrtlil.cc:1563:genRTLIL$562 ($sub).
+Removed top 25 bits (of 32) from port Y of cell secded_decoder_32.$auto$genrtlil.cc:1563:genRTLIL$562 ($sub).
+Removed top 25 bits (of 32) from port B of cell secded_decoder_32.$shiftx$rtl/ecc/secded_decoder_32.sv:0$564 ($shiftx).
+Removed top 37 bits (of 38) from port A of cell secded_decoder_32.$not$rtl/ecc/secded_decoder_32.sv:146$566 ($not).
+Removed top 37 bits (of 38) from port Y of cell secded_decoder_32.$not$rtl/ecc/secded_decoder_32.sv:146$566 ($not).
+Removed top 31 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$603 ($or).
+Removed top 30 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$603 ($or).
+Removed top 30 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$603 ($or).
+Removed top 30 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$617 ($or).
+Removed top 29 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$617 ($or).
+Removed top 29 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$617 ($or).
+Removed top 29 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$631 ($or).
+Removed top 28 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$631 ($or).
+Removed top 28 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$631 ($or).
+Removed top 28 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$645 ($or).
+Removed top 27 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$645 ($or).
+Removed top 27 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$645 ($or).
+Removed top 27 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$659 ($or).
+Removed top 26 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$659 ($or).
+Removed top 26 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$659 ($or).
+Removed top 26 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$673 ($or).
+Removed top 25 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$673 ($or).
+Removed top 25 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$673 ($or).
+Removed top 25 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$687 ($or).
+Removed top 24 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$687 ($or).
+Removed top 24 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$687 ($or).
+Removed top 24 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$701 ($or).
+Removed top 23 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$701 ($or).
+Removed top 23 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$701 ($or).
+Removed top 23 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$715 ($or).
+Removed top 22 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$715 ($or).
+Removed top 22 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$715 ($or).
+Removed top 22 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$729 ($or).
+Removed top 21 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$729 ($or).
+Removed top 21 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$729 ($or).
+Removed top 21 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$743 ($or).
+Removed top 20 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$743 ($or).
+Removed top 20 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$743 ($or).
+Removed top 20 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$757 ($or).
+Removed top 19 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$757 ($or).
+Removed top 19 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$757 ($or).
+Removed top 19 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$771 ($or).
+Removed top 18 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$771 ($or).
+Removed top 18 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$771 ($or).
+Removed top 18 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$785 ($or).
+Removed top 17 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$785 ($or).
+Removed top 17 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$785 ($or).
+Removed top 17 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$799 ($or).
+Removed top 16 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$799 ($or).
+Removed top 16 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$799 ($or).
+Removed top 16 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$813 ($or).
+Removed top 15 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$813 ($or).
+Removed top 15 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$813 ($or).
+Removed top 15 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$827 ($or).
+Removed top 14 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$827 ($or).
+Removed top 14 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$827 ($or).
+Removed top 14 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$841 ($or).
+Removed top 13 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$841 ($or).
+Removed top 13 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$841 ($or).
+Removed top 13 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$855 ($or).
+Removed top 12 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$855 ($or).
+Removed top 12 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$855 ($or).
+Removed top 12 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$869 ($or).
+Removed top 11 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$869 ($or).
+Removed top 11 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$869 ($or).
+Removed top 11 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$883 ($or).
+Removed top 10 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$883 ($or).
+Removed top 10 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$883 ($or).
+Removed top 10 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$897 ($or).
+Removed top 9 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$897 ($or).
+Removed top 9 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$897 ($or).
+Removed top 9 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$911 ($or).
+Removed top 8 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$911 ($or).
+Removed top 8 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$911 ($or).
+Removed top 8 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$925 ($or).
+Removed top 7 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$925 ($or).
+Removed top 7 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$925 ($or).
+Removed top 7 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$939 ($or).
+Removed top 6 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$939 ($or).
+Removed top 6 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$939 ($or).
+Removed top 6 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$953 ($or).
+Removed top 5 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$953 ($or).
+Removed top 5 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$953 ($or).
+Removed top 5 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$967 ($or).
+Removed top 4 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$967 ($or).
+Removed top 4 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$967 ($or).
+Removed top 4 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$981 ($or).
+Removed top 3 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$981 ($or).
+Removed top 3 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$981 ($or).
+Removed top 3 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$995 ($or).
+Removed top 2 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$995 ($or).
+Removed top 2 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$995 ($or).
+Removed top 2 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$1009 ($or).
+Removed top 1 bits (of 32) from port B of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$1009 ($or).
+Removed top 1 bits (of 32) from port Y of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$1009 ($or).
+Removed top 1 bits (of 32) from port A of cell secded_decoder_32.$or$rtl/ecc/secded_decoder_32.sv:0$1023 ($or).
+Removed top 22 bits (of 32) from wire secded_decoder_32.$10\corrected_data[31:0].
+Removed top 21 bits (of 32) from wire secded_decoder_32.$11\corrected_data[31:0].
+Removed top 18 bits (of 32) from wire secded_decoder_32.$14\corrected_data[31:0].
+Removed top 14 bits (of 32) from wire secded_decoder_32.$18\corrected_data[31:0].
+Removed top 11 bits (of 32) from wire secded_decoder_32.$21\corrected_data[31:0].
+Removed top 30 bits (of 32) from wire secded_decoder_32.$2\corrected_data[31:0].
+Removed top 29 bits (of 32) from wire secded_decoder_32.$3\corrected_data[31:0].
+Removed top 28 bits (of 32) from wire secded_decoder_32.$4\corrected_data[31:0].
+Removed top 37 bits (of 38) from wire secded_decoder_32.$and$rtl/ecc/secded_decoder_32.sv:0$567_Y.
+Removed top 37 bits (of 38) from wire secded_decoder_32.$extend$rtl/ecc/secded_decoder_32.sv:146$565_Y.
+
+5.10. Executing PEEPOPT pass (run peephole optimizers).
+
+5.11. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ecc_memory_32..
+Finding unused cells or wires in module \secded_decoder_32..
+Finding unused cells or wires in module \secded_encoder_32..
+Removed 0 unused cells and 11 unused wires.
+<suppressed ~1 debug messages>
+
+5.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module ecc_memory_32:
+  created 0 $alu and 0 $macc cells.
+Extracting $alu and $macc cells in module secded_decoder_32:
+  creating $macc model for $auto$genrtlil.cc:1563:genRTLIL$562 ($sub).
+  creating $macc model for $neg$rtl/ecc/secded_decoder_32.sv:0$560 ($neg).
+  creating $macc model for $sub$rtl/ecc/secded_decoder_32.sv:0$559 ($sub).
+  creating $alu model for $macc $sub$rtl/ecc/secded_decoder_32.sv:0$559.
+  creating $alu model for $macc $auto$genrtlil.cc:1563:genRTLIL$562.
+  creating $macc cell for $neg$rtl/ecc/secded_decoder_32.sv:0$560: $auto$alumacc.cc:365:replace_macc$1610
+  creating $alu model for $le$rtl/ecc/secded_decoder_32.sv:143$555 ($le): new $alu
+  creating $alu cell for $le$rtl/ecc/secded_decoder_32.sv:143$555: $auto$alumacc.cc:485:replace_alu$1612
+  creating $alu cell for $auto$genrtlil.cc:1563:genRTLIL$562: $auto$alumacc.cc:485:replace_alu$1625
+  creating $alu cell for $sub$rtl/ecc/secded_decoder_32.sv:0$559: $auto$alumacc.cc:485:replace_alu$1628
+  created 3 $alu and 1 $macc cells.
+Extracting $alu and $macc cells in module secded_encoder_32:
+  created 0 $alu and 0 $macc cells.
+
+5.13. Executing SHARE pass (SAT-based resource sharing).
+
+5.14. Executing OPT pass (performing simple optimizations).
+
+5.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ecc_memory_32.
+Optimizing module secded_decoder_32.
+Optimizing module secded_encoder_32.
+
+5.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ecc_memory_32'.
+Finding identical cells in module `\secded_decoder_32'.
+<suppressed ~5 debug messages>
+Finding identical cells in module `\secded_encoder_32'.
+Removed a total of 1 cells.
+
+5.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ecc_memory_32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \secded_decoder_32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \secded_encoder_32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~13 debug messages>
+
+5.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ecc_memory_32.
+  Optimizing cells in module \secded_decoder_32.
+  Optimizing cells in module \secded_encoder_32.
+Performed a total of 0 changes.
+
+5.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ecc_memory_32'.
+Finding identical cells in module `\secded_decoder_32'.
+Finding identical cells in module `\secded_encoder_32'.
+Removed a total of 0 cells.
+
+5.14.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ecc_memory_32..
+Finding unused cells or wires in module \secded_decoder_32..
+Finding unused cells or wires in module \secded_encoder_32..
+Removed 0 unused cells and 4 unused wires.
+<suppressed ~1 debug messages>
+
+5.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ecc_memory_32.
+Optimizing module secded_decoder_32.
+Optimizing module secded_encoder_32.
+
+5.14.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.14.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ecc_memory_32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \secded_decoder_32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \secded_encoder_32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~13 debug messages>
+
+5.14.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ecc_memory_32.
+  Optimizing cells in module \secded_decoder_32.
+  Optimizing cells in module \secded_encoder_32.
+Performed a total of 0 changes.
+
+5.14.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ecc_memory_32'.
+Finding identical cells in module `\secded_decoder_32'.
+Finding identical cells in module `\secded_encoder_32'.
+Removed a total of 0 cells.
+
+5.14.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.14.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ecc_memory_32..
+Finding unused cells or wires in module \secded_decoder_32..
+Finding unused cells or wires in module \secded_encoder_32..
+
+5.14.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ecc_memory_32.
+Optimizing module secded_decoder_32.
+Optimizing module secded_encoder_32.
+
+5.14.16. Finished OPT passes. (There is nothing left to do.)
+
+5.15. Executing MEMORY pass.
+
+5.15.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+5.15.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+5.15.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+  Analyzing ecc_memory_32.memory write port 0.
+  Analyzing ecc_memory_32.memory write port 1.
+  Analyzing ecc_memory_32.memory write port 2.
+
+5.15.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+5.15.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+Checking read port `\memory'[0] in module `\ecc_memory_32': no output FF found.
+Checking read port `\memory'[1] in module `\ecc_memory_32': no output FF found.
+Checking read port `\memory'[2] in module `\ecc_memory_32': no output FF found.
+Checking read port address `\memory'[0] in module `\ecc_memory_32': no address FF found.
+Checking read port address `\memory'[1] in module `\ecc_memory_32': no address FF found.
+Checking read port address `\memory'[2] in module `\ecc_memory_32': no address FF found.
+
+5.15.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ecc_memory_32..
+Finding unused cells or wires in module \secded_decoder_32..
+Finding unused cells or wires in module \secded_encoder_32..
+
+5.15.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+Consolidating read ports of memory ecc_memory_32.memory by address:
+Consolidating write ports of memory ecc_memory_32.memory by address:
+Consolidating write ports of memory ecc_memory_32.memory using sat-based resource sharing:
+  Checking group clocked with posedge \clk, width 39: ports 0, 1, 2.
+  Common input cone for all EN signals: 9 cells.
+  Size of unconstrained SAT problem: 63 variables, 155 clauses
+  Merging port 1 into port 0.
+  Merging port 2 into port 0.
+
+5.15.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+5.15.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ecc_memory_32..
+Finding unused cells or wires in module \secded_decoder_32..
+Finding unused cells or wires in module \secded_encoder_32..
+
+5.15.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+5.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ecc_memory_32..
+Finding unused cells or wires in module \secded_decoder_32..
+Finding unused cells or wires in module \secded_encoder_32..
+
+5.17. Executing OPT pass (performing simple optimizations).
+
+5.17.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ecc_memory_32.
+<suppressed ~23 debug messages>
+Optimizing module secded_decoder_32.
+<suppressed ~5 debug messages>
+Optimizing module secded_encoder_32.
+
+5.17.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ecc_memory_32'.
+Finding identical cells in module `\secded_decoder_32'.
+Finding identical cells in module `\secded_encoder_32'.
+Removed a total of 0 cells.
+
+5.17.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.17.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ecc_memory_32..
+Finding unused cells or wires in module \secded_decoder_32..
+Finding unused cells or wires in module \secded_encoder_32..
+Removed 0 unused cells and 25 unused wires.
+<suppressed ~2 debug messages>
+
+5.17.5. Finished fast OPT passes.
+
+5.18. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory \memory in module \ecc_memory_32:
+  created 16 $dff cells and 0 static cells of width 39.
+  read interface: 0 $dff and 45 $mux cells.
+  write interface: 16 write mux blocks.
+
+5.19. Executing OPT pass (performing simple optimizations).
+
+5.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ecc_memory_32.
+<suppressed ~8 debug messages>
+Optimizing module secded_decoder_32.
+Optimizing module secded_encoder_32.
+
+5.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ecc_memory_32'.
+Finding identical cells in module `\secded_decoder_32'.
+Finding identical cells in module `\secded_encoder_32'.
+Removed a total of 0 cells.
+
+5.19.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ecc_memory_32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+      Replacing known input bits on port B of cell $auto$memory_share.cc:453:consolidate_wr_using_sat$1652: $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:127$1027_EN[38:0]$1043 [38] -> 1'1
+      Replacing known input bits on port B of cell $auto$memory_share.cc:453:consolidate_wr_using_sat$1644: $0$memwr$\memory$rtl/memory/ecc_memory_32.sv:121$1026_EN[38:0]$1040 [38] -> 1'1
+  Analyzing evaluation results.
+Running muxtree optimizer on module \secded_decoder_32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \secded_encoder_32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~27 debug messages>
+
+5.19.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ecc_memory_32.
+  Optimizing cells in module \secded_decoder_32.
+  Optimizing cells in module \secded_encoder_32.
+Performed a total of 0 changes.
+
+5.19.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ecc_memory_32'.
+Finding identical cells in module `\secded_decoder_32'.
+Finding identical cells in module `\secded_encoder_32'.
+Removed a total of 0 cells.
+
+5.19.6. Executing OPT_SHARE pass.
+
+5.19.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.19.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ecc_memory_32..
+Finding unused cells or wires in module \secded_decoder_32..
+Finding unused cells or wires in module \secded_encoder_32..
+Removed 0 unused cells and 65 unused wires.
+<suppressed ~1 debug messages>
+
+5.19.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ecc_memory_32.
+<suppressed ~2 debug messages>
+Optimizing module secded_decoder_32.
+Optimizing module secded_encoder_32.
+
+5.19.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.19.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ecc_memory_32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \secded_decoder_32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \secded_encoder_32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~27 debug messages>
+
+5.19.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ecc_memory_32.
+  Optimizing cells in module \secded_decoder_32.
+  Optimizing cells in module \secded_encoder_32.
+Performed a total of 0 changes.
+
+5.19.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ecc_memory_32'.
+Finding identical cells in module `\secded_decoder_32'.
+Finding identical cells in module `\secded_encoder_32'.
+Removed a total of 0 cells.
+
+5.19.14. Executing OPT_SHARE pass.
+
+5.19.15. Executing OPT_DFF pass (perform DFF optimizations).
+Adding EN signal on $memory\memory[9]$1671 ($dff) from module ecc_memory_32 (D = $auto$rtlil.cc:2498:Mux$1650, Q = \memory[9]).
+Adding EN signal on $memory\memory[8]$1669 ($dff) from module ecc_memory_32 (D = $auto$rtlil.cc:2498:Mux$1650, Q = \memory[8]).
+Adding EN signal on $memory\memory[7]$1667 ($dff) from module ecc_memory_32 (D = $auto$rtlil.cc:2498:Mux$1650, Q = \memory[7]).
+Adding EN signal on $memory\memory[6]$1665 ($dff) from module ecc_memory_32 (D = $auto$rtlil.cc:2498:Mux$1650, Q = \memory[6]).
+Adding EN signal on $memory\memory[5]$1663 ($dff) from module ecc_memory_32 (D = $auto$rtlil.cc:2498:Mux$1650, Q = \memory[5]).
+Adding EN signal on $memory\memory[4]$1661 ($dff) from module ecc_memory_32 (D = $auto$rtlil.cc:2498:Mux$1650, Q = \memory[4]).
+Adding EN signal on $memory\memory[3]$1659 ($dff) from module ecc_memory_32 (D = $auto$rtlil.cc:2498:Mux$1650, Q = \memory[3]).
+Adding EN signal on $memory\memory[2]$1657 ($dff) from module ecc_memory_32 (D = $auto$rtlil.cc:2498:Mux$1650, Q = \memory[2]).
+Adding EN signal on $memory\memory[1]$1655 ($dff) from module ecc_memory_32 (D = $auto$rtlil.cc:2498:Mux$1650, Q = \memory[1]).
+Adding EN signal on $memory\memory[15]$1683 ($dff) from module ecc_memory_32 (D = $auto$rtlil.cc:2498:Mux$1650, Q = \memory[15]).
+Adding EN signal on $memory\memory[14]$1681 ($dff) from module ecc_memory_32 (D = $auto$rtlil.cc:2498:Mux$1650, Q = \memory[14]).
+Adding EN signal on $memory\memory[13]$1679 ($dff) from module ecc_memory_32 (D = $auto$rtlil.cc:2498:Mux$1650, Q = \memory[13]).
+Adding EN signal on $memory\memory[12]$1677 ($dff) from module ecc_memory_32 (D = $auto$rtlil.cc:2498:Mux$1650, Q = \memory[12]).
+Adding EN signal on $memory\memory[11]$1675 ($dff) from module ecc_memory_32 (D = $auto$rtlil.cc:2498:Mux$1650, Q = \memory[11]).
+Adding EN signal on $memory\memory[10]$1673 ($dff) from module ecc_memory_32 (D = $auto$rtlil.cc:2498:Mux$1650, Q = \memory[10]).
+Adding EN signal on $memory\memory[0]$1653 ($dff) from module ecc_memory_32 (D = $auto$rtlil.cc:2498:Mux$1650, Q = \memory[0]).
+
+5.19.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ecc_memory_32..
+Finding unused cells or wires in module \secded_decoder_32..
+Finding unused cells or wires in module \secded_encoder_32..
+Removed 16 unused cells and 16 unused wires.
+<suppressed ~17 debug messages>
+
+5.19.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ecc_memory_32.
+Optimizing module secded_decoder_32.
+Optimizing module secded_encoder_32.
+
+5.19.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.19.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \ecc_memory_32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \secded_decoder_32..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \secded_encoder_32..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+<suppressed ~11 debug messages>
+
+5.19.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \ecc_memory_32.
+  Optimizing cells in module \secded_decoder_32.
+  Optimizing cells in module \secded_encoder_32.
+Performed a total of 0 changes.
+
+5.19.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ecc_memory_32'.
+Finding identical cells in module `\secded_decoder_32'.
+Finding identical cells in module `\secded_encoder_32'.
+Removed a total of 0 cells.
+
+5.19.22. Executing OPT_SHARE pass.
+
+5.19.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.19.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ecc_memory_32..
+Finding unused cells or wires in module \secded_decoder_32..
+Finding unused cells or wires in module \secded_encoder_32..
+
+5.19.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ecc_memory_32.
+Optimizing module secded_decoder_32.
+Optimizing module secded_encoder_32.
+
+5.19.26. Finished OPT passes. (There is nothing left to do.)
+
+5.20. Executing TECHMAP pass (map to technology primitives).
+
+5.20.1. Executing Verilog-2005 frontend: /usr/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+5.20.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $reduce_bool.
+Using template $paramod$ac45afa5bcd8e16ca475cce13f9d19bb109f1516\_90_alu for cells of type $alu.
+Using template $paramod$constmap:f2de6a2a0098b1eee72f6eeca70a2e1141f92389$paramod$9b38dbf5223d005f83e6a88c9ccaf01bacfaa87c\_90_shift_shiftx for cells of type $shift.
+Using template $paramod$constmap:579c86de24ddda33f8f9d05a8d3ba235734ed871$paramod$ec0759b4541758c98cd8d881b620bdfada126856\_90_shift_shiftx for cells of type $shiftx.
+Using extmapper maccmap for cells of type $macc.
+  sub { $auto$rtlil.cc:2446:Sub$563 [31] $auto$rtlil.cc:2446:Sub$563 [5:0] } (7 bits, signed)
+Analyzing pattern of constant bits for this cell:
+Creating constmapped module `$paramod$constmap:b4f9c4733c0030e644e2835911f010bf6499ed6b$paramod$9b38dbf5223d005f83e6a88c9ccaf01bacfaa87c\_90_shift_shiftx'.
+
+5.20.15. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module $paramod$constmap:b4f9c4733c0030e644e2835911f010bf6499ed6b$paramod$9b38dbf5223d005f83e6a88c9ccaf01bacfaa87c\_90_shift_shiftx..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 2/2 on $mux $procmux$2378.
+    dead port 2/2 on $mux $procmux$2372.
+    dead port 2/2 on $mux $procmux$2366.
+    dead port 2/2 on $mux $procmux$2360.
+    dead port 2/2 on $mux $procmux$2354.
+    dead port 2/2 on $mux $procmux$2348.
+    dead port 2/2 on $mux $procmux$2342.
+Removed 7 multiplexer ports.
+<suppressed ~754 debug messages>
+
+5.20.16. Executing OPT_EXPR pass (perform const folding).
+Optimizing module $paramod$constmap:b4f9c4733c0030e644e2835911f010bf6499ed6b$paramod$9b38dbf5223d005f83e6a88c9ccaf01bacfaa87c\_90_shift_shiftx.
+<suppressed ~26 debug messages>
+Removed 0 unused cells and 12 unused wires.
+Using template $paramod$constmap:b4f9c4733c0030e644e2835911f010bf6499ed6b$paramod$9b38dbf5223d005f83e6a88c9ccaf01bacfaa87c\_90_shift_shiftx for cells of type $shift.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $reduce_and.
+Using template $paramod$00298f3f8094950cb9a5ff2fda48d0d8bde8806c\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $ne.
+Using template $paramod$fbc7873bff55778c0b3173955b7e4bce1d9d6834\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000110 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000000111 for cells of type $lcu.
+Using template $paramod\_90_lcu\WIDTH=32'00000000000000000000000000100000 for cells of type $lcu.
+Using extmapper simplemap for cells of type $dffe.
+Using extmapper simplemap for cells of type $sdffe.
+No more expansions possible.
+<suppressed ~898 debug messages>
+
+5.21. Executing OPT pass (performing simple optimizations).
+
+5.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ecc_memory_32.
+Optimizing module secded_decoder_32.
+<suppressed ~3580 debug messages>
+Optimizing module secded_encoder_32.
+
+5.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ecc_memory_32'.
+Finding identical cells in module `\secded_decoder_32'.
+<suppressed ~357 debug messages>
+Finding identical cells in module `\secded_encoder_32'.
+Removed a total of 119 cells.
+
+5.21.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.21.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ecc_memory_32..
+Finding unused cells or wires in module \secded_decoder_32..
+Finding unused cells or wires in module \secded_encoder_32..
+Removed 857 unused cells and 380 unused wires.
+<suppressed ~858 debug messages>
+
+5.21.5. Finished fast OPT passes.
+
+5.22. Executing ABC pass (technology mapping using ABC).
+
+5.22.1. Extracting gate netlist of module `\ecc_memory_32' to `<abc-temp-dir>/input.blif'..
+Extracted 1933 gates and 2696 wires to a netlist network with 762 inputs and 134 outputs.
+
+5.22.1.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+5.22.1.2. Re-integrating ABC results.
+ABC RESULTS:             ORNOT cells:        2
+ABC RESULTS:               XOR cells:       39
+ABC RESULTS:               NOT cells:       18
+ABC RESULTS:               NOR cells:        1
+ABC RESULTS:               AND cells:        1
+ABC RESULTS:               MUX cells:     1849
+ABC RESULTS:                OR cells:       27
+ABC RESULTS:            ANDNOT cells:       18
+ABC RESULTS:        internal signals:     1800
+ABC RESULTS:           input signals:      762
+ABC RESULTS:          output signals:      134
+Removing temp directory.
+
+5.22.2. Extracting gate netlist of module `\secded_decoder_32' to `<abc-temp-dir>/input.blif'..
+Extracted 766 gates and 807 wires to a netlist network with 39 inputs and 41 outputs.
+
+5.22.2.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+5.22.2.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        2
+ABC RESULTS:               NOR cells:        3
+ABC RESULTS:               XOR cells:      135
+ABC RESULTS:              XNOR cells:       11
+ABC RESULTS:              NAND cells:        3
+ABC RESULTS:               NOT cells:       11
+ABC RESULTS:             ORNOT cells:       41
+ABC RESULTS:            ANDNOT cells:      156
+ABC RESULTS:                OR cells:      209
+ABC RESULTS:               MUX cells:      135
+ABC RESULTS:        internal signals:      727
+ABC RESULTS:           input signals:       39
+ABC RESULTS:          output signals:       41
+Removing temp directory.
+
+5.22.3. Extracting gate netlist of module `\secded_encoder_32' to `<abc-temp-dir>/input.blif'..
+Extracted 121 gates and 153 wires to a netlist network with 32 inputs and 7 outputs.
+
+5.22.3.1. Executing ABC.
+Running ABC command: "<yosys-exe-dir>/yosys-abc" -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+5.22.3.2. Re-integrating ABC results.
+ABC RESULTS:               NOT cells:        3
+ABC RESULTS:              XNOR cells:        7
+ABC RESULTS:               XOR cells:      114
+ABC RESULTS:        internal signals:      114
+ABC RESULTS:           input signals:       32
+ABC RESULTS:          output signals:        7
+Removing temp directory.
+
+5.23. Executing OPT pass (performing simple optimizations).
+
+5.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module ecc_memory_32.
+<suppressed ~858 debug messages>
+Optimizing module secded_decoder_32.
+<suppressed ~6 debug messages>
+Optimizing module secded_encoder_32.
+
+5.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\ecc_memory_32'.
+Finding identical cells in module `\secded_decoder_32'.
+<suppressed ~30 debug messages>
+Finding identical cells in module `\secded_encoder_32'.
+Removed a total of 10 cells.
+
+5.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+5.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \ecc_memory_32..
+Finding unused cells or wires in module \secded_decoder_32..
+Finding unused cells or wires in module \secded_encoder_32..
+Removed 5 unused cells and 1416 unused wires.
+<suppressed ~9 debug messages>
+
+5.23.5. Finished fast OPT passes.
+
+5.24. Executing HIERARCHY pass (managing design hierarchy).
+
+5.24.1. Analyzing design hierarchy..
+Top module:  \ecc_memory_32
+Used module:     \secded_encoder_32
+Used module:     \secded_decoder_32
+
+5.24.2. Analyzing design hierarchy..
+Top module:  \ecc_memory_32
+Used module:     \secded_encoder_32
+Used module:     \secded_decoder_32
+Removed 0 unused modules.
+
+5.25. Printing statistics.
+
+=== ecc_memory_32 ===
+
+   Number of wires:               1916
+   Number of wire bits:           2824
+   Number of public wires:          43
+   Number of public wire bits:     951
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2613
+     $_ANDNOT_                      18
+     $_AND_                          1
+     $_DFFE_PP_                    624
+     $_MUX_                       1849
+     $_NOR_                          1
+     $_NOT_                         14
+     $_ORNOT_                        2
+     $_OR_                          27
+     $_SDFFE_PP0P_                  36
+     $_XOR_                         39
+     secded_decoder_32               1
+     secded_encoder_32               1
+
+=== secded_decoder_32 ===
+
+   Number of wires:                667
+   Number of wire bits:            913
+   Number of public wires:          13
+   Number of public wire bits:     259
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                695
+     $_ANDNOT_                     155
+     $_AND_                          2
+     $_MUX_                        134
+     $_NAND_                         3
+     $_NOR_                          3
+     $_NOT_                         10
+     $_ORNOT_                       41
+     $_OR_                         205
+     $_XNOR_                        11
+     $_XOR_                        131
+
+=== secded_encoder_32 ===
+
+   Number of wires:                124
+   Number of wire bits:            323
+   Number of public wires:           7
+   Number of public wire bits:     206
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                124
+     $_NOT_                          3
+     $_XNOR_                         7
+     $_XOR_                        114
+
+=== design hierarchy ===
+
+   ecc_memory_32                     1
+     secded_decoder_32               1
+     secded_encoder_32               1
+
+   Number of wires:               2707
+   Number of wire bits:           4060
+   Number of public wires:          63
+   Number of public wire bits:    1416
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               3430
+     $_ANDNOT_                     173
+     $_AND_                          3
+     $_DFFE_PP_                    624
+     $_MUX_                       1983
+     $_NAND_                         3
+     $_NOR_                          4
+     $_NOT_                         27
+     $_ORNOT_                       43
+     $_OR_                         232
+     $_SDFFE_PP0P_                  36
+     $_XNOR_                        18
+     $_XOR_                        284
+
+5.26. Executing CHECK pass (checking for obvious problems).
+Checking module ecc_memory_32...
+Checking module secded_decoder_32...
+Checking module secded_encoder_32...
+Found and reported 0 problems.
+
+6. Executing CHECK pass (checking for obvious problems).
+Checking module ecc_memory_32...
+Checking module secded_decoder_32...
+Checking module secded_encoder_32...
+Found and reported 0 problems.
+
+7. Printing statistics.
+
+=== ecc_memory_32 ===
+
+   Number of wires:               1916
+   Number of wire bits:           2824
+   Number of public wires:          43
+   Number of public wire bits:     951
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               2613
+     $_ANDNOT_                      18
+     $_AND_                          1
+     $_DFFE_PP_                    624
+     $_MUX_                       1849
+     $_NOR_                          1
+     $_NOT_                         14
+     $_ORNOT_                        2
+     $_OR_                          27
+     $_SDFFE_PP0P_                  36
+     $_XOR_                         39
+     secded_decoder_32               1
+     secded_encoder_32               1
+
+=== secded_decoder_32 ===
+
+   Number of wires:                667
+   Number of wire bits:            913
+   Number of public wires:          13
+   Number of public wire bits:     259
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                695
+     $_ANDNOT_                     155
+     $_AND_                          2
+     $_MUX_                        134
+     $_NAND_                         3
+     $_NOR_                          3
+     $_NOT_                         10
+     $_ORNOT_                       41
+     $_OR_                         205
+     $_XNOR_                        11
+     $_XOR_                        131
+
+=== secded_encoder_32 ===
+
+   Number of wires:                124
+   Number of wire bits:            323
+   Number of public wires:           7
+   Number of public wire bits:     206
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                124
+     $_NOT_                          3
+     $_XNOR_                         7
+     $_XOR_                        114
+
+=== design hierarchy ===
+
+   ecc_memory_32                     1
+     secded_decoder_32               1
+     secded_encoder_32               1
+
+   Number of wires:               2707
+   Number of wire bits:           4060
+   Number of public wires:          63
+   Number of public wire bits:    1416
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               3430
+     $_ANDNOT_                     173
+     $_AND_                          3
+     $_DFFE_PP_                    624
+     $_MUX_                       1983
+     $_NAND_                         3
+     $_NOR_                          4
+     $_NOT_                         27
+     $_ORNOT_                       43
+     $_OR_                         232
+     $_SDFFE_PP0P_                  36
+     $_XNOR_                        18
+     $_XOR_                        284
+
+8. Executing JSON backend.
+
+9. Executing Verilog backend.
+
+9.1. Executing BMUXMAP pass.
+
+9.2. Executing DEMUXMAP pass.
+Dumping module `\ecc_memory_32'.
+Dumping module `\secded_decoder_32'.
+Dumping module `\secded_encoder_32'.
+
+End of script. Logfile hash: c884d2049c, CPU: user 2.06s system 0.06s, MEM: 33.62 MB peak
+Yosys 0.33 (git sha1 2584903a060)
+Time spent: 22% 29x opt_expr (0 sec), 13% 1x abc (0 sec), ...

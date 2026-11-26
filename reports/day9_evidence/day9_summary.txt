@@ -1,0 +1,81 @@
+ASTRA-FT DAY 9 FPGA MAPPING SUMMARY
+===================================
+Thu Nov 26 13:07:56 UTC 2026
+
+Generic cell counts:
+reports/synthesis/astra_ft_system_synthesis.txt:   Number of cells:               2613
+reports/synthesis/astra_ft_system_synthesis.txt:   Number of cells:                362
+reports/synthesis/astra_ft_system_synthesis.txt:   Number of cells:                513
+reports/synthesis/astra_ft_system_synthesis.txt:   Number of cells:                417
+reports/synthesis/astra_ft_system_synthesis.txt:   Number of cells:                351
+reports/synthesis/astra_ft_system_synthesis.txt:   Number of cells:               1125
+reports/synthesis/astra_ft_system_synthesis.txt:   Number of cells:                 36
+reports/synthesis/astra_ft_system_synthesis.txt:   Number of cells:                698
+reports/synthesis/astra_ft_system_synthesis.txt:   Number of cells:                124
+reports/synthesis/astra_ft_system_synthesis.txt:   Number of cells:               9299
+reports/synthesis/astra_ft_system_synthesis.txt:   Number of cells:               2613
+reports/synthesis/astra_ft_system_synthesis.txt:   Number of cells:                362
+reports/synthesis/astra_ft_system_synthesis.txt:   Number of cells:                513
+reports/synthesis/astra_ft_system_synthesis.txt:   Number of cells:                417
+reports/synthesis/astra_ft_system_synthesis.txt:   Number of cells:                351
+reports/synthesis/astra_ft_system_synthesis.txt:   Number of cells:               1125
+reports/synthesis/astra_ft_system_synthesis.txt:   Number of cells:                 36
+reports/synthesis/astra_ft_system_synthesis.txt:   Number of cells:                698
+reports/synthesis/astra_ft_system_synthesis.txt:   Number of cells:                124
+reports/synthesis/astra_ft_system_synthesis.txt:   Number of cells:               9299
+reports/synthesis/astra_tmr_subsystem_synthesis.txt:   Number of cells:                351
+reports/synthesis/astra_tmr_subsystem_synthesis.txt:   Number of cells:               1125
+reports/synthesis/astra_tmr_subsystem_synthesis.txt:   Number of cells:                417
+reports/synthesis/astra_tmr_subsystem_synthesis.txt:   Number of cells:               4139
+reports/synthesis/astra_tmr_subsystem_synthesis.txt:   Number of cells:                351
+reports/synthesis/astra_tmr_subsystem_synthesis.txt:   Number of cells:               1125
+reports/synthesis/astra_tmr_subsystem_synthesis.txt:   Number of cells:                417
+reports/synthesis/astra_tmr_subsystem_synthesis.txt:   Number of cells:               4139
+reports/synthesis/ecc_memory_32_synthesis.txt:   Number of cells:               2613
+reports/synthesis/ecc_memory_32_synthesis.txt:   Number of cells:                695
+reports/synthesis/ecc_memory_32_synthesis.txt:   Number of cells:                124
+reports/synthesis/ecc_memory_32_synthesis.txt:   Number of cells:               3430
+reports/synthesis/ecc_memory_32_synthesis.txt:   Number of cells:               2613
+reports/synthesis/ecc_memory_32_synthesis.txt:   Number of cells:                695
+reports/synthesis/ecc_memory_32_synthesis.txt:   Number of cells:                124
+reports/synthesis/ecc_memory_32_synthesis.txt:   Number of cells:               3430
+reports/synthesis/ecc_scrubber_32_synthesis.txt:   Number of cells:                363
+reports/synthesis/ecc_scrubber_32_synthesis.txt:   Number of cells:                699
+reports/synthesis/ecc_scrubber_32_synthesis.txt:   Number of cells:                124
+reports/synthesis/ecc_scrubber_32_synthesis.txt:   Number of cells:               1184
+reports/synthesis/ecc_scrubber_32_synthesis.txt:   Number of cells:                363
+reports/synthesis/ecc_scrubber_32_synthesis.txt:   Number of cells:                699
+reports/synthesis/ecc_scrubber_32_synthesis.txt:   Number of cells:                124
+reports/synthesis/ecc_scrubber_32_synthesis.txt:   Number of cells:               1184
+reports/synthesis/replica_core_synthesis.txt:   Number of cells:               1125
+reports/synthesis/replica_core_synthesis.txt:   Number of cells:               1125
+reports/synthesis/watchdog_recovery_fsm_synthesis.txt:   Number of cells:                514
+reports/synthesis/watchdog_recovery_fsm_synthesis.txt:   Number of cells:                514
+
+ECP5 mapping completion:
+3483:End of script. Logfile hash: 0546674016, CPU: user 7.50s system 0.13s, MEM: 107.81 MB peak
+
+ECP5 cell types:
+187:Generating RTLIL representation for module `\LUT4'.
+192:Generating RTLIL representation for module `\CCU2C'.
+194:Generating RTLIL representation for module `\PFUMX'.
+198:Generating RTLIL representation for module `\TRELLIS_FF'.
+202:Generating RTLIL representation for module `\DP16KD'.
+240:Generating RTLIL representation for module `\MULT18X18D'.
+312:Marked 1 switch rules as full_case in process $proc$/usr/bin/../share/yosys/ecp5/cells_sim.v:350$1471 in module TRELLIS_FF.
+331:Found init rule in `\TRELLIS_FF.$proc$/usr/bin/../share/yosys/ecp5/cells_sim.v:0$1472'.
+341:Creating decoders for process `\TRELLIS_FF.$proc$/usr/bin/../share/yosys/ecp5/cells_sim.v:0$1472'.
+342:Creating decoders for process `\TRELLIS_FF.$proc$/usr/bin/../share/yosys/ecp5/cells_sim.v:350$1471'.
+732:Creating register for signal `\TRELLIS_FF.\Q' using process `\TRELLIS_FF.$proc$/usr/bin/../share/yosys/ecp5/cells_sim.v:350$1471'.
+870:Removing empty process `TRELLIS_FF.$proc$/usr/bin/../share/yosys/ecp5/cells_sim.v:0$1472'.
+871:Found and cleaned up 2 empty switches in `\TRELLIS_FF.$proc$/usr/bin/../share/yosys/ecp5/cells_sim.v:350$1471'.
+872:Removing empty process `TRELLIS_FF.$proc$/usr/bin/../share/yosys/ecp5/cells_sim.v:350$1471'.
+1813:Generating RTLIL representation for module `\$__ECP5_DP16KD_'.
+3451:     CCU2C                         166
+3453:     LUT4                         2340
+3454:     PFUMX                         759
+3456:     TRELLIS_FF                    224
+3476:     CCU2C                         166
+3478:     LUT4                         2340
+3479:     PFUMX                         759
+3481:     TRELLIS_FF                    224
