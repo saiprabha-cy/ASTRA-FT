@@ -1,0 +1,1 @@
+/home/saipr/projects/ASTRA-FT/rtl/scrubber/ecc_scrubber_32.sv

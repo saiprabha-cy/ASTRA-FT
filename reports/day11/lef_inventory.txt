@@ -1,0 +1,2 @@
+asic/openlane/runs/RUN_2026-11-26_17-07-12/58-magic-writelef/astra_ft_system.lef
+asic/openlane/runs/RUN_2026-11-26_17-07-12/final/lef/astra_ft_system.lef

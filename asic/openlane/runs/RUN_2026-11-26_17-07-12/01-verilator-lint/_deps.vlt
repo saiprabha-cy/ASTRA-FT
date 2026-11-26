@@ -1,0 +1,5 @@
+`verilator_config
+lint_off -rule DECLFILENAME
+lint_off -rule EOFNEWLINE
+lint_off -rule UNDRIVEN -file "/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/tmp/6f1aef2839eb4c4491922eaa3af19156.bb.v"
+lint_off -rule UNUSEDSIGNAL -file "/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/tmp/6f1aef2839eb4c4491922eaa3af19156.bb.v"

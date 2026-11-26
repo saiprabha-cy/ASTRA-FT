@@ -1,0 +1,1 @@
+/home/saipr/projects/ASTRA-FT/rtl/ecc/secded_encoder_32.sv

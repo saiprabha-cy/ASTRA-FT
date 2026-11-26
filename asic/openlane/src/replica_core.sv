@@ -1,0 +1,1 @@
+/home/saipr/projects/ASTRA-FT/rtl/tmr/replica_core.sv

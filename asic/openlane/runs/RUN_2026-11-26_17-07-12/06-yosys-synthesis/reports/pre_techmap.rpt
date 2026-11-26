@@ -1,0 +1,46 @@
+144. Printing statistics.
+
+=== astra_ft_system ===
+
+   Number of wires:               6471
+   Number of wire bits:           7812
+   Number of public wires:          69
+   Number of public wire bits:    1270
+   Number of ports:                 43
+   Number of port bits:            562
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               7483
+     $_ANDNOT_                     938
+     $_AND_                         75
+     $_DFFE_PP_                    624
+     $_DFF_P_                        3
+     $_MUX_                       2439
+     $_NAND_                       214
+     $_NOR_                        240
+     $_NOT_                        683
+     $_ORNOT_                      129
+     $_OR_                         827
+     $_SDFFE_PP0N_                   4
+     $_SDFFE_PP0P_                 208
+     $_SDFF_PP0_                     9
+     $_XNOR_                       114
+     $_XOR_                        976
+
+   Area for cell type $_NOT_ is unknown!
+   Area for cell type $_AND_ is unknown!
+   Area for cell type $_NAND_ is unknown!
+   Area for cell type $_OR_ is unknown!
+   Area for cell type $_NOR_ is unknown!
+   Area for cell type $_XOR_ is unknown!
+   Area for cell type $_XNOR_ is unknown!
+   Area for cell type $_ANDNOT_ is unknown!
+   Area for cell type $_ORNOT_ is unknown!
+   Area for cell type $_MUX_ is unknown!
+   Area for cell type $_DFF_P_ is unknown!
+   Area for cell type $_DFFE_PP_ is unknown!
+   Area for cell type $_SDFF_PP0_ is unknown!
+   Area for cell type $_SDFFE_PP0N_ is unknown!
+   Area for cell type $_SDFFE_PP0P_ is unknown!
+

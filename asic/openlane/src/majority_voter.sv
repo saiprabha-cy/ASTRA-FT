@@ -1,0 +1,1 @@
+/home/saipr/projects/ASTRA-FT/rtl/tmr/majority_voter.sv

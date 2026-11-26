@@ -1,0 +1,6 @@
+asic/openlane/runs/RUN_2026-11-26_17-07-12/57-klayout-streamout/astra_ft_system.klayout.gds
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/astra_ft_system.gds
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/astra_ft_system.magic.gds
+asic/openlane/runs/RUN_2026-11-26_17-07-12/final/gds/astra_ft_system.gds
+asic/openlane/runs/RUN_2026-11-26_17-07-12/final/klayout_gds/astra_ft_system.klayout.gds
+asic/openlane/runs/RUN_2026-11-26_17-07-12/final/mag_gds/astra_ft_system.magic.gds

@@ -1,0 +1,1 @@
+/home/saipr/projects/ASTRA-FT/rtl/memory/ecc_memory_32.sv

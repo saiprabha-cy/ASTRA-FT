@@ -1,0 +1,49 @@
+
+===========================================================================
+Violator List
+============================================================================
+[setup in-out] operand_b[3] -> lane_b_mismatch : -3.442166
+[setup in-out] operand_b[1] -> lane_c_mismatch : -3.285267
+[setup in-out] operand_b[3] -> lane_a_mismatch : -2.811424
+[setup in-out] operand_b[3] -> tmr_voted_result[31] : -2.323921
+[setup in-out] operand_b[3] -> tmr_voted_result[30] : -2.071861
+[setup in-out] operand_b[3] -> tmr_voted_result[29] : -1.797258
+[setup in-out] operand_b[3] -> replica_b[31] : -1.680920
+[setup in-out] operand_b[3] -> replica_c[31] : -1.409369
+[setup in-out] operand_b[3] -> replica_a[31] : -1.247249
+[setup in-out] operand_b[3] -> replica_b[30] : -1.087438
+[setup in-out] operand_b[3] -> replica_c[30] : -1.086423
+[setup in-out] operand_b[3] -> replica_a[30] : -1.079844
+[setup in-out] operand_b[3] -> tmr_voted_result[28] : -0.914698
+[setup in-out] operand_b[3] -> replica_b[29] : -0.898712
+[setup in-out] operand_b[3] -> replica_c[29] : -0.784359
+[setup in-out] operand_b[3] -> replica_a[27] : -0.759744
+[setup in-out] operand_b[3] -> replica_c[27] : -0.690930
+[setup in-out] operand_b[3] -> replica_a[29] : -0.689129
+[setup in-out] operand_b[3] -> tmr_voted_result[27] : -0.650688
+[setup in-out] operand_b[3] -> tmr_voted_result[25] : -0.644718
+[setup in-out] operand_b[3] -> replica_a[28] : -0.642665
+[setup in-out] operand_b[3] -> tmr_voted_result[26] : -0.590733
+[setup in-out] operand_b[3] -> replica_c[28] : -0.543233
+[setup in-out] operand_b[3] -> replica_b[27] : -0.518192
+[setup in-out] operand_b[3] -> replica_b[28] : -0.433497
+[setup in-reg] operand_b[3] -> _9167_/D : -0.272042
+[setup in-reg] operand_b[3] -> _8894_/D : -0.269127
+[setup in-reg] operand_b[3] -> _9511_/D : -0.260361
+[setup in-reg] operand_b[3] -> _9472_/D : -0.251982
+[setup in-reg] operand_b[3] -> _9242_/D : -0.251491
+[setup in-reg] operand_b[3] -> _8813_/D : -0.246649
+[setup in-reg] operand_b[3] -> _8972_/D : -0.166111
+[setup in-reg] operand_b[3] -> _9359_/D : -0.163267
+[setup in-reg] operand_b[3] -> _9050_/D : -0.163263
+[setup in-reg] operand_b[3] -> _9011_/D : -0.162180
+[setup in-reg] operand_b[3] -> _9320_/D : -0.154236
+[setup in-reg] operand_b[3] -> _8933_/D : -0.153374
+[setup in-reg] operand_b[3] -> _9089_/D : -0.146771
+[setup in-reg] operand_b[3] -> _8852_/D : -0.133680
+[setup in-reg] operand_b[3] -> _9281_/D : -0.133134
+[setup in-reg] operand_b[3] -> _9128_/D : -0.129948
+[setup in-reg] operand_b[3] -> _9283_/D : -0.027926
+[setup in-reg] operand_b[3] -> _9130_/D : -0.020590
+[setup in-out] operand_b[3] -> replica_b[25] : -0.016939
+[setup in-reg] operand_b[3] -> _9052_/D : -0.013143

@@ -1,0 +1,28 @@
+{
+    "DESIGN_NAME": "astra_ft_system",
+
+    "VERILOG_FILES": [
+        "dir::src/replica_core.sv",
+        "dir::src/majority_voter.sv",
+        "dir::src/astra_tmr_subsystem.sv",
+        "dir::src/secded_encoder_32.sv",
+        "dir::src/secded_decoder_32.sv",
+        "dir::src/ecc_memory_32.sv",
+        "dir::src/ecc_scrubber_32.sv",
+        "dir::src/watchdog_recovery_fsm.sv",
+        "dir::src/astra_ft_system.sv"
+    ],
+
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 20,
+
+    "FP_CORE_UTIL": 30,
+
+    "PL_TARGET_DENSITY": 0.45,
+
+    "SYNTH_STRATEGY": "AREA 0",
+
+    "RUN_LINTER": true,
+
+    "RUN_EQY": false
+}
