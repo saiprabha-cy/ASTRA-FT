@@ -1,0 +1,60 @@
+===== DAY 2 VOTER FORMAL CHECKPOINT =====
+Fri Nov 27 17:05:22 UTC 2026
+
+===== SOLVER =====
+Z3 version 4.8.12 - 64 bit
+
+===== YOSYS PREPARATION =====
+=== design hierarchy ===
+
+   formal_voter                      1
+     $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000      1
+
+   Number of wires:                 48
+   Number of wire bits:            575
+   Number of public wires:          11
+   Number of public wire bits:     290
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 51
+     $and                            6
+     $anyconst                       3
+     $assert                         8
+     $eq                             7
+     $logic_and                      1
+     $logic_or                       4
+     $mux                           11
+     $ne                             6
+     $not                            1
+     $or                             4
+
+3.12. Executing CHECK pass (checking for obvious problems).
+Checking module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000...
+Checking module formal_voter...
+Found and reported 0 problems.
+
+4. Executing SMT2 backend.
+
+4.1. Executing BMUXMAP pass.
+
+4.2. Executing DEMUXMAP pass.
+Creating SMT-LIBv2 representation of module $paramod\majority_voter\WIDTH=s32'00000000000000000000000000100000.
+Creating SMT-LIBv2 representation of module formal_voter.
+
+End of script. Logfile hash: ae9fdf20ec, CPU: user 0.22s system 0.01s, MEM: 11.35 MB peak
+Yosys 0.33 (git sha1 2584903a060)
+Time spent: 23% 6x opt_expr (0 sec), 21% 5x opt_clean (0 sec), ...
+
+===== FORMAL PROOF =====
+##   0:00:00  Solver: z3
+##   0:00:00  Checking assertions in step 0..
+##   0:00:00  Status: PASSED
+
+===== FORMAL FILES =====
+   165584      4 -rw-r--r--   1 saipr    saipr        1634 Nov 27 17:02 formal/day2/voter/formal_voter.sv
+   165586     24 -rw-r--r--   1 saipr    saipr       20870 Nov 27 17:03 formal/day2/voter/voter.smt2
+
+===== GIT STATUS =====
+?? formal/
+?? reports/advanced/day2/voter_checkpoint.txt

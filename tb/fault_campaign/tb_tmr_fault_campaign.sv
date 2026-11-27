@@ -2,67 +2,62 @@
 
 module tb_tmr_fault_campaign;
 
-    // ---------------------------------------------------------
-    // DUT inputs
-    // ---------------------------------------------------------
-    reg  [2:0]  opcode;
-    reg  [31:0] operand_a;
-    reg  [31:0] operand_b;
+    localparam integer WIDTH = 32;
 
-    reg  [31:0] fault_mask_a;
-    reg  [31:0] fault_mask_b;
-    reg  [31:0] fault_mask_c;
+    logic [2:0] opcode;
+    logic [WIDTH-1:0] operand_a;
+    logic [WIDTH-1:0] operand_b;
 
-    // ---------------------------------------------------------
-    // DUT outputs
-    // ---------------------------------------------------------
-    wire [31:0] replica_a;
-    wire [31:0] replica_b;
-    wire [31:0] replica_c;
+    logic [WIDTH-1:0] fault_mask_a;
+    logic [WIDTH-1:0] fault_mask_b;
+    logic [WIDTH-1:0] fault_mask_c;
 
-    wire [31:0] voted_output;
-    wire        mismatch_detected;
+    wire [WIDTH-1:0] replica_a;
+    wire [WIDTH-1:0] replica_b;
+    wire [WIDTH-1:0] replica_c;
 
+    wire [WIDTH-1:0] voted_output;
+
+    wire mismatch_detected;
     wire lane_a_mismatch;
     wire lane_b_mismatch;
     wire lane_c_mismatch;
 
-    // ---------------------------------------------------------
-    // Test accounting
-    // ---------------------------------------------------------
-    integer total_tests;
-    integer passed_tests;
-    integer failed_tests;
+    integer single_bit_tests;
+    integer single_bit_passes;
 
-    integer exhaustive_tests;
-    integer random_single_lane_tests;
-    integer double_lane_tests;
+    integer random_tests;
+    integer random_passes;
+
+    integer two_lane_tests;
+    integer two_lane_passes;
+
     integer common_mode_tests;
+    integer common_mode_passes;
 
-    integer double_lane_correct;
-    integer double_lane_incorrect;
-    integer double_lane_detected;
-    integer double_lane_undetected;
+    integer total_tests;
+    integer total_passes;
+    integer total_failures;
 
-    integer opcode_index;
+    integer op;
     integer bit_index;
-    integer lane_index;
-    integer random_index;
+    integer lane;
+    integer i;
 
+    reg [31:0] rng_state;
+    reg [31:0] random_mask_a;
+    reg [31:0] random_mask_b;
+    reg [31:0] random_mask_c;
     reg [31:0] expected_result;
-    reg [31:0] random_mask;
+    reg [31:0] expected_majority;
 
-    reg [31:0] saved_mask_a;
-    reg [31:0] saved_mask_b;
-    reg [31:0] saved_mask_c;
-
-    reg [31:0] random_a;
-    reg [31:0] random_b;
-
-    // ---------------------------------------------------------
+    // ------------------------------------------------------------
     // DUT
-    // ---------------------------------------------------------
-    astra_tmr_subsystem dut (
+    // ------------------------------------------------------------
+
+    astra_tmr_subsystem #(
+        .WIDTH(WIDTH)
+    ) dut (
         .opcode(opcode),
         .operand_a(operand_a),
         .operand_b(operand_b),
@@ -76,119 +71,455 @@ module tb_tmr_fault_campaign;
         .replica_c(replica_c),
 
         .voted_output(voted_output),
-        .mismatch_detected(mismatch_detected),
 
+        .mismatch_detected(mismatch_detected),
         .lane_a_mismatch(lane_a_mismatch),
         .lane_b_mismatch(lane_b_mismatch),
         .lane_c_mismatch(lane_c_mismatch)
     );
 
-    // ---------------------------------------------------------
-    // Golden reference model
-    //
-    // Independent behavioral reference for the 8 operations.
-    // ---------------------------------------------------------
-    function automatic [31:0] reference_operation;
-        input [2:0]  op;
+    // ------------------------------------------------------------
+    // Independent golden reference model.
+    // Mirrors the specified operations, not the DUT output.
+    // ------------------------------------------------------------
+
+    function automatic [31:0] golden_result;
+        input [2:0] op_code;
         input [31:0] a;
         input [31:0] b;
 
-        reg [4:0] shift_amount;
-
         begin
-            shift_amount = b[4:0];
-
-            case (op)
+            case (op_code)
 
                 3'b000:
-                    reference_operation = a + b;
+                    golden_result = a + b;
 
                 3'b001:
-                    reference_operation = a ^ b;
+                    golden_result = a ^ b;
 
                 3'b010:
-                    reference_operation = a & b;
+                    golden_result = a & b;
 
                 3'b011:
-                    reference_operation = a | b;
+                    golden_result = a | b;
 
-                3'b100: begin
-                    if (shift_amount == 0)
-                        reference_operation = a;
-                    else
-                        reference_operation =
-                            (a << shift_amount) |
-                            (a >> (32 - shift_amount));
-                end
+                3'b100:
+                    golden_result =
+                        (a << b[4:0]) |
+                        (a >> (32 - b[4:0]));
 
                 3'b101:
-                    reference_operation = (a == b) ? 32'd1 : 32'd0;
+                    golden_result = (a == b) ? 32'd1 : 32'd0;
 
                 3'b110:
-                    reference_operation = a;
+                    golden_result = a;
 
                 3'b111:
-                    reference_operation = b;
+                    golden_result = b;
 
                 default:
-                    reference_operation = 32'd0;
+                    golden_result = 32'd0;
 
             endcase
         end
     endfunction
 
-    // ---------------------------------------------------------
-    // Common checking task
-    // ---------------------------------------------------------
-    task check_recovery;
-        input [31:0] expected;
-        input [31:0] mask_a;
-        input [31:0] mask_b;
-        input [31:0] mask_c;
+    // ------------------------------------------------------------
+    // Deterministic pseudo-random number generator.
+    // Linear congruential generator.
+    // ------------------------------------------------------------
+
+    task automatic next_random;
+        begin
+            rng_state =
+                (rng_state * 32'd1664525) + 32'd1013904223;
+        end
+    endtask
+
+    // ------------------------------------------------------------
+    // Check majority equation and lane indicators.
+    // Used for multi-lane and common-mode characterization.
+    // ------------------------------------------------------------
+
+    task automatic check_internal_consistency;
+        reg [31:0] majority_reference;
+        reg expected_mismatch;
+        begin
+
+            majority_reference =
+                (replica_a & replica_b) |
+                (replica_a & replica_c) |
+                (replica_b & replica_c);
+
+            expected_mismatch =
+                (replica_a != replica_b) ||
+                (replica_b != replica_c) ||
+                (replica_a != replica_c);
+
+            if (voted_output !== majority_reference) begin
+                $display("FAIL: majority equation mismatch");
+                $display("A=%h B=%h C=%h", replica_a,
+                         replica_b, replica_c);
+                $display("DUT=%h EXPECTED=%h",
+                         voted_output, majority_reference);
+                total_failures = total_failures + 1;
+            end
+
+            if (mismatch_detected !== expected_mismatch) begin
+                $display("FAIL: mismatch_detected incorrect");
+                total_failures = total_failures + 1;
+            end
+
+            if (lane_a_mismatch !== (replica_a != voted_output)) begin
+                $display("FAIL: lane A mismatch indicator incorrect");
+                total_failures = total_failures + 1;
+            end
+
+            if (lane_b_mismatch !== (replica_b != voted_output)) begin
+                $display("FAIL: lane B mismatch indicator incorrect");
+                total_failures = total_failures + 1;
+            end
+
+            if (lane_c_mismatch !== (replica_c != voted_output)) begin
+                $display("FAIL: lane C mismatch indicator incorrect");
+                total_failures = total_failures + 1;
+            end
+
+        end
+    endtask
+
+    // ------------------------------------------------------------
+    // Single-bit fault campaign.
+    // Exactly one replica is corrupted by one bit.
+    // The other two replicas must preserve the golden result.
+    // ------------------------------------------------------------
+
+    task automatic run_single_bit_test;
+        input [2:0] op_code;
+        input [31:0] a;
+        input [31:0] b;
+        input integer selected_lane;
+        input integer selected_bit;
+
+        reg [31:0] mask;
+        reg [31:0] golden;
 
         begin
 
-            fault_mask_a = mask_a;
-            fault_mask_b = mask_b;
-            fault_mask_c = mask_c;
+            opcode = op_code;
+            operand_a = a;
+            operand_b = b;
 
-            #2;
+            fault_mask_a = 32'd0;
+            fault_mask_b = 32'd0;
+            fault_mask_c = 32'd0;
 
+            mask = 32'd1 << selected_bit;
+
+            case (selected_lane)
+                0: fault_mask_a = mask;
+                1: fault_mask_b = mask;
+                2: fault_mask_c = mask;
+            endcase
+
+            golden = golden_result(op_code, a, b);
+
+            #1;
+
+            single_bit_tests = single_bit_tests + 1;
             total_tests = total_tests + 1;
 
-            if ((voted_output === expected) &&
-                (mismatch_detected ===
-                    ((mask_a != 0) ||
-                     (mask_b != 0) ||
-                     (mask_c != 0)))) begin
+            if (voted_output !== golden) begin
+                $display(
+                    "FAIL SINGLE BIT: op=%b lane=%0d bit=%0d",
+                    op_code, selected_lane, selected_bit
+                );
+                $display("Golden=%h Voted=%h",
+                         golden, voted_output);
+                total_failures = total_failures + 1;
+            end
+            else if (mismatch_detected !== 1'b1) begin
+                $display(
+                    "FAIL SINGLE BIT: mismatch not detected"
+                );
+                total_failures = total_failures + 1;
+            end
+            else if (
+                (selected_lane == 0 &&
+                 !(lane_a_mismatch && !lane_b_mismatch &&
+                   !lane_c_mismatch)) ||
 
-                passed_tests = passed_tests + 1;
+                (selected_lane == 1 &&
+                 !(!lane_a_mismatch && lane_b_mismatch &&
+                   !lane_c_mismatch)) ||
+
+                (selected_lane == 2 &&
+                 !(!lane_a_mismatch && !lane_b_mismatch &&
+                   lane_c_mismatch))
+            ) begin
+                $display(
+                    "FAIL SINGLE BIT: incorrect lane identification"
+                );
+                $display("A=%b B=%b C=%b",
+                         lane_a_mismatch,
+                         lane_b_mismatch,
+                         lane_c_mismatch);
+                total_failures = total_failures + 1;
+            end
+            else begin
+                single_bit_passes = single_bit_passes + 1;
+                total_passes = total_passes + 1;
+            end
+
+        end
+    endtask
+
+    // ------------------------------------------------------------
+    // Randomized multi-bit fault in exactly one lane.
+    // ------------------------------------------------------------
+
+    task automatic run_random_single_lane_test;
+        input [2:0] op_code;
+        input [31:0] a;
+        input [31:0] b;
+        input integer selected_lane;
+        input [31:0] mask;
+
+        reg [31:0] golden;
+
+        begin
+
+            opcode = op_code;
+            operand_a = a;
+            operand_b = b;
+
+            fault_mask_a = 32'd0;
+            fault_mask_b = 32'd0;
+            fault_mask_c = 32'd0;
+
+            case (selected_lane)
+                0: fault_mask_a = mask;
+                1: fault_mask_b = mask;
+                2: fault_mask_c = mask;
+            endcase
+
+            golden = golden_result(op_code, a, b);
+
+            #1;
+
+            random_tests = random_tests + 1;
+            total_tests = total_tests + 1;
+
+            if ((mask == 0) || (voted_output !== golden) ||
+                (mismatch_detected !== 1'b1)) begin
+
+                $display(
+                    "FAIL RANDOM SINGLE-LANE: op=%b lane=%0d mask=%h",
+                    op_code, selected_lane, mask
+                );
+                $display("Golden=%h Voted=%h",
+                         golden, voted_output);
+
+                total_failures = total_failures + 1;
 
             end
             else begin
 
-                failed_tests = failed_tests + 1;
+                case (selected_lane)
 
-                $display(
-                    "FAIL | OP=%b A=%h B=%h | MA=%h MB=%h MC=%h",
-                    opcode, operand_a, operand_b,
-                    mask_a, mask_b, mask_c
-                );
+                    0: begin
+                        if (!(lane_a_mismatch &&
+                              !lane_b_mismatch &&
+                              !lane_c_mismatch)) begin
+                            $display("FAIL RANDOM: lane A flags");
+                            total_failures = total_failures + 1;
+                        end
+                        else begin
+                            random_passes = random_passes + 1;
+                            total_passes = total_passes + 1;
+                        end
+                    end
 
-                $display(
-                    "EXPECTED=%h ACTUAL=%h MISMATCH=%b",
-                    expected, voted_output, mismatch_detected
-                );
+                    1: begin
+                        if (!(!lane_a_mismatch &&
+                              lane_b_mismatch &&
+                              !lane_c_mismatch)) begin
+                            $display("FAIL RANDOM: lane B flags");
+                            total_failures = total_failures + 1;
+                        end
+                        else begin
+                            random_passes = random_passes + 1;
+                            total_passes = total_passes + 1;
+                        end
+                    end
+
+                    2: begin
+                        if (!(!lane_a_mismatch &&
+                              !lane_b_mismatch &&
+                              lane_c_mismatch)) begin
+                            $display("FAIL RANDOM: lane C flags");
+                            total_failures = total_failures + 1;
+                        end
+                        else begin
+                            random_passes = random_passes + 1;
+                            total_passes = total_passes + 1;
+                        end
+                    end
+
+                endcase
 
             end
 
         end
     endtask
 
-    // ---------------------------------------------------------
-    // Initialize
-    // ---------------------------------------------------------
+    // ------------------------------------------------------------
+    // Two-lane fault characterization.
+    //
+    // No claim is made that the golden result must survive.
+    // The test checks the majority equation and detector outputs.
+    // ------------------------------------------------------------
+
+    task automatic run_two_lane_test;
+        input [2:0] op_code;
+        input [31:0] a;
+        input [31:0] b;
+        input integer pair_select;
+        input [31:0] mask_1;
+        input [31:0] mask_2;
+
+        begin
+
+            opcode = op_code;
+            operand_a = a;
+            operand_b = b;
+
+            fault_mask_a = 32'd0;
+            fault_mask_b = 32'd0;
+            fault_mask_c = 32'd0;
+
+            case (pair_select)
+                0: begin
+                    fault_mask_a = mask_1;
+                    fault_mask_b = mask_2;
+                end
+
+                1: begin
+                    fault_mask_a = mask_1;
+                    fault_mask_c = mask_2;
+                end
+
+                2: begin
+                    fault_mask_b = mask_1;
+                    fault_mask_c = mask_2;
+                end
+            endcase
+
+            #1;
+
+            two_lane_tests = two_lane_tests + 1;
+            total_tests = total_tests + 1;
+
+            expected_majority =
+                (replica_a & replica_b) |
+                (replica_a & replica_c) |
+                (replica_b & replica_c);
+
+            if (mismatch_detected !== 1'b1 ||
+                voted_output !== expected_majority) begin
+
+                $display(
+                    "FAIL TWO-LANE CHARACTERIZATION: case=%0d",
+                    pair_select
+                );
+                total_failures = total_failures + 1;
+
+            end
+            else begin
+
+                two_lane_passes = two_lane_passes + 1;
+                total_passes = total_passes + 1;
+
+            end
+
+            check_internal_consistency();
+
+        end
+    endtask
+
+    // ------------------------------------------------------------
+    // Common-mode fault characterization.
+    //
+    // Identical masks corrupt all replicas identically.
+    // The voter may return a corrupted result while reporting
+    // no mismatch. This is an expected limitation of TMR.
+    // ------------------------------------------------------------
+
+    task automatic run_common_mode_test;
+        input [2:0] op_code;
+        input [31:0] a;
+        input [31:0] b;
+        input [31:0] common_mask;
+
+        reg [31:0] golden;
+
+        begin
+
+            opcode = op_code;
+            operand_a = a;
+            operand_b = b;
+
+            fault_mask_a = common_mask;
+            fault_mask_b = common_mask;
+            fault_mask_c = common_mask;
+
+            golden = golden_result(op_code, a, b);
+
+            #1;
+
+            common_mode_tests = common_mode_tests + 1;
+            total_tests = total_tests + 1;
+
+            if ((replica_a !== replica_b) ||
+                (replica_b !== replica_c) ||
+                (voted_output !== (golden ^ common_mask)) ||
+                (mismatch_detected !== 1'b0)) begin
+
+                $display(
+                    "FAIL COMMON-MODE CHARACTERIZATION: op=%b",
+                    op_code
+                );
+                total_failures = total_failures + 1;
+
+            end
+            else begin
+
+                common_mode_passes = common_mode_passes + 1;
+                total_passes = total_passes + 1;
+
+                if (common_mask != 0 &&
+                    voted_output != golden) begin
+                    $display(
+                        "EXPECTED LIMITATION: common-mode fault escaped detection, op=%b",
+                        op_code
+                    );
+                end
+
+            end
+
+            check_internal_consistency();
+
+        end
+    endtask
+
+    // ------------------------------------------------------------
+    // Main campaign
+    // ------------------------------------------------------------
+
     initial begin
+
+        $dumpfile("sim/waveforms/tmr_fault_campaign.vcd");
+        $dumpvars(0, tb_tmr_fault_campaign);
 
         opcode = 0;
         operand_a = 0;
@@ -198,101 +529,57 @@ module tb_tmr_fault_campaign;
         fault_mask_b = 0;
         fault_mask_c = 0;
 
-        total_tests = 0;
-        passed_tests = 0;
-        failed_tests = 0;
+        single_bit_tests = 0;
+        single_bit_passes = 0;
 
-        exhaustive_tests = 0;
-        random_single_lane_tests = 0;
-        double_lane_tests = 0;
+        random_tests = 0;
+        random_passes = 0;
+
+        two_lane_tests = 0;
+        two_lane_passes = 0;
+
         common_mode_tests = 0;
+        common_mode_passes = 0;
 
-        double_lane_correct = 0;
-        double_lane_incorrect = 0;
-        double_lane_detected = 0;
-        double_lane_undetected = 0;
+        total_tests = 0;
+        total_passes = 0;
+        total_failures = 0;
 
-        random_mask = 0;
-        random_a = 0;
-        random_b = 0;
+        rng_state = 32'hA57A_F123;
 
-        $dumpfile("sim/waveforms/tmr_fault_campaign.vcd");
+        $display("==============================================");
+        $display(" ASTRA-FT DAY 3 TMR FAULT-INJECTION CAMPAIGN");
+        $display("==============================================");
 
-        $dumpvars(0, tb_tmr_fault_campaign);
+        // --------------------------------------------------------
+        // CAMPAIGN 1: Exhaustive single-bit fault locations.
+        // 8 opcodes x 32 bits x 3 lanes = 768 tests.
+        // --------------------------------------------------------
 
         $display("");
-        $display("==================================================");
-        $display(" ASTRA-FT DAY 3 TMR FAULT INJECTION CAMPAIGN");
-        $display("==================================================");
-        $display("");
+        $display("[1/4] SINGLE-BIT FAULT CAMPAIGN");
 
-        // -----------------------------------------------------
-        // CAMPAIGN 1:
-        // Exhaustive single-bit fault injection
-        //
-        // 8 opcodes x 32 bits x 3 lanes = 768 tests
-        // -----------------------------------------------------
+        for (op = 0; op < 8; op = op + 1) begin
 
-        $display("[CAMPAIGN 1] Exhaustive single-bit injection");
+            for (bit_index = 0;
+                 bit_index < WIDTH;
+                 bit_index = bit_index + 1) begin
 
-        for (opcode_index = 0;
-             opcode_index < 8;
-             opcode_index = opcode_index + 1) begin
+                for (lane = 0; lane < 3; lane = lane + 1) begin
 
-            opcode = opcode_index;
+                    next_random();
+                    operand_a = rng_state;
 
-            // New operands for every opcode
-            random_a = $urandom;
-            random_b = $urandom;
+                    next_random();
+                    operand_b = rng_state;
 
-            operand_a = random_a;
-            operand_b = random_b;
-
-            expected_result =
-                reference_operation(opcode, operand_a, operand_b);
-
-            for (lane_index = 0;
-                 lane_index < 3;
-                 lane_index = lane_index + 1) begin
-
-                for (bit_index = 0;
-                     bit_index < 32;
-                     bit_index = bit_index + 1) begin
-
-                    random_mask = 32'h00000001 << bit_index;
-
-                    if (lane_index == 0) begin
-
-                        check_recovery(
-                            expected_result,
-                            random_mask,
-                            32'h00000000,
-                            32'h00000000
-                        );
-
-                    end
-                    else if (lane_index == 1) begin
-
-                        check_recovery(
-                            expected_result,
-                            32'h00000000,
-                            random_mask,
-                            32'h00000000
-                        );
-
-                    end
-                    else begin
-
-                        check_recovery(
-                            expected_result,
-                            32'h00000000,
-                            32'h00000000,
-                            random_mask
-                        );
-
-                    end
-
-                    exhaustive_tests = exhaustive_tests + 1;
+                    run_single_bit_test(
+                        op[2:0],
+                        operand_a,
+                        operand_b,
+                        lane,
+                        bit_index
+                    );
 
                 end
 
@@ -301,277 +588,181 @@ module tb_tmr_fault_campaign;
         end
 
         $display(
-            "Exhaustive single-bit tests completed: %0d",
-            exhaustive_tests
+            "Single-bit results: %0d / %0d",
+            single_bit_passes,
+            single_bit_tests
         );
 
-        // -----------------------------------------------------
-        // CAMPAIGN 2:
-        // Random multi-bit fault affecting one lane only
-        //
-        // Any one lane may be arbitrarily corrupted.
-        // The two remaining correct lanes must dominate.
-        // -----------------------------------------------------
+        // --------------------------------------------------------
+        // CAMPAIGN 2: 200 randomized multi-bit single-lane faults.
+        // --------------------------------------------------------
 
         $display("");
-        $display("[CAMPAIGN 2] Random single-lane multi-bit faults");
+        $display("[2/4] RANDOMIZED SINGLE-LANE MULTI-BIT CAMPAIGN");
 
-        for (random_index = 0;
-             random_index < 200;
-             random_index = random_index + 1) begin
+        for (i = 0; i < 200; i = i + 1) begin
 
-            opcode = $urandom;
-            random_a = $urandom;
-            random_b = $urandom;
+            next_random();
+            operand_a = rng_state;
 
-            operand_a = random_a;
-            operand_b = random_b;
+            next_random();
+            operand_b = rng_state;
 
-            expected_result =
-                reference_operation(opcode, operand_a, operand_b);
+            next_random();
+            random_mask_a = rng_state | 32'h00000003;
 
-            random_mask = $urandom;
+            next_random();
+            random_mask_b = rng_state | 32'h0000000C;
 
-            // Ensure the injected fault is nonzero.
-            if (random_mask == 0)
-                random_mask = 32'h00000001;
+            next_random();
+            random_mask_c = rng_state | 32'h00000030;
 
-            lane_index = random_index % 3;
+            case (i % 3)
+                0: run_random_single_lane_test(
+                       i[2:0], operand_a, operand_b,
+                       0, random_mask_a
+                   );
 
-            if (lane_index == 0) begin
+                1: run_random_single_lane_test(
+                       i[2:0], operand_a, operand_b,
+                       1, random_mask_b
+                   );
 
-                check_recovery(
-                    expected_result,
-                    random_mask,
-                    32'h00000000,
-                    32'h00000000
-                );
-
-            end
-            else if (lane_index == 1) begin
-
-                check_recovery(
-                    expected_result,
-                    32'h00000000,
-                    random_mask,
-                    32'h00000000
-                );
-
-            end
-            else begin
-
-                check_recovery(
-                    expected_result,
-                    32'h00000000,
-                    32'h00000000,
-                    random_mask
-                );
-
-            end
-
-            random_single_lane_tests =
-                random_single_lane_tests + 1;
-
-        end
-
-        // -----------------------------------------------------
-        // CAMPAIGN 3:
-        // Two lanes faulty simultaneously
-        //
-        // TMR is not guaranteed to recover.
-        // We record the result instead of assuming success.
-        // -----------------------------------------------------
-
-        $display("");
-        $display("[CAMPAIGN 3] Simultaneous two-lane faults");
-
-        for (random_index = 0;
-             random_index < 100;
-             random_index = random_index + 1) begin
-
-            opcode = $urandom;
-            random_a = $urandom;
-            random_b = $urandom;
-
-            operand_a = random_a;
-            operand_b = random_b;
-
-            expected_result =
-                reference_operation(opcode, operand_a, operand_b);
-
-            random_mask = $urandom;
-
-            if (random_mask == 0)
-                random_mask = 32'h00000001;
-
-            saved_mask_a = $urandom;
-            saved_mask_b = $urandom;
-            saved_mask_c = $urandom;
-
-            // Force two faulty replicas.
-            // Third replica remains fault-free.
-            case (random_index % 3)
-
-                0: begin
-                    fault_mask_a = random_mask;
-                    fault_mask_b = saved_mask_b | 1;
-                    fault_mask_c = 0;
-                end
-
-                1: begin
-                    fault_mask_a = 0;
-                    fault_mask_b = random_mask;
-                    fault_mask_c = saved_mask_c | 1;
-                end
-
-                2: begin
-                    fault_mask_a = saved_mask_a | 1;
-                    fault_mask_b = 0;
-                    fault_mask_c = random_mask;
-                end
-
+                2: run_random_single_lane_test(
+                       i[2:0], operand_a, operand_b,
+                       2, random_mask_c
+                   );
             endcase
 
-            #2;
+        end
 
-            total_tests = total_tests + 1;
-            double_lane_tests = double_lane_tests + 1;
+        $display(
+            "Random single-lane results: %0d / %0d",
+            random_passes,
+            random_tests
+        );
 
-            if (voted_output == expected_result)
-                double_lane_correct = double_lane_correct + 1;
-            else
-                double_lane_incorrect = double_lane_incorrect + 1;
+        // --------------------------------------------------------
+        // CAMPAIGN 3: 100 two-lane characterization cases.
+        // --------------------------------------------------------
 
-            if (mismatch_detected)
-                double_lane_detected = double_lane_detected + 1;
-            else
-                double_lane_undetected = double_lane_undetected + 1;
+        $display("");
+        $display("[3/4] TWO-LANE FAULT CHARACTERIZATION");
 
-            // These are characterization tests.
-            // Two-fault recovery is not a requirement.
-            // We still ensure the subsystem's outputs are not X/Z.
-            if ((^voted_output === 1'bx) ||
-                (mismatch_detected === 1'bx)) begin
+        for (i = 0; i < 100; i = i + 1) begin
 
-                failed_tests = failed_tests + 1;
+            next_random();
+            operand_a = rng_state;
 
-                $display(
-                    "FAIL | Two-lane fault produced unknown output"
-                );
+            next_random();
+            operand_b = rng_state;
 
-            end
-            else begin
+            next_random();
+            random_mask_a = rng_state | 32'h00000001;
 
-                passed_tests = passed_tests + 1;
+            next_random();
+            random_mask_b = rng_state | 32'h00000002;
 
-            end
+            run_two_lane_test(
+                i[2:0],
+                operand_a,
+                operand_b,
+                i % 3,
+                random_mask_a,
+                random_mask_b
+            );
 
         end
 
-        // -----------------------------------------------------
-        // CAMPAIGN 4:
-        // Common-mode identical faults
-        //
-        // Same mask applied to all replicas.
-        // The voter may produce the wrong result while the
-        // mismatch detector reports no disagreement.
-        // -----------------------------------------------------
+        $display(
+            "Two-lane characterization consistency: %0d / %0d",
+            two_lane_passes,
+            two_lane_tests
+        );
+
+        // --------------------------------------------------------
+        // CAMPAIGN 4: 8 common-mode cases, one per opcode.
+        // --------------------------------------------------------
 
         $display("");
-        $display("[CAMPAIGN 4] Common-mode identical faults");
+        $display("[4/4] COMMON-MODE FAULT CHARACTERIZATION");
 
-        for (opcode_index = 0;
-             opcode_index < 8;
-             opcode_index = opcode_index + 1) begin
+        for (op = 0; op < 8; op = op + 1) begin
 
-            opcode = opcode_index;
+            next_random();
+            operand_a = rng_state;
 
-            random_a = $urandom;
-            random_b = $urandom;
+            next_random();
+            operand_b = rng_state;
 
-            operand_a = random_a;
-            operand_b = random_b;
+            next_random();
+            random_mask_a = rng_state | 32'h00000001;
 
-            expected_result =
-                reference_operation(opcode, operand_a, operand_b);
-
-            // Deliberately apply identical nonzero masks.
-            random_mask = 32'h00000001;
-
-            fault_mask_a = random_mask;
-            fault_mask_b = random_mask;
-            fault_mask_c = random_mask;
-
-            #2;
-
-            total_tests = total_tests + 1;
-            common_mode_tests = common_mode_tests + 1;
-
-            // All three replicas are corrupted identically.
-            // The voter cannot distinguish this from correct data.
-            if ((replica_a == replica_b) &&
-                (replica_b == replica_c) &&
-                (mismatch_detected == 0) &&
-                (voted_output != expected_result)) begin
-
-                passed_tests = passed_tests + 1;
-
-                $display(
-                    "EXPECTED LIMITATION | OP=%b | COMMON OUTPUT=%h | ERROR NOT DETECTED",
-                    opcode, voted_output
-                );
-
-            end
-            else begin
-
-                failed_tests = failed_tests + 1;
-
-                $display(
-                    "FAIL | Common-mode behavior unexpected"
-                );
-
-            end
+            run_common_mode_test(
+                op[2:0],
+                operand_a,
+                operand_b,
+                random_mask_a
+            );
 
         end
 
-        // -----------------------------------------------------
-        // Final report
-        // -----------------------------------------------------
+        $display(
+            "Common-mode characterization consistency: %0d / %0d",
+            common_mode_passes,
+            common_mode_tests
+        );
+
+        // --------------------------------------------------------
+        // FINAL RESULTS
+        // --------------------------------------------------------
 
         $display("");
-        $display("==================================================");
-        $display(" ASTRA-FT FAULT CAMPAIGN SUMMARY");
-        $display("==================================================");
+        $display("==============================================");
+        $display(" DAY 3 CAMPAIGN SUMMARY");
+        $display("==============================================");
 
-        $display("Total campaign tests       : %0d", total_tests);
-        $display("Tests passed               : %0d", passed_tests);
-        $display("Tests failed               : %0d", failed_tests);
+        $display("Single-bit tests       : %0d / %0d",
+                 single_bit_passes, single_bit_tests);
 
-        $display("");
-        $display("Exhaustive single-bit      : %0d", exhaustive_tests);
-        $display("Random single-lane         : %0d", random_single_lane_tests);
-        $display("Double-lane tests          : %0d", double_lane_tests);
-        $display("Common-mode tests          : %0d", common_mode_tests);
+        $display("Random single-lane     : %0d / %0d",
+                 random_passes, random_tests);
 
-        $display("");
-        $display("Double fault correct       : %0d", double_lane_correct);
-        $display("Double fault incorrect     : %0d", double_lane_incorrect);
+        $display("Two-lane characterization: %0d / %0d",
+                 two_lane_passes, two_lane_tests);
 
-        $display("Double fault detected     : %0d", double_lane_detected);
-        $display("Double fault undetected   : %0d", double_lane_undetected);
+        $display("Common-mode characterization: %0d / %0d",
+                 common_mode_passes, common_mode_tests);
 
-        $display("");
-        $display("==================================================");
+        $display("----------------------------------------------");
+        $display("Total checks executed  : %0d", total_tests);
+        $display("Total checks passed    : %0d", total_passes);
+        $display("Total failures         : %0d", total_failures);
+        $display("----------------------------------------------");
 
-        if (failed_tests == 0) begin
-            $display("CAMPAIGN STATUS: PASS");
+        if (single_bit_passes != 768 ||
+            random_passes != 200 ||
+            two_lane_passes != 100 ||
+            common_mode_passes != 8 ||
+            total_tests != 1076 ||
+            total_failures != 0) begin
+
+            $display("DAY 3 CAMPAIGN: FAIL");
+            $fatal(1, "Fault campaign acceptance criteria failed.");
+
         end
         else begin
-            $display("CAMPAIGN STATUS: FAIL");
+
+            $display("DAY 3 CAMPAIGN: PASS");
+            $display("All campaign checks completed.");
+            $display("Single-lane TMR recovery verified under tested masks.");
+            $display("Multi-lane and common-mode limitations characterized.");
+
         end
 
-        $display("==================================================");
+        $display("==============================================");
 
+        #1;
         $finish;
 
     end

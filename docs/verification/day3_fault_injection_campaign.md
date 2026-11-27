@@ -1,114 +1,91 @@
-# ASTRA-FT Day 3 — Fault Injection Campaign
+# ASTRA-FT — Day 3 TMR Fault-Injection Campaign
 
-## Objective
+## 1. Objective
 
-Systematically evaluate the Triple Modular Redundancy (TMR)
-subsystem under injected output faults.
+Evaluate the TMR subsystem under single-lane, multi-lane and common-mode
+output fault injection.
 
-## Architecture Under Test
+The campaign uses the existing astra_tmr_subsystem RTL without modifying
+the TMR architecture.
 
-- Three replicated processing lanes
-- Bitwise majority voter
-- Output XOR fault injection masks
-- Global mismatch detection
-- Individual lane mismatch indicators
+## 2. Verification Environment
 
-## Test Campaign
+- HDL: SystemVerilog
+- Simulator: Icarus Verilog 12.0
+- Testbench: tb/fault_campaign/tb_tmr_fault_campaign.sv
+- DUT: rtl/tmr/astra_tmr_subsystem.sv
+- Fault model: XOR masks applied to replica outputs
+- Waveform: sim/waveforms/tmr_fault_campaign.vcd
 
-### 1. Exhaustive Single-Bit Fault Injection
+## 3. Campaign Results
 
-Test all output bit positions in all three replicas across
-all eight supported operations.
+| Campaign | Executed | Passed | Failed |
+|---|---:|---:|---:|
+| Single-bit, single-lane faults | 768 | 768 | 0 |
+| Randomized multi-bit, single-lane faults | 200 | 200 | 0 |
+| Two-lane characterization | 100 | 100 | 0 |
+| Common-mode characterization | 8 | 8 | 0 |
+| Total | 1076 | 1076 | 0 |
 
-Number of tests:
+## 4. Single-Lane Fault Results
 
-8 operations × 32 bits × 3 lanes = 768 tests
+All 768 single-bit cases preserved the golden output.
 
-Expected behavior:
-- Two healthy lanes provide the correct result.
-- Majority voting reconstructs the correct output.
-- Fault disagreement is detected.
+The campaign covered:
+- 8 supported opcodes
+- 32 output bit positions
+- 3 replica lanes
 
-### 2. Random Single-Lane Multi-Bit Fault Injection
+All 200 randomized multi-bit single-lane cases also preserved the
+golden output and identified the corrupted lane using mismatch outputs.
 
-200 randomized tests.
+## 5. Multiple-Lane Fault Characterization
 
-One replica is corrupted using a randomized nonzero
-32-bit fault mask.
+All 100 two-lane cases passed the internal consistency checks for:
+- Bitwise majority equation
+- Global mismatch indication
+- Individual lane mismatch indications
 
-Expected behavior:
-- The remaining two replicas agree.
-- The majority voter returns the correct result.
-- Mismatch detection is asserted.
+No guarantee of correct golden output is claimed for two-lane corruption.
 
-### 3. Simultaneous Two-Lane Faults
+## 6. Common-Mode Fault Characterization
 
-100 randomized characterization tests.
+All 8 common-mode cases behaved as expected.
 
-Expected behavior:
-- Recovery is not guaranteed.
-- The majority may follow the two faulty replicas.
-- Results are recorded to characterize the architecture.
+Identical XOR masks applied to all replicas resulted in:
+- Identical corrupted replica outputs
+- A correspondingly corrupted voted output
+- No mismatch indication
 
-### 4. Common-Mode Faults
+This demonstrates a common-mode limitation of the implemented TMR
+architecture.
 
-Eight operation scenarios.
+## 7. Final Result
 
-The same nonzero corruption mask is applied to all
-three replicas.
+DAY 3 CAMPAIGN: PASS
 
-Expected behavior:
-- All replicas agree on the corrupted result.
-- The voter cannot identify the error.
-- The mismatch detector remains inactive.
+- Campaign cases: 1076
+- Passed cases: 1076
+- Failed cases: 0
 
-## Expected Test Counts
+## 8. Limitations
 
-| Campaign | Tests |
-|---|---:|
-| Exhaustive single-bit | 768 |
-| Random single-lane | 200 |
-| Two-lane characterization | 100 |
-| Common-mode | 8 |
-| Total | 1,076 |
+This campaign injects faults at replica outputs using XOR masks.
 
-## Verification Criteria
+It does not establish:
+- Radiation tolerance
+- Physical independence of replica implementations
+- Protection against voter faults
+- Internal register or pipeline transient fault tolerance
+- Clock or power fault tolerance
+- FPGA or ASIC hardware qualification
 
-- Single-bit fault recovery: PASS
-- Random single-lane recovery: PASS
-- No unknown outputs in tested cases: PASS
-- Two-lane fault behavior characterized: PASS
-- Common-mode vulnerability demonstrated: PASS
-- No unexplained test failures
+The two-lane and common-mode tests characterize expected limitations;
+they do not demonstrate fault recovery in those scenarios.
 
-## Limitations
+## 9. Evidence Files
 
-This campaign models faults as XOR corruption of the
-replica outputs.
-
-It does not model:
-- Radiation particle transport
-- Single-event transients at transistor level
-- Timing faults or metastability
-- Clock or reset common-mode failures
-- Power supply disturbances
-- Faults inside the voter
-- Physical FPGA routing or placement vulnerabilities
-
-The results demonstrate architectural behavior under the
-defined fault model, not radiation qualification.
-
-## Conclusion
-
-The TMR subsystem is expected to recover from a single
-replica fault because two healthy replicas maintain
-agreement.
-
-With two faulty replicas, the voter may produce an
-incorrect result.
-
-When all replicas experience identical corruption,
-disagreement detection cannot detect the common-mode error.
-
-This demonstrates both the value and limitations of TMR
-for fault-tolerant spacecraft digital architectures.
+- sim/logs/day3/compile.log
+- sim/logs/day3/fault_campaign.log
+- sim/waveforms/tmr_fault_campaign.vcd
+- sim/tb/day3/tb_tmr_fault_campaign.vvp
