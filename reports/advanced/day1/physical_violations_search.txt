@@ -1,0 +1,1108 @@
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_tt_025C_1v80/checks.rpt:152:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_tt_025C_1v80/checks.rpt:7902:max slew violation count 1998
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_tt_025C_1v80/sta.log:127779:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_tt_025C_1v80/sta.log:135529:max slew violation count 1998
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/summary.rpt:3:┃                      ┃ Worst    ┃ Reg      ┃          ┃ Hold Vio ┃ reg to   ┃ Worst     ┃ Reg      ┃           ┃ Vio      ┃ reg to    ┃ Max Cap  ┃ Max Slew  ┃
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ss_100C_1v60/checks.rpt:239:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ss_100C_1v60/checks.rpt:9040:max slew violation count 3038
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ss_100C_1v60/sta.log:121794:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ss_100C_1v60/sta.log:130595:max slew violation count 3038
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ff_n40C_1v95/checks.rpt:152:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ff_n40C_1v95/checks.rpt:7640:max slew violation count 1736
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ff_n40C_1v95/sta.log:118599:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ff_n40C_1v95/sta.log:126087:max slew violation count 1736
+asic/openlane/runs/RUN_2026-11-26_17-07-12/29-checker-powergridviolations/config.json:146:    "ERROR_ON_PDN_VIOLATIONS": true,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/29-checker-powergridviolations/config.json:149:        "step": "Checker.PowerGridViolations"
+asic/openlane/runs/RUN_2026-11-26_17-07-12/67-checker-illegaloverlap/state_in.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/67-checker-illegaloverlap/state_in.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/67-checker-illegaloverlap/state_in.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/67-checker-illegaloverlap/state_in.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/67-checker-illegaloverlap/state_in.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/67-checker-illegaloverlap/state_in.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/67-checker-illegaloverlap/state_out.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/67-checker-illegaloverlap/state_out.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/67-checker-illegaloverlap/state_out.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/67-checker-illegaloverlap/state_out.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/67-checker-illegaloverlap/state_out.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/67-checker-illegaloverlap/state_out.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/73-checker-maxcapviolations/state_in.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/73-checker-maxcapviolations/state_in.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/73-checker-maxcapviolations/state_in.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/73-checker-maxcapviolations/state_in.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/73-checker-maxcapviolations/state_in.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/73-checker-maxcapviolations/state_in.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/73-checker-maxcapviolations/config.json:154:        "step": "Checker.MaxCapViolations"
+asic/openlane/runs/RUN_2026-11-26_17-07-12/73-checker-maxcapviolations/state_out.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/73-checker-maxcapviolations/state_out.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/73-checker-maxcapviolations/state_out.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/73-checker-maxcapviolations/state_out.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/73-checker-maxcapviolations/state_out.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/73-checker-maxcapviolations/state_out.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/69-checker-lvs/state_in.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/69-checker-lvs/state_in.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/69-checker-lvs/state_in.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/69-checker-lvs/state_in.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/69-checker-lvs/state_in.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/69-checker-lvs/state_in.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/69-checker-lvs/state_out.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/69-checker-lvs/state_out.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/69-checker-lvs/state_out.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/69-checker-lvs/state_out.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/69-checker-lvs/state_out.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/69-checker-lvs/state_out.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/47-odb-reportdisconnectedpins/state_in.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/47-odb-reportdisconnectedpins/state_in.json:142:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/47-odb-reportdisconnectedpins/state_in.json:143:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/47-odb-reportdisconnectedpins/state_in.json:144:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/47-odb-reportdisconnectedpins/state_in.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/47-odb-reportdisconnectedpins/state_in.json:146:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/47-odb-reportdisconnectedpins/state_out.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/47-odb-reportdisconnectedpins/state_out.json:142:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/47-odb-reportdisconnectedpins/state_out.json:143:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/47-odb-reportdisconnectedpins/state_out.json:144:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/47-odb-reportdisconnectedpins/state_out.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/47-odb-reportdisconnectedpins/state_out.json:146:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/58-magic-writelef/state_in.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/58-magic-writelef/state_in.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/58-magic-writelef/state_in.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/58-magic-writelef/state_in.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/58-magic-writelef/state_in.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/58-magic-writelef/state_in.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/58-magic-writelef/magic-writelef.log:18:LEF read, Line 82 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/58-magic-writelef/magic-writelef.log:19:LEF read, Line 83 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/58-magic-writelef/magic-writelef.log:21:LEF read, Line 118 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/58-magic-writelef/magic-writelef.log:22:LEF read, Line 119 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/58-magic-writelef/magic-writelef.log:27:LEF read, Line 168 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/58-magic-writelef/magic-writelef.log:28:LEF read, Line 169 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/58-magic-writelef/magic-writelef.log:32:LEF read, Line 210 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/58-magic-writelef/magic-writelef.log:33:LEF read, Line 211 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/58-magic-writelef/magic-writelef.log:37:LEF read, Line 252 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/58-magic-writelef/magic-writelef.log:38:LEF read, Line 253 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/58-magic-writelef/magic-writelef.log:42:LEF read, Line 294 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/58-magic-writelef/magic-writelef.log:43:LEF read, Line 295 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/58-magic-writelef/state_out.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/58-magic-writelef/state_out.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/58-magic-writelef/state_out.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/58-magic-writelef/state_out.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/58-magic-writelef/state_out.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/58-magic-writelef/state_out.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/61-checker-xor/state_in.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/61-checker-xor/state_in.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/61-checker-xor/state_in.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/61-checker-xor/state_in.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/61-checker-xor/state_in.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/61-checker-xor/state_in.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/61-checker-xor/state_out.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/61-checker-xor/state_out.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/61-checker-xor/state_out.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/61-checker-xor/state_out.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/61-checker-xor/state_out.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/61-checker-xor/state_out.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_in.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_in.json:142:        "antenna__violating__nets": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_in.json:143:        "antenna__violating__pins": 19,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_in.json:144:        "route__antenna_violation__count": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_in.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_in.json:146:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/reports/antenna.rpt:3021:[INFO ANT-0002] Found 22 net violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/reports/antenna.rpt:3022:[INFO ANT-0001] Found 22 pin violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/config.json:153:        "step": "OpenROAD.CheckAntennas"
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/or_metrics_out.json:2:	"antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/or_metrics_out.json:3:	"antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_out.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_out.json:142:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_out.json:143:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_out.json:144:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_out.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_out.json:146:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/openroad-checkantennas-1.log:11:%OL_CREATE_REPORT /home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/reports/antenna.rpt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/openroad-checkantennas-1.log:3032:[INFO ANT-0002] Found 22 net violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/openroad-checkantennas-1.log:3033:[INFO ANT-0001] Found 22 pin violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/70-checker-setupviolations/state_in.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/70-checker-setupviolations/state_in.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/70-checker-setupviolations/state_in.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/70-checker-setupviolations/state_in.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/70-checker-setupviolations/state_in.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/70-checker-setupviolations/state_in.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/70-checker-setupviolations/config.json:152:        "step": "Checker.SetupViolations"
+asic/openlane/runs/RUN_2026-11-26_17-07-12/70-checker-setupviolations/state_out.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/70-checker-setupviolations/state_out.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/70-checker-setupviolations/state_out.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/70-checker-setupviolations/state_out.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/70-checker-setupviolations/state_out.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/70-checker-setupviolations/state_out.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/59-odb-checkdesignantennaproperties/state_in.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/59-odb-checkdesignantennaproperties/state_in.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/59-odb-checkdesignantennaproperties/state_in.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/59-odb-checkdesignantennaproperties/state_in.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/59-odb-checkdesignantennaproperties/state_in.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/59-odb-checkdesignantennaproperties/state_in.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/59-odb-checkdesignantennaproperties/config.json:148:        "step": "Odb.CheckDesignAntennaProperties"
+asic/openlane/runs/RUN_2026-11-26_17-07-12/59-odb-checkdesignantennaproperties/state_out.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/59-odb-checkdesignantennaproperties/state_out.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/59-odb-checkdesignantennaproperties/state_out.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/59-odb-checkdesignantennaproperties/state_out.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/59-odb-checkdesignantennaproperties/state_out.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/59-odb-checkdesignantennaproperties/state_out.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:43:Running 'Odb.CheckMacroAntennaProperties' at 'asic/openlane/runs/RUN_2026-11-26_17-07-12/14-odb-checkmacroantennaproperties'…
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:74:Running 'Checker.PowerGridViolations' at 'asic/openlane/runs/RUN_2026-11-26_17-07-12/29-checker-powergridviolations'…
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:75:Check for power grid violations (as reported by OpenROAD PSM- you may ignore these if LVS passes) clear.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:92:[RSZ-0062] Unable to repair all setup violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:98:Running 'OpenROAD.CheckAntennas' at 'asic/openlane/runs/RUN_2026-11-26_17-07-12/39-openroad-checkantennas'…
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:99:Logging subprocess to [repr.filename]'asic/openlane/runs/RUN_2026-11-26_17-07-12/39-openroad-checkantennas/openroad-checkantennas.log'[/repr.filename]…
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:106:Running 'OpenROAD.RepairAntennas' at 'asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas'…
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:107:Running 'DiodeInsertion' at 'asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion'…
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:108:Logging subprocess to [repr.filename]'asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log'[/repr.filename]…
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:109:Running 'OpenROAD.CheckAntennas' at 'asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas'…
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:110:Logging subprocess to [repr.filename]'asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/openroad-checkantennas.log'[/repr.filename]…
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:130:Running 'OpenROAD.CheckAntennas-1' at 'asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1'…
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:131:Logging subprocess to [repr.filename]'asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/openroad-checkantennas-1.log'[/repr.filename]…
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:226:Running 'Odb.CheckDesignAntennaProperties' at 'asic/openlane/runs/RUN_2026-11-26_17-07-12/59-odb-checkdesignantennaproperties'…
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:227:Logging subprocess to [repr.filename]'asic/openlane/runs/RUN_2026-11-26_17-07-12/59-odb-checkdesignantennaproperties/odb-checkdesignantennaproperties.log'[/repr.filename]…
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:253:Running 'Checker.SetupViolations' at 'asic/openlane/runs/RUN_2026-11-26_17-07-12/70-checker-setupviolations'…
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:254:Setup violations found in the following corners:
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:258:No setup violations found
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:259:Running 'Checker.HoldViolations' at 'asic/openlane/runs/RUN_2026-11-26_17-07-12/71-checker-holdviolations'…
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:260:No hold violations found
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:261:Running 'Checker.MaxSlewViolations' at 'asic/openlane/runs/RUN_2026-11-26_17-07-12/72-checker-maxslewviolations'…
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:262:Max Slew violations found in the following corners:
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:268:No max slew violations found
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:269:Running 'Checker.MaxCapViolations' at 'asic/openlane/runs/RUN_2026-11-26_17-07-12/73-checker-maxcapviolations'…
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:270:No max cap violations found
+asic/openlane/runs/RUN_2026-11-26_17-07-12/71-checker-holdviolations/state_in.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/71-checker-holdviolations/state_in.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/71-checker-holdviolations/state_in.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/71-checker-holdviolations/state_in.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/71-checker-holdviolations/state_in.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/71-checker-holdviolations/state_in.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/71-checker-holdviolations/config.json:152:        "step": "Checker.HoldViolations"
+asic/openlane/runs/RUN_2026-11-26_17-07-12/71-checker-holdviolations/state_out.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/71-checker-holdviolations/state_out.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/71-checker-holdviolations/state_out.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/71-checker-holdviolations/state_out.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/71-checker-holdviolations/state_out.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/71-checker-holdviolations/state_out.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/state_in.json:6:    "def": "/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.def",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/state_in.json:9:    "odb": "/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.odb",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/state_in.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/state_in.json:142:        "antenna__violating__nets": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/state_in.json:143:        "antenna__violating__pins": 19,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/state_in.json:144:        "route__antenna_violation__count": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/state_in.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/state_in.json:146:        "design__instance__count__class:antenna_cell": 208
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/checks.rpt:339:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/state_out.json:6:    "def": "/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.def",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/state_out.json:9:    "odb": "/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.odb",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/state_out.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/state_out.json:142:        "antenna__violating__nets": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/state_out.json:143:        "antenna__violating__pins": 19,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/state_out.json:144:        "route__antenna_violation__count": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/state_out.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/state_out.json:146:        "design__instance__count__class:antenna_cell": 208
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/openroad-stamidpnr-3.log:1:Reading OpenROAD database at '/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.odb'…
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/openroad-stamidpnr-3.log:172524:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/30-openroad-stamidpnr/checks.rpt:152:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/30-openroad-stamidpnr/checks.rpt:4245:max slew violation count 3886
+asic/openlane/runs/RUN_2026-11-26_17-07-12/30-openroad-stamidpnr/openroad-stamidpnr.log:121850:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/30-openroad-stamidpnr/openroad-stamidpnr.log:125943:max slew violation count 3886
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/state_in.json:140:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/state_in.json:146:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/state_in.json:147:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/state_in.json:148:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/state_in.json:149:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/state_in.json:150:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:269:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:273:ANTENNA_146/DIODE                       0.750000    1.133381   -0.383381 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:274:ANTENNA_147/DIODE                       0.750000    1.133381   -0.383381 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:277:ANTENNA_145/DIODE                       0.750000    1.105273   -0.355273 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:280:ANTENNA_132/DIODE                       0.750000    1.029225   -0.279225 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:281:ANTENNA_133/DIODE                       0.750000    1.029225   -0.279225 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:283:ANTENNA_134/DIODE                       0.750000    1.029225   -0.279225 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:284:ANTENNA_135/DIODE                       0.750000    1.029225   -0.279225 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:285:ANTENNA_136/DIODE                       0.750000    1.029224   -0.279224 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:286:ANTENNA_137/DIODE                       0.750000    1.029224   -0.279224 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:289:ANTENNA_177/DIODE                       0.750000    1.007719   -0.257719 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:290:ANTENNA_179/DIODE                       0.750000    1.007719   -0.257719 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:291:ANTENNA_176/DIODE                       0.750000    1.007718   -0.257718 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:292:ANTENNA_178/DIODE                       0.750000    1.007717   -0.257717 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:293:ANTENNA_180/DIODE                       0.750000    1.007717   -0.257717 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:299:ANTENNA_37/DIODE                        0.750000    0.992700   -0.242700 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:300:ANTENNA_38/DIODE                        0.750000    0.992699   -0.242699 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:301:ANTENNA_40/DIODE                        0.750000    0.992700   -0.242700 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:302:ANTENNA_42/DIODE                        0.750000    0.992700   -0.242700 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:304:ANTENNA_39/DIODE                        0.750000    0.992699   -0.242699 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:305:ANTENNA_41/DIODE                        0.750000    0.992699   -0.242699 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:306:ANTENNA_43/DIODE                        0.750000    0.992699   -0.242699 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:307:ANTENNA_44/DIODE                        0.750000    0.992699   -0.242699 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:310:ANTENNA_138/DIODE                       0.750000    0.989109   -0.239109 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:311:ANTENNA_139/DIODE                       0.750000    0.989109   -0.239109 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:312:ANTENNA_140/DIODE                       0.750000    0.989109   -0.239109 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:313:ANTENNA_141/DIODE                       0.750000    0.989109   -0.239109 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:314:ANTENNA_142/DIODE                       0.750000    0.989109   -0.239109 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:315:ANTENNA_143/DIODE                       0.750000    0.989109   -0.239109 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:316:ANTENNA_144/DIODE                       0.750000    0.989109   -0.239109 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:319:ANTENNA_63/DIODE                        0.750000    0.972361   -0.222361 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:325:ANTENNA_164/DIODE                       0.750000    0.946794   -0.196794 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:326:ANTENNA_158/DIODE                       0.750000    0.946794   -0.196794 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:327:ANTENNA_160/DIODE                       0.750000    0.946794   -0.196794 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:328:ANTENNA_162/DIODE                       0.750000    0.946794   -0.196794 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:330:ANTENNA_159/DIODE                       0.750000    0.946793   -0.196793 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:331:ANTENNA_161/DIODE                       0.750000    0.946793   -0.196793 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:332:ANTENNA_163/DIODE                       0.750000    0.946792   -0.196792 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:340:ANTENNA_153/DIODE                       0.750000    0.906355   -0.156355 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:341:ANTENNA_154/DIODE                       0.750000    0.906355   -0.156355 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:342:ANTENNA_155/DIODE                       0.750000    0.906355   -0.156355 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:343:ANTENNA_156/DIODE                       0.750000    0.906355   -0.156355 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:362:ANTENNA_208/DIODE                       0.750000    0.856909   -0.106909 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:367:ANTENNA_51/DIODE                        0.750000    0.855706   -0.105706 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:377:ANTENNA_81/DIODE                        0.750000    0.821834   -0.071834 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:383:ANTENNA_93/DIODE                        0.750000    0.805541   -0.055541 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:384:ANTENNA_94/DIODE                        0.750000    0.805541   -0.055541 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:385:ANTENNA_95/DIODE                        0.750000    0.805541   -0.055541 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:386:ANTENNA_96/DIODE                        0.750000    0.805541   -0.055541 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:388:ANTENNA_32/DIODE                        0.750000    0.797406   -0.047406 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:393:ANTENNA_47/DIODE                        0.750000    0.789952   -0.039952 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:394:ANTENNA_45/DIODE                        0.750000    0.789952   -0.039952 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:395:ANTENNA_46/DIODE                        0.750000    0.789952   -0.039952 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:581:max slew violation count 138
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179032:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179036:ANTENNA_146/DIODE                       0.750000    1.133381   -0.383381 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179037:ANTENNA_147/DIODE                       0.750000    1.133381   -0.383381 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179040:ANTENNA_145/DIODE                       0.750000    1.105273   -0.355273 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179043:ANTENNA_132/DIODE                       0.750000    1.029225   -0.279225 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179044:ANTENNA_133/DIODE                       0.750000    1.029225   -0.279225 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179046:ANTENNA_134/DIODE                       0.750000    1.029225   -0.279225 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179047:ANTENNA_135/DIODE                       0.750000    1.029225   -0.279225 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179048:ANTENNA_136/DIODE                       0.750000    1.029224   -0.279224 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179049:ANTENNA_137/DIODE                       0.750000    1.029224   -0.279224 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179052:ANTENNA_177/DIODE                       0.750000    1.007719   -0.257719 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179053:ANTENNA_179/DIODE                       0.750000    1.007719   -0.257719 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179054:ANTENNA_176/DIODE                       0.750000    1.007718   -0.257718 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179055:ANTENNA_178/DIODE                       0.750000    1.007717   -0.257717 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179056:ANTENNA_180/DIODE                       0.750000    1.007717   -0.257717 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179062:ANTENNA_37/DIODE                        0.750000    0.992700   -0.242700 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179063:ANTENNA_38/DIODE                        0.750000    0.992699   -0.242699 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179064:ANTENNA_40/DIODE                        0.750000    0.992700   -0.242700 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179065:ANTENNA_42/DIODE                        0.750000    0.992700   -0.242700 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179067:ANTENNA_39/DIODE                        0.750000    0.992699   -0.242699 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179068:ANTENNA_41/DIODE                        0.750000    0.992699   -0.242699 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179069:ANTENNA_43/DIODE                        0.750000    0.992699   -0.242699 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179070:ANTENNA_44/DIODE                        0.750000    0.992699   -0.242699 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179073:ANTENNA_138/DIODE                       0.750000    0.989109   -0.239109 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179074:ANTENNA_139/DIODE                       0.750000    0.989109   -0.239109 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179075:ANTENNA_140/DIODE                       0.750000    0.989109   -0.239109 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179076:ANTENNA_141/DIODE                       0.750000    0.989109   -0.239109 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179077:ANTENNA_142/DIODE                       0.750000    0.989109   -0.239109 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179078:ANTENNA_143/DIODE                       0.750000    0.989109   -0.239109 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179079:ANTENNA_144/DIODE                       0.750000    0.989109   -0.239109 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179082:ANTENNA_63/DIODE                        0.750000    0.972361   -0.222361 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179088:ANTENNA_164/DIODE                       0.750000    0.946794   -0.196794 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179089:ANTENNA_158/DIODE                       0.750000    0.946794   -0.196794 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179090:ANTENNA_160/DIODE                       0.750000    0.946794   -0.196794 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179091:ANTENNA_162/DIODE                       0.750000    0.946794   -0.196794 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179093:ANTENNA_159/DIODE                       0.750000    0.946793   -0.196793 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179094:ANTENNA_161/DIODE                       0.750000    0.946793   -0.196793 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179095:ANTENNA_163/DIODE                       0.750000    0.946792   -0.196792 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179103:ANTENNA_153/DIODE                       0.750000    0.906355   -0.156355 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179104:ANTENNA_154/DIODE                       0.750000    0.906355   -0.156355 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179105:ANTENNA_155/DIODE                       0.750000    0.906355   -0.156355 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179106:ANTENNA_156/DIODE                       0.750000    0.906355   -0.156355 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179125:ANTENNA_208/DIODE                       0.750000    0.856909   -0.106909 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179130:ANTENNA_51/DIODE                        0.750000    0.855706   -0.105706 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179140:ANTENNA_81/DIODE                        0.750000    0.821834   -0.071834 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179146:ANTENNA_93/DIODE                        0.750000    0.805541   -0.055541 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179147:ANTENNA_94/DIODE                        0.750000    0.805541   -0.055541 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179148:ANTENNA_95/DIODE                        0.750000    0.805541   -0.055541 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179149:ANTENNA_96/DIODE                        0.750000    0.805541   -0.055541 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179151:ANTENNA_32/DIODE                        0.750000    0.797406   -0.047406 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179156:ANTENNA_47/DIODE                        0.750000    0.789952   -0.039952 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179157:ANTENNA_45/DIODE                        0.750000    0.789952   -0.039952 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179158:ANTENNA_46/DIODE                        0.750000    0.789952   -0.039952 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179344:max slew violation count 138
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_tt_025C_1v80/checks.rpt:336:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_tt_025C_1v80/sta.log:175947:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ff_n40C_1v95/checks.rpt:333:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ff_n40C_1v95/sta.log:165741:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_tt_025C_1v80/checks.rpt:167:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_tt_025C_1v80/checks.rpt:172:ANTENNA_146/DIODE                       0.750000    0.807799   -0.057799 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_tt_025C_1v80/checks.rpt:173:ANTENNA_147/DIODE                       0.750000    0.807799   -0.057799 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_tt_025C_1v80/checks.rpt:176:ANTENNA_145/DIODE                       0.750000    0.786981   -0.036981 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_tt_025C_1v80/checks.rpt:348:max slew violation count 7
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_tt_025C_1v80/sta.log:176367:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_tt_025C_1v80/sta.log:176372:ANTENNA_146/DIODE                       0.750000    0.807799   -0.057799 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_tt_025C_1v80/sta.log:176373:ANTENNA_147/DIODE                       0.750000    0.807799   -0.057799 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_tt_025C_1v80/sta.log:176376:ANTENNA_145/DIODE                       0.750000    0.786981   -0.036981 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_tt_025C_1v80/sta.log:176548:max slew violation count 7
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/summary.rpt:3:┃                      ┃ Worst    ┃ Reg      ┃          ┃ Hold Vio ┃ reg to    ┃ Worst    ┃ Reg to    ┃ Setup    ┃ Setup Vio ┃ reg to   ┃ Max Cap   ┃ Max Slew ┃
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/state_out.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/state_out.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/state_out.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/state_out.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/state_out.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/state_out.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:269:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:274:ANTENNA_146/DIODE                       0.750000    1.294730   -0.544730 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:275:ANTENNA_147/DIODE                       0.750000    1.294730   -0.544730 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:278:ANTENNA_145/DIODE                       0.750000    1.288663   -0.538663 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:281:ANTENNA_132/DIODE                       0.750000    1.226854   -0.476854 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:282:ANTENNA_133/DIODE                       0.750000    1.226854   -0.476854 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:283:ANTENNA_134/DIODE                       0.750000    1.226853   -0.476854 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:284:ANTENNA_135/DIODE                       0.750000    1.226853   -0.476853 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:285:ANTENNA_136/DIODE                       0.750000    1.226853   -0.476853 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:286:ANTENNA_137/DIODE                       0.750000    1.226852   -0.476852 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:289:ANTENNA_138/DIODE                       0.750000    1.139347   -0.389347 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:290:ANTENNA_139/DIODE                       0.750000    1.139347   -0.389347 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:291:ANTENNA_140/DIODE                       0.750000    1.139347   -0.389347 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:292:ANTENNA_141/DIODE                       0.750000    1.139347   -0.389347 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:293:ANTENNA_142/DIODE                       0.750000    1.139347   -0.389347 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:294:ANTENNA_143/DIODE                       0.750000    1.139346   -0.389346 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:295:ANTENNA_144/DIODE                       0.750000    1.139346   -0.389346 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:298:ANTENNA_179/DIODE                       0.750000    1.132996   -0.382996 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:299:ANTENNA_177/DIODE                       0.750000    1.132995   -0.382996 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:300:ANTENNA_176/DIODE                       0.750000    1.132994   -0.382994 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:301:ANTENNA_178/DIODE                       0.750000    1.132984   -0.382984 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:302:ANTENNA_180/DIODE                       0.750000    1.132984   -0.382984 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:309:ANTENNA_63/DIODE                        0.750000    1.117522   -0.367522 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:314:ANTENNA_37/DIODE                        0.750000    1.078100   -0.328100 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:316:ANTENNA_38/DIODE                        0.750000    1.078098   -0.328098 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:317:ANTENNA_40/DIODE                        0.750000    1.078099   -0.328099 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:318:ANTENNA_42/DIODE                        0.750000    1.078099   -0.328099 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:319:ANTENNA_39/DIODE                        0.750000    1.078097   -0.328097 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:320:ANTENNA_41/DIODE                        0.750000    1.078097   -0.328097 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:321:ANTENNA_43/DIODE                        0.750000    1.078097   -0.328097 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:322:ANTENNA_44/DIODE                        0.750000    1.078097   -0.328097 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:325:ANTENNA_164/DIODE                       0.750000    1.071999   -0.321999 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:327:ANTENNA_160/DIODE                       0.750000    1.071999   -0.321999 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:328:ANTENNA_162/DIODE                       0.750000    1.071999   -0.321999 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:329:ANTENNA_158/DIODE                       0.750000    1.071998   -0.321998 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:330:ANTENNA_159/DIODE                       0.750000    1.071997   -0.321997 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:331:ANTENNA_161/DIODE                       0.750000    1.071996   -0.321996 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:332:ANTENNA_163/DIODE                       0.750000    1.071995   -0.321995 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:340:ANTENNA_155/DIODE                       0.750000    1.043742   -0.293742 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:341:ANTENNA_153/DIODE                       0.750000    1.043742   -0.293742 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:342:ANTENNA_154/DIODE                       0.750000    1.043742   -0.293742 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:343:ANTENNA_156/DIODE                       0.750000    1.043742   -0.293742 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:362:ANTENNA_208/DIODE                       0.750000    0.966308   -0.216308 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:372:ANTENNA_93/DIODE                        0.750000    0.942884   -0.192884 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:373:ANTENNA_94/DIODE                        0.750000    0.942884   -0.192884 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:374:ANTENNA_95/DIODE                        0.750000    0.942883   -0.192883 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:375:ANTENNA_96/DIODE                        0.750000    0.942883   -0.192883 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:378:ANTENNA_51/DIODE                        0.750000    0.935309   -0.185309 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:383:ANTENNA_81/DIODE                        0.750000    0.934394   -0.184394 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:388:ANTENNA_47/DIODE                        0.750000    0.909439   -0.159439 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:389:ANTENNA_45/DIODE                        0.750000    0.909439   -0.159439 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:390:ANTENNA_46/DIODE                        0.750000    0.909439   -0.159439 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:403:ANTENNA_32/DIODE                        0.750000    0.896843   -0.146843 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:414:ANTENNA_33/DIODE                        0.750000    0.829463   -0.079463 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:421:ANTENNA_85/DIODE                        0.750000    0.805801   -0.055801 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:423:ANTENNA_84/DIODE                        0.750000    0.804610   -0.054610 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:607:max slew violation count 164
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:178957:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:178962:ANTENNA_146/DIODE                       0.750000    1.294730   -0.544730 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:178963:ANTENNA_147/DIODE                       0.750000    1.294730   -0.544730 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:178966:ANTENNA_145/DIODE                       0.750000    1.288663   -0.538663 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:178969:ANTENNA_132/DIODE                       0.750000    1.226854   -0.476854 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:178970:ANTENNA_133/DIODE                       0.750000    1.226854   -0.476854 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:178971:ANTENNA_134/DIODE                       0.750000    1.226853   -0.476854 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:178972:ANTENNA_135/DIODE                       0.750000    1.226853   -0.476853 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:178973:ANTENNA_136/DIODE                       0.750000    1.226853   -0.476853 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:178974:ANTENNA_137/DIODE                       0.750000    1.226852   -0.476852 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:178977:ANTENNA_138/DIODE                       0.750000    1.139347   -0.389347 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:178978:ANTENNA_139/DIODE                       0.750000    1.139347   -0.389347 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:178979:ANTENNA_140/DIODE                       0.750000    1.139347   -0.389347 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:178980:ANTENNA_141/DIODE                       0.750000    1.139347   -0.389347 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:178981:ANTENNA_142/DIODE                       0.750000    1.139347   -0.389347 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:178982:ANTENNA_143/DIODE                       0.750000    1.139346   -0.389346 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:178983:ANTENNA_144/DIODE                       0.750000    1.139346   -0.389346 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:178986:ANTENNA_179/DIODE                       0.750000    1.132996   -0.382996 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:178987:ANTENNA_177/DIODE                       0.750000    1.132995   -0.382996 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:178988:ANTENNA_176/DIODE                       0.750000    1.132994   -0.382994 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:178989:ANTENNA_178/DIODE                       0.750000    1.132984   -0.382984 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:178990:ANTENNA_180/DIODE                       0.750000    1.132984   -0.382984 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:178997:ANTENNA_63/DIODE                        0.750000    1.117522   -0.367522 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179002:ANTENNA_37/DIODE                        0.750000    1.078100   -0.328100 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179004:ANTENNA_38/DIODE                        0.750000    1.078098   -0.328098 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179005:ANTENNA_40/DIODE                        0.750000    1.078099   -0.328099 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179006:ANTENNA_42/DIODE                        0.750000    1.078099   -0.328099 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179007:ANTENNA_39/DIODE                        0.750000    1.078097   -0.328097 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179008:ANTENNA_41/DIODE                        0.750000    1.078097   -0.328097 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179009:ANTENNA_43/DIODE                        0.750000    1.078097   -0.328097 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179010:ANTENNA_44/DIODE                        0.750000    1.078097   -0.328097 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179013:ANTENNA_164/DIODE                       0.750000    1.071999   -0.321999 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179015:ANTENNA_160/DIODE                       0.750000    1.071999   -0.321999 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179016:ANTENNA_162/DIODE                       0.750000    1.071999   -0.321999 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179017:ANTENNA_158/DIODE                       0.750000    1.071998   -0.321998 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179018:ANTENNA_159/DIODE                       0.750000    1.071997   -0.321997 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179019:ANTENNA_161/DIODE                       0.750000    1.071996   -0.321996 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179020:ANTENNA_163/DIODE                       0.750000    1.071995   -0.321995 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179028:ANTENNA_155/DIODE                       0.750000    1.043742   -0.293742 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179029:ANTENNA_153/DIODE                       0.750000    1.043742   -0.293742 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179030:ANTENNA_154/DIODE                       0.750000    1.043742   -0.293742 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179031:ANTENNA_156/DIODE                       0.750000    1.043742   -0.293742 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179050:ANTENNA_208/DIODE                       0.750000    0.966308   -0.216308 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179060:ANTENNA_93/DIODE                        0.750000    0.942884   -0.192884 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179061:ANTENNA_94/DIODE                        0.750000    0.942884   -0.192884 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179062:ANTENNA_95/DIODE                        0.750000    0.942883   -0.192883 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179063:ANTENNA_96/DIODE                        0.750000    0.942883   -0.192883 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179066:ANTENNA_51/DIODE                        0.750000    0.935309   -0.185309 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179071:ANTENNA_81/DIODE                        0.750000    0.934394   -0.184394 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179076:ANTENNA_47/DIODE                        0.750000    0.909439   -0.159439 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179077:ANTENNA_45/DIODE                        0.750000    0.909439   -0.159439 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179078:ANTENNA_46/DIODE                        0.750000    0.909439   -0.159439 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179091:ANTENNA_32/DIODE                        0.750000    0.896843   -0.146843 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179102:ANTENNA_33/DIODE                        0.750000    0.829463   -0.079463 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179109:ANTENNA_85/DIODE                        0.750000    0.805801   -0.055801 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179111:ANTENNA_84/DIODE                        0.750000    0.804610   -0.054610 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179295:max slew violation count 164
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/checks.rpt:146:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/checks.rpt:151:ANTENNA_146/DIODE                       0.750000    0.837680   -0.087680 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/checks.rpt:152:ANTENNA_147/DIODE                       0.750000    0.837680   -0.087680 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/checks.rpt:155:ANTENNA_145/DIODE                       0.750000    0.831610   -0.081610 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/checks.rpt:158:ANTENNA_132/DIODE                       0.750000    0.791629   -0.041629 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/checks.rpt:159:ANTENNA_133/DIODE                       0.750000    0.791628   -0.041628 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/checks.rpt:160:ANTENNA_134/DIODE                       0.750000    0.791628   -0.041628 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/checks.rpt:161:ANTENNA_135/DIODE                       0.750000    0.791627   -0.041627 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/checks.rpt:162:ANTENNA_136/DIODE                       0.750000    0.791627   -0.041627 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/checks.rpt:163:ANTENNA_137/DIODE                       0.750000    0.791626   -0.041626 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/checks.rpt:335:max slew violation count 15
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/sta.log:173846:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/sta.log:173851:ANTENNA_146/DIODE                       0.750000    0.837680   -0.087680 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/sta.log:173852:ANTENNA_147/DIODE                       0.750000    0.837680   -0.087680 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/sta.log:173855:ANTENNA_145/DIODE                       0.750000    0.831610   -0.081610 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/sta.log:173858:ANTENNA_132/DIODE                       0.750000    0.791629   -0.041629 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/sta.log:173859:ANTENNA_133/DIODE                       0.750000    0.791628   -0.041628 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/sta.log:173860:ANTENNA_134/DIODE                       0.750000    0.791628   -0.041628 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/sta.log:173861:ANTENNA_135/DIODE                       0.750000    0.791627   -0.041627 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/sta.log:173862:ANTENNA_136/DIODE                       0.750000    0.791627   -0.041627 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/sta.log:173863:ANTENNA_137/DIODE                       0.750000    0.791626   -0.041626 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/sta.log:174035:max slew violation count 15
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:269:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:273:ANTENNA_146/DIODE                       0.750000    1.249050   -0.499050 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:274:ANTENNA_147/DIODE                       0.750000    1.249050   -0.499050 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:277:ANTENNA_145/DIODE                       0.750000    1.218943   -0.468943 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:281:ANTENNA_132/DIODE                       0.750000    1.143026   -0.393026 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:282:ANTENNA_133/DIODE                       0.750000    1.143026   -0.393026 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:283:ANTENNA_134/DIODE                       0.750000    1.143026   -0.393026 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:284:ANTENNA_135/DIODE                       0.750000    1.143026   -0.393026 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:285:ANTENNA_136/DIODE                       0.750000    1.143026   -0.393026 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:286:ANTENNA_137/DIODE                       0.750000    1.143025   -0.393025 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:289:ANTENNA_177/DIODE                       0.750000    1.092752   -0.342752 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:290:ANTENNA_179/DIODE                       0.750000    1.092752   -0.342752 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:291:ANTENNA_176/DIODE                       0.750000    1.092751   -0.342751 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:292:ANTENNA_178/DIODE                       0.750000    1.092748   -0.342748 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:293:ANTENNA_180/DIODE                       0.750000    1.092747   -0.342748 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:299:ANTENNA_138/DIODE                       0.750000    1.081772   -0.331772 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:300:ANTENNA_139/DIODE                       0.750000    1.081772   -0.331772 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:301:ANTENNA_140/DIODE                       0.750000    1.081772   -0.331772 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:302:ANTENNA_141/DIODE                       0.750000    1.081772   -0.331772 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:304:ANTENNA_142/DIODE                       0.750000    1.081772   -0.331772 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:305:ANTENNA_143/DIODE                       0.750000    1.081772   -0.331772 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:306:ANTENNA_144/DIODE                       0.750000    1.081772   -0.331772 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:309:ANTENNA_63/DIODE                        0.750000    1.070535   -0.320535 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:314:ANTENNA_37/DIODE                        0.750000    1.044025   -0.294025 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:315:ANTENNA_38/DIODE                        0.750000    1.044024   -0.294024 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:316:ANTENNA_40/DIODE                        0.750000    1.044024   -0.294024 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:317:ANTENNA_42/DIODE                        0.750000    1.044024   -0.294024 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:319:ANTENNA_39/DIODE                        0.750000    1.044024   -0.294024 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:320:ANTENNA_41/DIODE                        0.750000    1.044023   -0.294023 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:321:ANTENNA_43/DIODE                        0.750000    1.044023   -0.294023 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:322:ANTENNA_44/DIODE                        0.750000    1.044023   -0.294023 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:325:ANTENNA_164/DIODE                       0.750000    1.029799   -0.279799 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:326:ANTENNA_158/DIODE                       0.750000    1.029799   -0.279799 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:327:ANTENNA_160/DIODE                       0.750000    1.029799   -0.279799 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:328:ANTENNA_162/DIODE                       0.750000    1.029799   -0.279799 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:330:ANTENNA_159/DIODE                       0.750000    1.029798   -0.279798 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:331:ANTENNA_161/DIODE                       0.750000    1.029797   -0.279797 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:332:ANTENNA_163/DIODE                       0.750000    1.029797   -0.279797 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:340:ANTENNA_153/DIODE                       0.750000    0.992297   -0.242297 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:341:ANTENNA_154/DIODE                       0.750000    0.992297   -0.242297 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:342:ANTENNA_155/DIODE                       0.750000    0.992297   -0.242297 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:343:ANTENNA_156/DIODE                       0.750000    0.992297   -0.242297 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:358:ANTENNA_208/DIODE                       0.750000    0.935511   -0.185511 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:371:ANTENNA_51/DIODE                        0.750000    0.913585   -0.163585 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:379:ANTENNA_93/DIODE                        0.750000    0.898461   -0.148461 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:380:ANTENNA_94/DIODE                        0.750000    0.898461   -0.148461 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:381:ANTENNA_95/DIODE                        0.750000    0.898461   -0.148461 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:382:ANTENNA_96/DIODE                        0.750000    0.898460   -0.148460 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:385:ANTENNA_81/DIODE                        0.750000    0.891328   -0.141328 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:391:ANTENNA_32/DIODE                        0.750000    0.853593   -0.103593 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:395:ANTENNA_47/DIODE                        0.750000    0.850490   -0.100490 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:396:ANTENNA_45/DIODE                        0.750000    0.850490   -0.100490 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:397:ANTENNA_46/DIODE                        0.750000    0.850490   -0.100490 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:412:ANTENNA_33/DIODE                        0.750000    0.807010   -0.057010 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:421:ANTENNA_85/DIODE                        0.750000    0.786116   -0.036116 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:423:ANTENNA_84/DIODE                        0.750000    0.785557   -0.035557 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:597:max slew violation count 154
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:178964:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:178968:ANTENNA_146/DIODE                       0.750000    1.249050   -0.499050 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:178969:ANTENNA_147/DIODE                       0.750000    1.249050   -0.499050 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:178972:ANTENNA_145/DIODE                       0.750000    1.218943   -0.468943 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:178976:ANTENNA_132/DIODE                       0.750000    1.143026   -0.393026 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:178977:ANTENNA_133/DIODE                       0.750000    1.143026   -0.393026 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:178978:ANTENNA_134/DIODE                       0.750000    1.143026   -0.393026 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:178979:ANTENNA_135/DIODE                       0.750000    1.143026   -0.393026 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:178980:ANTENNA_136/DIODE                       0.750000    1.143026   -0.393026 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:178981:ANTENNA_137/DIODE                       0.750000    1.143025   -0.393025 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:178984:ANTENNA_177/DIODE                       0.750000    1.092752   -0.342752 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:178985:ANTENNA_179/DIODE                       0.750000    1.092752   -0.342752 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:178986:ANTENNA_176/DIODE                       0.750000    1.092751   -0.342751 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:178987:ANTENNA_178/DIODE                       0.750000    1.092748   -0.342748 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:178988:ANTENNA_180/DIODE                       0.750000    1.092747   -0.342748 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:178994:ANTENNA_138/DIODE                       0.750000    1.081772   -0.331772 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:178995:ANTENNA_139/DIODE                       0.750000    1.081772   -0.331772 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:178996:ANTENNA_140/DIODE                       0.750000    1.081772   -0.331772 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:178997:ANTENNA_141/DIODE                       0.750000    1.081772   -0.331772 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:178999:ANTENNA_142/DIODE                       0.750000    1.081772   -0.331772 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179000:ANTENNA_143/DIODE                       0.750000    1.081772   -0.331772 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179001:ANTENNA_144/DIODE                       0.750000    1.081772   -0.331772 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179004:ANTENNA_63/DIODE                        0.750000    1.070535   -0.320535 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179009:ANTENNA_37/DIODE                        0.750000    1.044025   -0.294025 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179010:ANTENNA_38/DIODE                        0.750000    1.044024   -0.294024 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179011:ANTENNA_40/DIODE                        0.750000    1.044024   -0.294024 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179012:ANTENNA_42/DIODE                        0.750000    1.044024   -0.294024 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179014:ANTENNA_39/DIODE                        0.750000    1.044024   -0.294024 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179015:ANTENNA_41/DIODE                        0.750000    1.044023   -0.294023 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179016:ANTENNA_43/DIODE                        0.750000    1.044023   -0.294023 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179017:ANTENNA_44/DIODE                        0.750000    1.044023   -0.294023 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179020:ANTENNA_164/DIODE                       0.750000    1.029799   -0.279799 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179021:ANTENNA_158/DIODE                       0.750000    1.029799   -0.279799 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179022:ANTENNA_160/DIODE                       0.750000    1.029799   -0.279799 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179023:ANTENNA_162/DIODE                       0.750000    1.029799   -0.279799 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179025:ANTENNA_159/DIODE                       0.750000    1.029798   -0.279798 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179026:ANTENNA_161/DIODE                       0.750000    1.029797   -0.279797 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179027:ANTENNA_163/DIODE                       0.750000    1.029797   -0.279797 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179035:ANTENNA_153/DIODE                       0.750000    0.992297   -0.242297 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179036:ANTENNA_154/DIODE                       0.750000    0.992297   -0.242297 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179037:ANTENNA_155/DIODE                       0.750000    0.992297   -0.242297 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179038:ANTENNA_156/DIODE                       0.750000    0.992297   -0.242297 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179053:ANTENNA_208/DIODE                       0.750000    0.935511   -0.185511 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179066:ANTENNA_51/DIODE                        0.750000    0.913585   -0.163585 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179074:ANTENNA_93/DIODE                        0.750000    0.898461   -0.148461 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179075:ANTENNA_94/DIODE                        0.750000    0.898461   -0.148461 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179076:ANTENNA_95/DIODE                        0.750000    0.898461   -0.148461 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179077:ANTENNA_96/DIODE                        0.750000    0.898460   -0.148460 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179080:ANTENNA_81/DIODE                        0.750000    0.891328   -0.141328 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179086:ANTENNA_32/DIODE                        0.750000    0.853593   -0.103593 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179090:ANTENNA_47/DIODE                        0.750000    0.850490   -0.100490 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179091:ANTENNA_45/DIODE                        0.750000    0.850490   -0.100490 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179092:ANTENNA_46/DIODE                        0.750000    0.850490   -0.100490 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179107:ANTENNA_33/DIODE                        0.750000    0.807010   -0.057010 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179116:ANTENNA_85/DIODE                        0.750000    0.786116   -0.036116 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179118:ANTENNA_84/DIODE                        0.750000    0.785557   -0.035557 (VIOLATED)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179292:max slew violation count 154
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ff_n40C_1v95/checks.rpt:333:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ff_n40C_1v95/sta.log:165672:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ff_n40C_1v95/checks.rpt:333:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ff_n40C_1v95/sta.log:165645:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/60-klayout-xor/state_in.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/60-klayout-xor/state_in.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/60-klayout-xor/state_in.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/60-klayout-xor/state_in.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/60-klayout-xor/state_in.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/60-klayout-xor/state_in.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/60-klayout-xor/state_out.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/60-klayout-xor/state_out.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/60-klayout-xor/state_out.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/60-klayout-xor/state_out.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/60-klayout-xor/state_out.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/60-klayout-xor/state_out.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/44-odb-removeroutingobstructions/state_in.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/44-odb-removeroutingobstructions/state_in.json:142:        "antenna__violating__nets": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/44-odb-removeroutingobstructions/state_in.json:143:        "antenna__violating__pins": 19,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/44-odb-removeroutingobstructions/state_in.json:144:        "route__antenna_violation__count": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/44-odb-removeroutingobstructions/state_in.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/44-odb-removeroutingobstructions/state_in.json:146:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/44-odb-removeroutingobstructions/state_out.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/44-odb-removeroutingobstructions/state_out.json:142:        "antenna__violating__nets": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/44-odb-removeroutingobstructions/state_out.json:143:        "antenna__violating__pins": 19,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/44-odb-removeroutingobstructions/state_out.json:144:        "route__antenna_violation__count": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/44-odb-removeroutingobstructions/state_out.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/44-odb-removeroutingobstructions/state_out.json:146:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/62-magic-drc/state_in.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/62-magic-drc/state_in.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/62-magic-drc/state_in.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/62-magic-drc/state_in.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/62-magic-drc/state_in.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/62-magic-drc/state_in.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/62-magic-drc/magic-drc.log:197:[INFO] DRC Checking DONE (/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/62-magic-drc/reports/drc_violations.magic.rpt)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/62-magic-drc/state_out.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/62-magic-drc/state_out.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/62-magic-drc/state_out.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/62-magic-drc/state_out.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/62-magic-drc/state_out.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/62-magic-drc/state_out.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/46-checker-trdrc/state_in.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/46-checker-trdrc/state_in.json:142:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/46-checker-trdrc/state_in.json:143:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/46-checker-trdrc/state_in.json:144:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/46-checker-trdrc/state_in.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/46-checker-trdrc/state_in.json:146:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/46-checker-trdrc/state_out.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/46-checker-trdrc/state_out.json:142:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/46-checker-trdrc/state_out.json:143:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/46-checker-trdrc/state_out.json:144:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/46-checker-trdrc/state_out.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/46-checker-trdrc/state_out.json:146:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/32-odb-manualglobalplacement/state_in.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/32-odb-manualglobalplacement/state_out.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/warning.log:6:[RSZ-0062] Unable to repair all setup violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/warning.log:20:Setup violations found in the following corners:
+asic/openlane/runs/RUN_2026-11-26_17-07-12/warning.log:24:Max Slew violations found in the following corners:
+asic/openlane/runs/RUN_2026-11-26_17-07-12/40-odb-diodesonports/state_in.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/40-odb-diodesonports/state_in.json:142:        "antenna__violating__nets": 70,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/40-odb-diodesonports/state_in.json:143:        "antenna__violating__pins": 75,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/40-odb-diodesonports/state_in.json:144:        "route__antenna_violation__count": 70
+asic/openlane/runs/RUN_2026-11-26_17-07-12/40-odb-diodesonports/config.json:171:    "GRT_ANTENNA_ITERS": 3,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/40-odb-diodesonports/config.json:173:    "GRT_ANTENNA_MARGIN": 10,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/40-odb-diodesonports/state_out.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/40-odb-diodesonports/state_out.json:142:        "antenna__violating__nets": 70,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/40-odb-diodesonports/state_out.json:143:        "antenna__violating__pins": 75,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/40-odb-diodesonports/state_out.json:144:        "route__antenna_violation__count": 70
+asic/openlane/runs/RUN_2026-11-26_17-07-12/63-klayout-drc/state_in.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/63-klayout-drc/state_in.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/63-klayout-drc/state_in.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/63-klayout-drc/state_in.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/63-klayout-drc/state_in.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/63-klayout-drc/state_in.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/63-klayout-drc/klayout-drc.log:2553:Writing report database: /home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/63-klayout-drc/reports/drc_violations.klayout.xml ..
+asic/openlane/runs/RUN_2026-11-26_17-07-12/63-klayout-drc/state_out.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/63-klayout-drc/state_out.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/63-klayout-drc/state_out.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/63-klayout-drc/state_out.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/63-klayout-drc/state_out.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/63-klayout-drc/state_out.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_in.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_in.json:142:        "antenna__violating__nets": 70,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_in.json:143:        "antenna__violating__pins": 75,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_in.json:144:        "route__antenna_violation__count": 70
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_in.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_in.json:142:        "antenna__violating__nets": 70,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_in.json:143:        "antenna__violating__pins": 75,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_in.json:144:        "route__antenna_violation__count": 70
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/config.json:165:    "GRT_ANTENNA_ITERS": 3,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/config.json:167:    "GRT_ANTENNA_MARGIN": 10,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/or_metrics_out.json:2:	"antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/or_metrics_out.json:7:	"design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/or_metrics_out.json:21:	"design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log:65:[INFO GRT-0006] Repairing antennas, iteration 1.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log:67:[INFO GRT-0012] Found 84 antenna violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log:72:[INFO GRT-0006] Repairing antennas, iteration 2.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log:74:[INFO GRT-0012] Found 20 antenna violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log:79:[INFO GRT-0006] Repairing antennas, iteration 3.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log:81:[INFO GRT-0012] Found 2 antenna violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log:158:  Antenna cell                            208     520.50
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log:167:Writing OpenROAD database to '/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.odb'…
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log:168:Writing layout to '/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.def'…
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_out.json:6:    "def": "/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.def",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_out.json:9:    "odb": "/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.odb",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_out.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_out.json:142:        "antenna__violating__nets": 70,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_out.json:143:        "antenna__violating__pins": 75,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_out.json:144:        "route__antenna_violation__count": 70,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_out.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_out.json:146:        "design__instance__count__class:antenna_cell": 208
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/config.json:165:    "GRT_ANTENNA_ITERS": 3,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/config.json:167:    "GRT_ANTENNA_MARGIN": 10,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/config.json:174:        "step": "OpenROAD.RepairAntennas"
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_out.json:6:    "def": "/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.def",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_out.json:9:    "odb": "/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.odb",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_out.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_out.json:142:        "antenna__violating__nets": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_out.json:143:        "antenna__violating__pins": 19,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_out.json:144:        "route__antenna_violation__count": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_out.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_out.json:146:        "design__instance__count__class:antenna_cell": 208
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_in.json:6:    "def": "/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.def",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_in.json:9:    "odb": "/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.odb",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_in.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_in.json:142:        "antenna__violating__nets": 70,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_in.json:143:        "antenna__violating__pins": 75,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_in.json:144:        "route__antenna_violation__count": 70,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_in.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_in.json:146:        "design__instance__count__class:antenna_cell": 208
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/reports/antenna.rpt:492:  Pin:   ANTENNA_25/DIODE (sky130_fd_sc_hd__diode_2)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/reports/antenna.rpt:2627:[INFO ANT-0002] Found 17 net violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/reports/antenna.rpt:2628:[INFO ANT-0001] Found 19 pin violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/config.json:153:        "step": "OpenROAD.CheckAntennas"
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/or_metrics_out.json:2:	"antenna__violating__nets": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/or_metrics_out.json:3:	"antenna__violating__pins": 19,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_out.json:6:    "def": "/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.def",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_out.json:9:    "odb": "/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.odb",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_out.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_out.json:142:        "antenna__violating__nets": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_out.json:143:        "antenna__violating__pins": 19,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_out.json:144:        "route__antenna_violation__count": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_out.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_out.json:146:        "design__instance__count__class:antenna_cell": 208
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/openroad-checkantennas.log:1:Reading OpenROAD database at '/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.odb'…
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/openroad-checkantennas.log:11:%OL_CREATE_REPORT /home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/reports/antenna.rpt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/openroad-checkantennas.log:503:  Pin:   ANTENNA_25/DIODE (sky130_fd_sc_hd__diode_2)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/openroad-checkantennas.log:2638:[INFO ANT-0002] Found 17 net violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/openroad-checkantennas.log:2639:[INFO ANT-0001] Found 19 pin violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/53-openroad-rcx/state_in.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/53-openroad-rcx/state_in.json:142:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/53-openroad-rcx/state_in.json:143:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/53-openroad-rcx/state_in.json:144:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/53-openroad-rcx/state_in.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/53-openroad-rcx/state_in.json:146:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/53-openroad-rcx/max/rcx.log:37:  Antenna cell                            208     520.50
+asic/openlane/runs/RUN_2026-11-26_17-07-12/53-openroad-rcx/min/rcx.log:37:  Antenna cell                            208     520.50
+asic/openlane/runs/RUN_2026-11-26_17-07-12/53-openroad-rcx/or_metrics_out.json:15:	"design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/53-openroad-rcx/nom/rcx.log:37:  Antenna cell                            208     520.50
+asic/openlane/runs/RUN_2026-11-26_17-07-12/53-openroad-rcx/state_out.json:140:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/53-openroad-rcx/state_out.json:146:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/53-openroad-rcx/state_out.json:147:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/53-openroad-rcx/state_out.json:148:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/53-openroad-rcx/state_out.json:149:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/53-openroad-rcx/state_out.json:150:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/48-checker-disconnectedpins/state_in.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/48-checker-disconnectedpins/state_in.json:142:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/48-checker-disconnectedpins/state_in.json:143:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/48-checker-disconnectedpins/state_in.json:144:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/48-checker-disconnectedpins/state_in.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/48-checker-disconnectedpins/state_in.json:146:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/48-checker-disconnectedpins/state_out.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/48-checker-disconnectedpins/state_out.json:142:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/48-checker-disconnectedpins/state_out.json:143:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/48-checker-disconnectedpins/state_out.json:144:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/48-checker-disconnectedpins/state_out.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/48-checker-disconnectedpins/state_out.json:146:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/64-checker-magicdrc/state_in.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/64-checker-magicdrc/state_in.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/64-checker-magicdrc/state_in.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/64-checker-magicdrc/state_in.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/64-checker-magicdrc/state_in.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/64-checker-magicdrc/state_in.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/64-checker-magicdrc/state_out.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/64-checker-magicdrc/state_out.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/64-checker-magicdrc/state_out.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/64-checker-magicdrc/state_out.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/64-checker-magicdrc/state_out.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/64-checker-magicdrc/state_out.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/65-checker-klayoutdrc/state_in.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/65-checker-klayoutdrc/state_in.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/65-checker-klayoutdrc/state_in.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/65-checker-klayoutdrc/state_in.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/65-checker-klayoutdrc/state_in.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/65-checker-klayoutdrc/state_in.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/65-checker-klayoutdrc/state_out.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/65-checker-klayoutdrc/state_out.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/65-checker-klayoutdrc/state_out.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/65-checker-klayoutdrc/state_out.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/65-checker-klayoutdrc/state_out.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/65-checker-klayoutdrc/state_out.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/37-openroad-stamidpnr-2/state_in.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/37-openroad-stamidpnr-2/checks.rpt:330:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/37-openroad-stamidpnr-2/openroad-stamidpnr-2.log:171787:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/37-openroad-stamidpnr-2/state_out.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/55-openroad-irdropreport/state_in.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/55-openroad-irdropreport/state_in.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/55-openroad-irdropreport/state_in.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/55-openroad-irdropreport/state_in.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/55-openroad-irdropreport/state_in.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/55-openroad-irdropreport/state_in.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/55-openroad-irdropreport/state_out.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/55-openroad-irdropreport/state_out.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/55-openroad-irdropreport/state_out.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/55-openroad-irdropreport/state_out.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/55-openroad-irdropreport/state_out.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/55-openroad-irdropreport/state_out.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/50-checker-wirelength/state_in.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/50-checker-wirelength/state_in.json:142:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/50-checker-wirelength/state_in.json:143:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/50-checker-wirelength/state_in.json:144:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/50-checker-wirelength/state_in.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/50-checker-wirelength/state_in.json:146:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/50-checker-wirelength/state_out.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/50-checker-wirelength/state_out.json:142:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/50-checker-wirelength/state_out.json:143:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/50-checker-wirelength/state_out.json:144:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/50-checker-wirelength/state_out.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/50-checker-wirelength/state_out.json:146:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/33-openroad-detailedplacement/state_in.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/33-openroad-detailedplacement/or_metrics_out.json:6:	"design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/33-openroad-detailedplacement/or_metrics_out.json:7:	"design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/33-openroad-detailedplacement/state_out.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/31-openroad-repairdesignpostgpl/openroad-repairdesignpostgpl.log:86:[INFO RSZ-0034] Found 152 slew violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/31-openroad-repairdesignpostgpl/openroad-repairdesignpostgpl.log:87:[INFO RSZ-0035] Found 142 fanout violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/31-openroad-repairdesignpostgpl/config.json:165:    "GRT_ANTENNA_ITERS": 3,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/31-openroad-repairdesignpostgpl/config.json:167:    "GRT_ANTENNA_MARGIN": 10,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/31-openroad-repairdesignpostgpl/or_metrics_out.json:8:	"design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/31-openroad-repairdesignpostgpl/state_out.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/35-openroad-stamidpnr-1/state_in.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/35-openroad-stamidpnr-1/checks.rpt:329:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/35-openroad-stamidpnr-1/openroad-stamidpnr-1.log:168721:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/35-openroad-stamidpnr-1/state_out.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/51-openroad-fillinsertion/state_in.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/51-openroad-fillinsertion/state_in.json:142:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/51-openroad-fillinsertion/state_in.json:143:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/51-openroad-fillinsertion/state_in.json:144:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/51-openroad-fillinsertion/state_in.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/51-openroad-fillinsertion/state_in.json:146:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/51-openroad-fillinsertion/or_metrics_out.json:15:	"design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/51-openroad-fillinsertion/state_out.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/51-openroad-fillinsertion/state_out.json:142:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/51-openroad-fillinsertion/state_out.json:143:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/51-openroad-fillinsertion/state_out.json:144:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/51-openroad-fillinsertion/state_out.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/51-openroad-fillinsertion/state_out.json:146:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/51-openroad-fillinsertion/openroad-fillinsertion.log:19:  Antenna cell                            208     520.50
+asic/openlane/runs/RUN_2026-11-26_17-07-12/57-klayout-streamout/state_in.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/57-klayout-streamout/state_in.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/57-klayout-streamout/state_in.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/57-klayout-streamout/state_in.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/57-klayout-streamout/state_in.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/57-klayout-streamout/state_in.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/57-klayout-streamout/state_out.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/57-klayout-streamout/state_out.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/57-klayout-streamout/state_out.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/57-klayout-streamout/state_out.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/57-klayout-streamout/state_out.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/57-klayout-streamout/state_out.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/36-openroad-resizertimingpostcts/state_in.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/36-openroad-resizertimingpostcts/config.json:165:    "GRT_ANTENNA_ITERS": 3,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/36-openroad-resizertimingpostcts/config.json:167:    "GRT_ANTENNA_MARGIN": 10,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/36-openroad-resizertimingpostcts/or_metrics_out.json:8:	"design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/36-openroad-resizertimingpostcts/state_out.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/36-openroad-resizertimingpostcts/openroad-resizertimingpostcts.log:17:[INFO RSZ-0094] Found 128 endpoints with setup violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/36-openroad-resizertimingpostcts/openroad-resizertimingpostcts.log:243:[WARNING RSZ-0062] Unable to repair all setup violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/36-openroad-resizertimingpostcts/openroad-resizertimingpostcts.log:244:[INFO RSZ-0046] Found 755 endpoints with hold violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/state_in.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/state_in.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/state_in.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/state_in.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/state_in.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/state_in.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/magic-streamout.log:469:LEF read, Line 82 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/magic-streamout.log:470:LEF read, Line 83 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/magic-streamout.log:472:LEF read, Line 118 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/magic-streamout.log:473:LEF read, Line 119 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/magic-streamout.log:478:LEF read, Line 168 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/magic-streamout.log:479:LEF read, Line 169 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/magic-streamout.log:483:LEF read, Line 210 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/magic-streamout.log:484:LEF read, Line 211 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/magic-streamout.log:488:LEF read, Line 252 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/magic-streamout.log:489:LEF read, Line 253 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/magic-streamout.log:493:LEF read, Line 294 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/magic-streamout.log:494:LEF read, Line 295 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/state_out.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/state_out.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/state_out.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/state_out.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/state_out.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/56-magic-streamout/state_out.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/74-misc-reportmanufacturability/state_in.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/74-misc-reportmanufacturability/state_in.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/74-misc-reportmanufacturability/state_in.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/74-misc-reportmanufacturability/state_in.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/74-misc-reportmanufacturability/state_in.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/74-misc-reportmanufacturability/state_in.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/74-misc-reportmanufacturability/state_out.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/74-misc-reportmanufacturability/state_out.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/74-misc-reportmanufacturability/state_out.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/74-misc-reportmanufacturability/state_out.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/74-misc-reportmanufacturability/state_out.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/74-misc-reportmanufacturability/state_out.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/74-misc-reportmanufacturability/manufacturability.rpt:1:* Antenna
+asic/openlane/runs/RUN_2026-11-26_17-07-12/74-misc-reportmanufacturability/manufacturability.rpt:3:Pin violations: 22
+asic/openlane/runs/RUN_2026-11-26_17-07-12/74-misc-reportmanufacturability/manufacturability.rpt:4:Net violations: 22
+asic/openlane/runs/RUN_2026-11-26_17-07-12/74-misc-reportmanufacturability/manufacturability.rpt:5:Check the report directory of OpenROAD.CheckAntennas.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/66-magic-spiceextraction/state_in.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/66-magic-spiceextraction/state_in.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/66-magic-spiceextraction/state_in.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/66-magic-spiceextraction/state_in.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/66-magic-spiceextraction/state_in.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/66-magic-spiceextraction/state_in.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/66-magic-spiceextraction/magic-spiceextraction.log:18:LEF read, Line 82 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/66-magic-spiceextraction/magic-spiceextraction.log:19:LEF read, Line 83 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/66-magic-spiceextraction/magic-spiceextraction.log:21:LEF read, Line 118 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/66-magic-spiceextraction/magic-spiceextraction.log:22:LEF read, Line 119 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/66-magic-spiceextraction/magic-spiceextraction.log:27:LEF read, Line 168 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/66-magic-spiceextraction/magic-spiceextraction.log:28:LEF read, Line 169 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/66-magic-spiceextraction/magic-spiceextraction.log:32:LEF read, Line 210 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/66-magic-spiceextraction/magic-spiceextraction.log:33:LEF read, Line 211 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/66-magic-spiceextraction/magic-spiceextraction.log:37:LEF read, Line 252 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/66-magic-spiceextraction/magic-spiceextraction.log:38:LEF read, Line 253 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/66-magic-spiceextraction/magic-spiceextraction.log:42:LEF read, Line 294 (Message): Unknown keyword "ANTENNAMODEL" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/66-magic-spiceextraction/magic-spiceextraction.log:43:LEF read, Line 295 (Message): Unknown keyword "ANTENNADIFFSIDEAREARATIO" in LEF file; ignoring.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/66-magic-spiceextraction/state_out.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/66-magic-spiceextraction/state_out.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/66-magic-spiceextraction/state_out.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/66-magic-spiceextraction/state_out.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/66-magic-spiceextraction/state_out.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/66-magic-spiceextraction/state_out.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/final/metrics.json:112:    "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/final/metrics.json:118:    "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/final/metrics.json:119:    "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/final/metrics.json:120:    "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/final/metrics.json:121:    "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/final/metrics.json:122:    "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/38-openroad-globalrouting/state_in.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/38-openroad-globalrouting/antenna.rpt:10800:[INFO ANT-0002] Found 70 net violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/38-openroad-globalrouting/antenna.rpt:10801:[INFO ANT-0001] Found 75 pin violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/38-openroad-globalrouting/config.json:165:    "GRT_ANTENNA_ITERS": 3,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/38-openroad-globalrouting/config.json:167:    "GRT_ANTENNA_MARGIN": 10,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/38-openroad-globalrouting/openroad-globalrouting.log:65:%OL_CREATE_REPORT antenna.rpt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/38-openroad-globalrouting/openroad-globalrouting.log:10865:[INFO ANT-0002] Found 70 net violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/38-openroad-globalrouting/openroad-globalrouting.log:10866:[INFO ANT-0001] Found 75 pin violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/38-openroad-globalrouting/or_metrics_out.json:2:	"antenna__violating__nets": 70,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/38-openroad-globalrouting/or_metrics_out.json:3:	"antenna__violating__pins": 75,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/38-openroad-globalrouting/state_out.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/38-openroad-globalrouting/state_out.json:142:        "antenna__violating__nets": 70,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/38-openroad-globalrouting/state_out.json:143:        "antenna__violating__pins": 75
+asic/openlane/runs/RUN_2026-11-26_17-07-12/49-odb-reportwirelength/state_in.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/49-odb-reportwirelength/state_in.json:142:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/49-odb-reportwirelength/state_in.json:143:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/49-odb-reportwirelength/state_in.json:144:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/49-odb-reportwirelength/state_in.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/49-odb-reportwirelength/state_in.json:146:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/49-odb-reportwirelength/state_out.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/49-odb-reportwirelength/state_out.json:142:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/49-odb-reportwirelength/state_out.json:143:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/49-odb-reportwirelength/state_out.json:144:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/49-odb-reportwirelength/state_out.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/49-odb-reportwirelength/state_out.json:146:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/52-odb-cellfrequencytables/state_in.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/52-odb-cellfrequencytables/state_in.json:142:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/52-odb-cellfrequencytables/state_in.json:143:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/52-odb-cellfrequencytables/state_in.json:144:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/52-odb-cellfrequencytables/state_in.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/52-odb-cellfrequencytables/state_in.json:146:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/52-odb-cellfrequencytables/state_out.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/52-odb-cellfrequencytables/state_out.json:142:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/52-odb-cellfrequencytables/state_out.json:143:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/52-odb-cellfrequencytables/state_out.json:144:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/52-odb-cellfrequencytables/state_out.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/52-odb-cellfrequencytables/state_out.json:146:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/72-checker-maxslewviolations/state_in.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/72-checker-maxslewviolations/state_in.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/72-checker-maxslewviolations/state_in.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/72-checker-maxslewviolations/state_in.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/72-checker-maxslewviolations/state_in.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/72-checker-maxslewviolations/state_in.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/72-checker-maxslewviolations/config.json:154:        "step": "Checker.MaxSlewViolations"
+asic/openlane/runs/RUN_2026-11-26_17-07-12/72-checker-maxslewviolations/state_out.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/72-checker-maxslewviolations/state_out.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/72-checker-maxslewviolations/state_out.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/72-checker-maxslewviolations/state_out.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/72-checker-maxslewviolations/state_out.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/72-checker-maxslewviolations/state_out.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/39-openroad-checkantennas/state_in.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/39-openroad-checkantennas/state_in.json:142:        "antenna__violating__nets": 70,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/39-openroad-checkantennas/state_in.json:143:        "antenna__violating__pins": 75
+asic/openlane/runs/RUN_2026-11-26_17-07-12/39-openroad-checkantennas/reports/antenna.rpt:10799:[INFO ANT-0002] Found 70 net violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/39-openroad-checkantennas/reports/antenna.rpt:10800:[INFO ANT-0001] Found 75 pin violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/39-openroad-checkantennas/config.json:153:        "step": "OpenROAD.CheckAntennas"
+asic/openlane/runs/RUN_2026-11-26_17-07-12/39-openroad-checkantennas/or_metrics_out.json:2:	"antenna__violating__nets": 70,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/39-openroad-checkantennas/or_metrics_out.json:3:	"antenna__violating__pins": 75,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/39-openroad-checkantennas/state_out.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/39-openroad-checkantennas/state_out.json:142:        "antenna__violating__nets": 70,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/39-openroad-checkantennas/state_out.json:143:        "antenna__violating__pins": 75,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/39-openroad-checkantennas/state_out.json:144:        "route__antenna_violation__count": 70
+asic/openlane/runs/RUN_2026-11-26_17-07-12/39-openroad-checkantennas/openroad-checkantennas.log:11:%OL_CREATE_REPORT /home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/39-openroad-checkantennas/reports/antenna.rpt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/39-openroad-checkantennas/openroad-checkantennas.log:10810:[INFO ANT-0002] Found 70 net violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/39-openroad-checkantennas/openroad-checkantennas.log:10811:[INFO ANT-0001] Found 75 pin violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/68-netgen-lvs/state_in.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/68-netgen-lvs/state_in.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/68-netgen-lvs/state_in.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/68-netgen-lvs/state_in.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/68-netgen-lvs/state_in.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/68-netgen-lvs/state_in.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/68-netgen-lvs/state_out.json:156:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/68-netgen-lvs/state_out.json:162:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/68-netgen-lvs/state_out.json:163:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/68-netgen-lvs/state_out.json:164:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/68-netgen-lvs/state_out.json:165:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/68-netgen-lvs/state_out.json:166:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/14-odb-checkmacroantennaproperties/config.json:148:        "step": "Odb.CheckMacroAntennaProperties"
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/state_in.json:6:    "def": "/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.def",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/state_in.json:9:    "odb": "/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.odb",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/state_in.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/state_in.json:142:        "antenna__violating__nets": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/state_in.json:143:        "antenna__violating__pins": 19,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/state_in.json:144:        "route__antenna_violation__count": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/state_in.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/state_in.json:146:        "design__instance__count__class:antenna_cell": 208
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:1:Reading OpenROAD database at '/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.odb'…
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:161:    Completing 10% with 0 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:163:    Completing 20% with 0 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:165:    Completing 30% with 765 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:167:    Completing 40% with 765 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:169:    Completing 50% with 765 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:171:    Completing 60% with 1825 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:173:    Completing 70% with 1825 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:175:    Completing 80% with 2516 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:177:    Completing 90% with 2516 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:179:    Completing 100% with 3414 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:181:[INFO DRT-0199]   Number of violations = 3922.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:212:    Completing 10% with 3922 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:214:    Completing 20% with 3922 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:216:    Completing 30% with 3475 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:218:    Completing 40% with 3475 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:220:    Completing 50% with 3475 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:222:    Completing 60% with 2995 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:224:    Completing 70% with 2995 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:226:    Completing 80% with 2465 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:228:    Completing 90% with 2465 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:230:    Completing 100% with 1729 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:232:[INFO DRT-0199]   Number of violations = 1729.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:260:    Completing 10% with 1729 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:262:    Completing 20% with 1729 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:264:    Completing 30% with 1671 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:266:    Completing 40% with 1671 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:268:    Completing 50% with 1671 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:270:    Completing 60% with 1736 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:272:    Completing 70% with 1736 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:274:    Completing 80% with 1660 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:276:    Completing 90% with 1660 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:278:    Completing 100% with 1540 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:280:[INFO DRT-0199]   Number of violations = 1540.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:308:    Completing 10% with 1540 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:310:    Completing 20% with 1540 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:312:    Completing 30% with 1236 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:314:    Completing 40% with 1236 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:316:    Completing 50% with 1236 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:318:    Completing 60% with 819 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:320:    Completing 70% with 819 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:322:    Completing 80% with 531 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:324:    Completing 90% with 531 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:326:    Completing 100% with 148 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:328:[INFO DRT-0199]   Number of violations = 148.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:355:    Completing 10% with 148 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:357:    Completing 20% with 148 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:359:    Completing 30% with 113 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:361:    Completing 40% with 113 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:363:    Completing 50% with 113 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:365:    Completing 60% with 109 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:367:    Completing 70% with 109 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:369:    Completing 80% with 86 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:371:    Completing 90% with 86 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:373:    Completing 100% with 11 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:375:[INFO DRT-0199]   Number of violations = 11.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:402:    Completing 10% with 11 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:404:    Completing 20% with 11 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:406:    Completing 30% with 11 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:408:    Completing 40% with 11 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:410:    Completing 50% with 11 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:412:    Completing 60% with 11 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:414:    Completing 70% with 11 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:416:    Completing 80% with 0 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:418:    Completing 90% with 0 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:420:    Completing 100% with 0 violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:422:[INFO DRT-0199]   Number of violations = 0.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:476:  Antenna cell                            208     520.50
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/or_metrics_out.json:34:	"design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/state_out.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/state_out.json:142:        "antenna__violating__nets": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/state_out.json:143:        "antenna__violating__pins": 19,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/state_out.json:144:        "route__antenna_violation__count": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/state_out.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/state_out.json:146:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/34-openroad-cts/state_in.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/34-openroad-cts/or_metrics_out.json:26:	"design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/34-openroad-cts/state_out.json:136:        "design__violations": 0,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/resolved.json:153:    "RUN_ANTENNA_REPAIR": true,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/resolved.json:311:    "ERROR_ON_PDN_VIOLATIONS": true,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/resolved.json:314:    "GRT_ANTENNA_ITERS": 3,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/resolved.json:316:    "GRT_ANTENNA_MARGIN": 10,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/resolved.json:359:    "HEURISTIC_ANTENNA_THRESHOLD": 90,

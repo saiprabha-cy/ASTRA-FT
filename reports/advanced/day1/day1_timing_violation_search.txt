@@ -1,0 +1,213 @@
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_tt_025C_1v80/checks.rpt:148: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_tt_025C_1v80/checks.rpt:152:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_tt_025C_1v80/checks.rpt:7902:max slew violation count 1998
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_tt_025C_1v80/checks.rpt:7903:max fanout violation count 141
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_tt_025C_1v80/sta.log:11:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_tt_025C_1v80/sta.log:127775: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_tt_025C_1v80/sta.log:127779:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_tt_025C_1v80/sta.log:135529:max slew violation count 1998
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_tt_025C_1v80/sta.log:135531:max fanout violation count 141
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_tt_025C_1v80/sta.log:135647:%OL_CREATE_REPORT violator_list.rpt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_tt_025C_1v80/sta.log:135650:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_tt_025C_1v80/violator_list.rpt:3:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/summary.rpt:3:┃                      ┃ Worst    ┃ Reg      ┃          ┃ Hold Vio ┃ reg to   ┃ Worst     ┃ Reg      ┃           ┃ Vio      ┃ reg to    ┃ Max Cap  ┃ Max Slew  ┃
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ss_100C_1v60/checks.rpt:235: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ss_100C_1v60/checks.rpt:239:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ss_100C_1v60/checks.rpt:9040:max slew violation count 3038
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ss_100C_1v60/checks.rpt:9041:max fanout violation count 141
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ss_100C_1v60/sta.log:11:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ss_100C_1v60/sta.log:121790: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ss_100C_1v60/sta.log:121794:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ss_100C_1v60/sta.log:130595:max slew violation count 3038
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ss_100C_1v60/sta.log:130597:max fanout violation count 141
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ss_100C_1v60/sta.log:130713:%OL_CREATE_REPORT violator_list.rpt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ss_100C_1v60/sta.log:130716:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ss_100C_1v60/violator_list.rpt:3:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ff_n40C_1v95/checks.rpt:148: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ff_n40C_1v95/checks.rpt:152:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ff_n40C_1v95/checks.rpt:7640:max slew violation count 1736
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ff_n40C_1v95/checks.rpt:7641:max fanout violation count 141
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ff_n40C_1v95/sta.log:11:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ff_n40C_1v95/sta.log:118595: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ff_n40C_1v95/sta.log:118599:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ff_n40C_1v95/sta.log:126087:max slew violation count 1736
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ff_n40C_1v95/sta.log:126089:max fanout violation count 141
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ff_n40C_1v95/sta.log:126205:%OL_CREATE_REPORT violator_list.rpt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ff_n40C_1v95/sta.log:126208:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/12-openroad-staprepnr/nom_ff_n40C_1v95/violator_list.rpt:3:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/18-openroad-tapendcapinsertion/openroad-tapendcapinsertion.log:9:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/openroad-checkantennas-1.log:9:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/13-openroad-floorplan/openroad-floorplan.log:22:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:262:Max Slew violations found in the following corners:
+asic/openlane/runs/RUN_2026-11-26_17-07-12/flow.log:268:No max slew violations found
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/checks.rpt:166: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/checks.rpt:339:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/checks.rpt:341:max fanout violation count 58
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/violator_list.rpt:3:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/openroad-stamidpnr-3.log:9:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/openroad-stamidpnr-3.log:172351: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/openroad-stamidpnr-3.log:172524:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/openroad-stamidpnr-3.log:172526:max fanout violation count 58
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/openroad-stamidpnr-3.log:172642:%OL_CREATE_REPORT violator_list.rpt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/42-openroad-stamidpnr-3/openroad-stamidpnr-3.log:172645:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/30-openroad-stamidpnr/checks.rpt:148: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/30-openroad-stamidpnr/checks.rpt:152:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/30-openroad-stamidpnr/checks.rpt:4245:max slew violation count 3886
+asic/openlane/runs/RUN_2026-11-26_17-07-12/30-openroad-stamidpnr/checks.rpt:4247:max fanout violation count 142
+asic/openlane/runs/RUN_2026-11-26_17-07-12/30-openroad-stamidpnr/violator_list.rpt:3:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/30-openroad-stamidpnr/openroad-stamidpnr.log:9:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/30-openroad-stamidpnr/openroad-stamidpnr.log:121846: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/30-openroad-stamidpnr/openroad-stamidpnr.log:121850:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/30-openroad-stamidpnr/openroad-stamidpnr.log:125943:max slew violation count 3886
+asic/openlane/runs/RUN_2026-11-26_17-07-12/30-openroad-stamidpnr/openroad-stamidpnr.log:125945:max fanout violation count 142
+asic/openlane/runs/RUN_2026-11-26_17-07-12/30-openroad-stamidpnr/openroad-stamidpnr.log:126061:%OL_CREATE_REPORT violator_list.rpt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/30-openroad-stamidpnr/openroad-stamidpnr.log:126064:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:265: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:269:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:581:max slew violation count 138
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/checks.rpt:582:max fanout violation count 58
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:15:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179028: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179032:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179344:max slew violation count 138
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179346:max fanout violation count 58
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179462:%OL_CREATE_REPORT violator_list.rpt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/sta.log:179465:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ss_100C_1v60/violator_list.rpt:3:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_tt_025C_1v80/checks.rpt:163: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_tt_025C_1v80/checks.rpt:336:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_tt_025C_1v80/checks.rpt:337:max fanout violation count 58
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_tt_025C_1v80/sta.log:15:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_tt_025C_1v80/sta.log:175774: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_tt_025C_1v80/sta.log:175947:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_tt_025C_1v80/sta.log:175949:max fanout violation count 58
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_tt_025C_1v80/sta.log:176065:%OL_CREATE_REPORT violator_list.rpt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_tt_025C_1v80/sta.log:176068:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_tt_025C_1v80/violator_list.rpt:3:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ff_n40C_1v95/checks.rpt:160: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ff_n40C_1v95/checks.rpt:333:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ff_n40C_1v95/checks.rpt:334:max fanout violation count 58
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ff_n40C_1v95/sta.log:15:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ff_n40C_1v95/sta.log:165568: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ff_n40C_1v95/sta.log:165741:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ff_n40C_1v95/sta.log:165743:max fanout violation count 58
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ff_n40C_1v95/sta.log:165859:%OL_CREATE_REPORT violator_list.rpt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ff_n40C_1v95/sta.log:165862:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/min_ff_n40C_1v95/violator_list.rpt:3:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_tt_025C_1v80/checks.rpt:163: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_tt_025C_1v80/checks.rpt:167:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_tt_025C_1v80/checks.rpt:348:max slew violation count 7
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_tt_025C_1v80/checks.rpt:349:max fanout violation count 58
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_tt_025C_1v80/sta.log:15:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_tt_025C_1v80/sta.log:176363: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_tt_025C_1v80/sta.log:176367:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_tt_025C_1v80/sta.log:176548:max slew violation count 7
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_tt_025C_1v80/sta.log:176550:max fanout violation count 58
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_tt_025C_1v80/sta.log:176666:%OL_CREATE_REPORT violator_list.rpt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_tt_025C_1v80/sta.log:176669:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_tt_025C_1v80/violator_list.rpt:3:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/summary.rpt:3:┃                      ┃ Worst    ┃ Reg      ┃          ┃ Hold Vio ┃ reg to    ┃ Worst    ┃ Reg to    ┃ Setup    ┃ Setup Vio ┃ reg to   ┃ Max Cap   ┃ Max Slew ┃
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:265: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:269:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:607:max slew violation count 164
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/checks.rpt:608:max fanout violation count 58
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:15:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:178953: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:178957:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179295:max slew violation count 164
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179297:max fanout violation count 58
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179413:%OL_CREATE_REPORT violator_list.rpt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/sta.log:179416:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ss_100C_1v60/violator_list.rpt:3:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/checks.rpt:142: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/checks.rpt:146:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/checks.rpt:335:max slew violation count 15
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/checks.rpt:336:max fanout violation count 58
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/sta.log:15:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/sta.log:173842: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/sta.log:173846:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/sta.log:174035:max slew violation count 15
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/sta.log:174037:max fanout violation count 58
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/sta.log:174153:%OL_CREATE_REPORT violator_list.rpt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/sta.log:174156:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_tt_025C_1v80/violator_list.rpt:3:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:265: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:269:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:597:max slew violation count 154
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/checks.rpt:598:max fanout violation count 58
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:15:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:178960: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:178964:max slew
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179292:max slew violation count 154
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179294:max fanout violation count 58
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179410:%OL_CREATE_REPORT violator_list.rpt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/sta.log:179413:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ss_100C_1v60/violator_list.rpt:3:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ff_n40C_1v95/checks.rpt:160: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ff_n40C_1v95/checks.rpt:333:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ff_n40C_1v95/checks.rpt:334:max fanout violation count 58
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ff_n40C_1v95/sta.log:15:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ff_n40C_1v95/sta.log:165499: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ff_n40C_1v95/sta.log:165672:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ff_n40C_1v95/sta.log:165674:max fanout violation count 58
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ff_n40C_1v95/sta.log:165790:%OL_CREATE_REPORT violator_list.rpt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ff_n40C_1v95/sta.log:165793:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/max_ff_n40C_1v95/violator_list.rpt:3:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ff_n40C_1v95/checks.rpt:160: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ff_n40C_1v95/checks.rpt:333:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ff_n40C_1v95/checks.rpt:334:max fanout violation count 58
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ff_n40C_1v95/sta.log:15:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ff_n40C_1v95/sta.log:165472: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ff_n40C_1v95/sta.log:165645:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ff_n40C_1v95/sta.log:165647:max fanout violation count 58
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ff_n40C_1v95/sta.log:165763:%OL_CREATE_REPORT violator_list.rpt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ff_n40C_1v95/sta.log:165766:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/54-openroad-stapostpnr/nom_ff_n40C_1v95/violator_list.rpt:3:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/06-yosys-synthesis/yosys-synthesis.log:770:  transition:       2'00 3'-00 ->       2'00 5'00100
+asic/openlane/runs/RUN_2026-11-26_17-07-12/06-yosys-synthesis/yosys-synthesis.log:771:  transition:       2'00 3'-10 ->       2'01 5'01100
+asic/openlane/runs/RUN_2026-11-26_17-07-12/06-yosys-synthesis/yosys-synthesis.log:772:  transition:       2'00 3'--1 ->       2'00 5'00100
+asic/openlane/runs/RUN_2026-11-26_17-07-12/06-yosys-synthesis/yosys-synthesis.log:773:  transition:       2'10 3'--0 ->       2'00 5'00010
+asic/openlane/runs/RUN_2026-11-26_17-07-12/06-yosys-synthesis/yosys-synthesis.log:774:  transition:       2'10 3'--1 ->       2'00 5'00010
+asic/openlane/runs/RUN_2026-11-26_17-07-12/06-yosys-synthesis/yosys-synthesis.log:775:  transition:       2'01 3'0-0 ->       2'01 5'01001
+asic/openlane/runs/RUN_2026-11-26_17-07-12/06-yosys-synthesis/yosys-synthesis.log:776:  transition:       2'01 3'1-0 ->       2'10 5'10001
+asic/openlane/runs/RUN_2026-11-26_17-07-12/06-yosys-synthesis/yosys-synthesis.log:777:  transition:       2'01 3'--1 ->       2'00 5'00001
+asic/openlane/runs/RUN_2026-11-26_17-07-12/06-yosys-synthesis/yosys-synthesis.log:827:  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+asic/openlane/runs/RUN_2026-11-26_17-07-12/warning.log:24:Max Slew violations found in the following corners:
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log:9:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/openroad-checkantennas.log:9:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/37-openroad-stamidpnr-2/checks.rpt:166: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/37-openroad-stamidpnr-2/checks.rpt:330:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/37-openroad-stamidpnr-2/checks.rpt:332:max fanout violation count 49
+asic/openlane/runs/RUN_2026-11-26_17-07-12/37-openroad-stamidpnr-2/openroad-stamidpnr-2.log:9:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/37-openroad-stamidpnr-2/openroad-stamidpnr-2.log:171623: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/37-openroad-stamidpnr-2/openroad-stamidpnr-2.log:171787:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/37-openroad-stamidpnr-2/openroad-stamidpnr-2.log:171789:max fanout violation count 49
+asic/openlane/runs/RUN_2026-11-26_17-07-12/37-openroad-stamidpnr-2/openroad-stamidpnr-2.log:171905:%OL_CREATE_REPORT violator_list.rpt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/37-openroad-stamidpnr-2/openroad-stamidpnr-2.log:171908:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/37-openroad-stamidpnr-2/violator_list.rpt:3:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/17-openroad-cutrows/openroad-cutrows.log:9:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/55-openroad-irdropreport/openroad-irdropreport.log:9:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/33-openroad-detailedplacement/openroad-detailedplacement.log:9:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/31-openroad-repairdesignpostgpl/openroad-repairdesignpostgpl.log:14:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/31-openroad-repairdesignpostgpl/openroad-repairdesignpostgpl.log:86:[INFO RSZ-0034] Found 152 slew violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/31-openroad-repairdesignpostgpl/openroad-repairdesignpostgpl.log:87:[INFO RSZ-0035] Found 142 fanout violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/35-openroad-stamidpnr-1/checks.rpt:166: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/35-openroad-stamidpnr-1/checks.rpt:329:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/35-openroad-stamidpnr-1/checks.rpt:331:max fanout violation count 48
+asic/openlane/runs/RUN_2026-11-26_17-07-12/35-openroad-stamidpnr-1/violator_list.rpt:3:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/35-openroad-stamidpnr-1/openroad-stamidpnr-1.log:9:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/35-openroad-stamidpnr-1/openroad-stamidpnr-1.log:168558: report_check_types -max_slew -max_cap -max_fanout -violators
+asic/openlane/runs/RUN_2026-11-26_17-07-12/35-openroad-stamidpnr-1/openroad-stamidpnr-1.log:168721:max slew violation count 0
+asic/openlane/runs/RUN_2026-11-26_17-07-12/35-openroad-stamidpnr-1/openroad-stamidpnr-1.log:168723:max fanout violation count 48
+asic/openlane/runs/RUN_2026-11-26_17-07-12/35-openroad-stamidpnr-1/openroad-stamidpnr-1.log:168839:%OL_CREATE_REPORT violator_list.rpt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/35-openroad-stamidpnr-1/openroad-stamidpnr-1.log:168842:Violator List
+asic/openlane/runs/RUN_2026-11-26_17-07-12/51-openroad-fillinsertion/openroad-fillinsertion.log:9:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/23-openroad-globalplacementskipio/openroad-globalplacementskipio.log:9:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/36-openroad-resizertimingpostcts/openroad-resizertimingpostcts.log:14:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/24-openroad-ioplacement/openroad-ioplacement.log:9:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/27-openroad-globalplacement/openroad-globalplacement.log:9:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/38-openroad-globalrouting/openroad-globalrouting.log:9:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/39-openroad-checkantennas/openroad-checkantennas.log:9:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log:9:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/20-openroad-generatepdn/openroad-generatepdn.log:9:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+asic/openlane/runs/RUN_2026-11-26_17-07-12/34-openroad-cts/openroad-cts.log:14:[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375

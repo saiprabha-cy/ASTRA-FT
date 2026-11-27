@@ -1,0 +1,216 @@
+===== TOOL / FLOW ENVIRONMENT =====
+/usr/bin/docker
+
+===== ANTENNA REPAIR STAGE FILES =====
+asic/openlane/runs/RUN_2026-11-26_17-07-12/40-odb-diodesonports/config.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/40-odb-diodesonports/runtime.txt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/40-odb-diodesonports/state_in.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/40-odb-diodesonports/state_out.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/COMMANDS
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/_env.tcl
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/after_grt.guide
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.def
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.odb
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/config.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.process_stats.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/or_metrics_out.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/runtime.txt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_in.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_out.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/COMMANDS
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/_env.tcl
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/config.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/openroad-checkantennas.log
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/openroad-checkantennas.process_stats.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/or_metrics_out.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/reports/antenna.rpt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/reports/antenna_summary.rpt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/runtime.txt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_in.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_out.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/config.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/runtime.txt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_in.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_out.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/COMMANDS
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/_env.tcl
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/config.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/openroad-checkantennas-1.log
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/openroad-checkantennas-1.process_stats.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/or_metrics_out.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/reports/antenna.rpt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/reports/antenna_summary.rpt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/runtime.txt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_in.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_out.json
+
+===== ANTENNA REPAIR METRICS =====
+----- asic/openlane/runs/RUN_2026-11-26_17-07-12/40-odb-diodesonports/or_metrics_out.json
+----- asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/or_metrics_out.json
+{
+	"antenna_diodes_count": 208,
+	"design__instance__displacement__total": 0,
+	"design__instance__displacement__mean": 0,
+	"design__instance__displacement__max": 0,
+	"route__wirelength__estimated": 312881,
+	"design__violations": 0,
+	"design__io": 564,
+	"design__die__area": 244699,
+	"design__core__area": 227499,
+	"design__instance__count": 10797,
+	"design__instance__area": 87417.6,
+	"design__instance__count__stdcell": 10797,
+	"design__instance__area__stdcell": 87417.6,
+	"design__instance__count__macros": 0,
+	"design__instance__area__macros": 0,
+	"design__instance__utilization": 0.384254,
+	"design__instance__utilization__stdcell": 0.384254,
+	"design__instance__count__class:fill_cell": 350,
+	"design__instance__count__class:tap_cell": 3186,
+	"design__instance__count__class:antenna_cell": 208,
+	"design__instance__count__class:buffer": 1,
+	"design__instance__count__class:clock_buffer": 125,
+	"design__instance__count__class:timing_repair_buffer": 1879,
+	"design__instance__count__class:inverter": 213,
+	"design__instance__count__class:clock_inverter": 79,
+	"design__instance__count__class:sequential_cell": 848,
+	"design__instance__count__class:multi_input_combinational_cell": 4258,
+	"flow__warnings__count": 0,
+	"flow__errors__count": 0
+}----- asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/or_metrics_out.json
+{
+	"antenna__violating__nets": 17,
+	"antenna__violating__pins": 19,
+	"flow__warnings__count": 0,
+	"flow__errors__count": 0
+}
+===== ANTENNA CONFIGURATION SETTINGS =====
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_in.json:137:        "design__instance__count__class:timing_repair_buffer": 1879,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_in.json:142:        "antenna__violating__nets": 70,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_in.json:143:        "antenna__violating__pins": 75,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_in.json:144:        "route__antenna_violation__count": 70
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_in.json:137:        "design__instance__count__class:timing_repair_buffer": 1879,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_in.json:142:        "antenna__violating__nets": 70,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_in.json:143:        "antenna__violating__pins": 75,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_in.json:144:        "route__antenna_violation__count": 70
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/config.json:127:    "DIODE_CELL": "sky130_fd_sc_hd__diode_2/DIODE",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/config.json:163:    "DIODE_PADDING": null,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/config.json:165:    "GRT_ANTENNA_ITERS": 3,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/config.json:167:    "GRT_ANTENNA_MARGIN": 10,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/config.json:174:        "step": "DiodeInsertion"
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/_env.tcl:1:set ::env(STEP_ID) DiodeInsertion
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/_env.tcl:51:set ::env(DIODE_CELL) sky130_fd_sc_hd__diode_2/DIODE
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/_env.tcl:62:set ::env(GRT_ANTENNA_ITERS) 3
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/_env.tcl:64:set ::env(GRT_ANTENNA_MARGIN) 10
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/_env.tcl:70:set ::env(SAVE_ODB) /home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.odb
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/_env.tcl:71:set ::env(SAVE_DEF) /home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.def
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/or_metrics_out.json:2:	"antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/or_metrics_out.json:21:	"design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/or_metrics_out.json:24:	"design__instance__count__class:timing_repair_buffer": 1879,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log:65:[INFO GRT-0006] Repairing antennas, iteration 1.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log:67:[INFO GRT-0012] Found 84 antenna violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log:68:[INFO GRT-0015] Inserted 148 diodes.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log:72:[INFO GRT-0006] Repairing antennas, iteration 2.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log:74:[INFO GRT-0012] Found 20 antenna violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log:75:[INFO GRT-0015] Inserted 53 diodes.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log:79:[INFO GRT-0006] Repairing antennas, iteration 3.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log:81:[INFO GRT-0012] Found 2 antenna violations.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log:82:[INFO GRT-0015] Inserted 7 diodes.
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log:158:  Antenna cell                            208     520.50
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log:161:  Timing Repair Buffer                   1879   15268.39
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log:167:Writing OpenROAD database to '/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.odb'…
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/diodeinsertion.log:168:Writing layout to '/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.def'…
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_out.json:6:    "def": "/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.def",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_out.json:9:    "odb": "/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.odb",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_out.json:137:        "design__instance__count__class:timing_repair_buffer": 1879,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_out.json:142:        "antenna__violating__nets": 70,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_out.json:143:        "antenna__violating__pins": 75,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_out.json:144:        "route__antenna_violation__count": 70,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_out.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/state_out.json:146:        "design__instance__count__class:antenna_cell": 208
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/config.json:127:    "DIODE_CELL": "sky130_fd_sc_hd__diode_2/DIODE",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/config.json:163:    "DIODE_PADDING": null,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/config.json:165:    "GRT_ANTENNA_ITERS": 3,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/config.json:167:    "GRT_ANTENNA_MARGIN": 10,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/config.json:174:        "step": "OpenROAD.RepairAntennas"
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_out.json:6:    "def": "/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.def",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_out.json:9:    "odb": "/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.odb",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_out.json:137:        "design__instance__count__class:timing_repair_buffer": 1879,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_out.json:142:        "antenna__violating__nets": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_out.json:143:        "antenna__violating__pins": 19,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_out.json:144:        "route__antenna_violation__count": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_out.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/state_out.json:146:        "design__instance__count__class:antenna_cell": 208
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_in.json:6:    "def": "/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.def",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_in.json:9:    "odb": "/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.odb",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_in.json:137:        "design__instance__count__class:timing_repair_buffer": 1879,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_in.json:142:        "antenna__violating__nets": 70,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_in.json:143:        "antenna__violating__pins": 75,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_in.json:144:        "route__antenna_violation__count": 70,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_in.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_in.json:146:        "design__instance__count__class:antenna_cell": 208
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/config.json:127:    "DIODE_CELL": "sky130_fd_sc_hd__diode_2/DIODE",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/config.json:153:        "step": "OpenROAD.CheckAntennas"
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/_env.tcl:1:set ::env(STEP_ID) OpenROAD.CheckAntennas
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/_env.tcl:51:set ::env(DIODE_CELL) sky130_fd_sc_hd__diode_2/DIODE
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/_env.tcl:58:set ::env(CURRENT_ODB) /home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.odb
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/or_metrics_out.json:2:	"antenna__violating__nets": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/or_metrics_out.json:3:	"antenna__violating__pins": 19,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_out.json:6:    "def": "/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.def",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_out.json:9:    "odb": "/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.odb",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_out.json:137:        "design__instance__count__class:timing_repair_buffer": 1879,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_out.json:142:        "antenna__violating__nets": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_out.json:143:        "antenna__violating__pins": 19,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_out.json:144:        "route__antenna_violation__count": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_out.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/state_out.json:146:        "design__instance__count__class:antenna_cell": 208
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/openroad-checkantennas.log:1:Reading OpenROAD database at '/home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/1-diodeinsertion/astra_ft_system.odb'…
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/openroad-checkantennas.log:11:%OL_CREATE_REPORT /home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/reports/antenna.rpt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/41-openroad-repairantennas/2-openroad-checkantennas/openroad-checkantennas.log:503:  Pin:   ANTENNA_25/DIODE (sky130_fd_sc_hd__diode_2)
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_in.json:137:        "design__instance__count__class:timing_repair_buffer": 1879,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_in.json:142:        "antenna__violating__nets": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_in.json:143:        "antenna__violating__pins": 19,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_in.json:144:        "route__antenna_violation__count": 17,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_in.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_in.json:146:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/config.json:127:    "DIODE_CELL": "sky130_fd_sc_hd__diode_2/DIODE",
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/config.json:153:        "step": "OpenROAD.CheckAntennas"
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/_env.tcl:1:set ::env(STEP_ID) OpenROAD.CheckAntennas
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/_env.tcl:51:set ::env(DIODE_CELL) sky130_fd_sc_hd__diode_2/DIODE
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/or_metrics_out.json:2:	"antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/or_metrics_out.json:3:	"antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_out.json:137:        "design__instance__count__class:timing_repair_buffer": 1879,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_out.json:142:        "antenna__violating__nets": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_out.json:143:        "antenna__violating__pins": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_out.json:144:        "route__antenna_violation__count": 22,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_out.json:145:        "antenna_diodes_count": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/state_out.json:146:        "design__instance__count__class:antenna_cell": 208,
+asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/openroad-checkantennas-1.log:11:%OL_CREATE_REPORT /home/saipr/projects/ASTRA-FT/asic/openlane/runs/RUN_2026-11-26_17-07-12/45-openroad-checkantennas-1/reports/antenna.rpt
+
+===== MAX SLEW STAGE FILES =====
+asic/openlane/runs/RUN_2026-11-26_17-07-12/72-checker-maxslewviolations/config.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/72-checker-maxslewviolations/runtime.txt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/72-checker-maxslewviolations/state_in.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/72-checker-maxslewviolations/state_out.json
+
+===== FINAL ROUTE AND TIMING REPORTS =====
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/COMMANDS
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/_env.tcl
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/astra_ft_system.def
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/astra_ft_system.drc
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/astra_ft_system.nl.v
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/astra_ft_system.odb
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/astra_ft_system.pnl.v
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/astra_ft_system.sdc
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/config.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.log
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/openroad-detailedrouting.process_stats.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/or_metrics_out.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/runtime.txt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/state_in.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/43-openroad-detailedrouting/state_out.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/72-checker-maxslewviolations/config.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/72-checker-maxslewviolations/runtime.txt
+asic/openlane/runs/RUN_2026-11-26_17-07-12/72-checker-maxslewviolations/state_in.json
+asic/openlane/runs/RUN_2026-11-26_17-07-12/72-checker-maxslewviolations/state_out.json
